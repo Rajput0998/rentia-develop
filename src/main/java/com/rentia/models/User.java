@@ -34,7 +34,7 @@ public class User {
 	}
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
+	private Long id;
 	@NotBlank(message = "User Name field is required !!")
 	private String userName;
 	@NotBlank(message = "Name field is required !!")
@@ -60,9 +60,9 @@ public class User {
 	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch =
 	FetchType.LAZY, orphanRemoval = true)
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"}) 
-	private List<Address> adress=new ArrayList<>();
+	private List<UserAddress> adress=new ArrayList<>();
 	
-	public void addAddress(Address adr) {
+	public void addAddress(UserAddress adr) {
 		if ( adr == null) {
 			return;
 		}
@@ -72,11 +72,11 @@ public class User {
 	}
 
 
-	public int getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
@@ -160,8 +160,8 @@ public class User {
 		this.creationDate = creationDate;
 	}
 
-	public List<Address> getAdress() { return adress; }
+	public List<UserAddress> getAdress() { return adress; }
 	 
-	public void setAdress(List<Address> adress) { this.adress = adress; }	 
+	public void setAdress(List<UserAddress> adress) { this.adress = adress; }	 
 	  	 
 }

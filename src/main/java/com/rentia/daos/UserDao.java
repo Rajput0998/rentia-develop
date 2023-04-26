@@ -10,16 +10,19 @@ import com.rentia.repositories.UsersRepository;
 @Component
 public class UserDao {
 
-   @Autowired
-   private UsersRepository usersRepository;
-	
-   public User registerUser(User user)
-	{	
-	   return usersRepository.save(user);
+	@Autowired
+	private UsersRepository usersRepository;
+
+	public User registerUser(User user) {
+		return usersRepository.save(user);
 	}
 
-   	public User getUserbyUserName(String userName) {
-	     User user = usersRepository.getUserbyUserName(userName);
-	     return user;
-   	}
+	public User getUserbyUserName(String userName) {
+		User user = usersRepository.getUserbyUserName(userName);
+		return user;
+	}
+
+	public User getById(Long id) {
+		return usersRepository.getOne(id);
+	}
 }

@@ -5,12 +5,16 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
-@Table(name="ADDRESS")
-public class Address {
+@Table(name="USERADDRESS")
+public class UserAddress {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -29,9 +33,21 @@ public class Address {
 	@Column(length = 50)
 	private String other;
 	
+	@ManyToOne	
+	@JsonIgnore
+	@JoinColumn(name = "uid", nullable = false)
+	private User user;
 
 	public Long getAdrid() {
 		return adrid;
+	}
+
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
 	}
 
 	public void setAdrid(Long adrid) {
@@ -86,11 +102,15 @@ public class Address {
 		this.other = other;
 	}
 
+	public UserAddress() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 
 	@Override
 	public String toString() {
 		return "Address [adrid=" + adrid + ", state=" + state + ", city=" + city + ", street=" + street + ", pin=" + pin
-				+ ", country=" + country + ", other=" + other + "]";
+				+ ", country=" + country + ", other=" + other + ", user=" + user + "]";
 	}
 
 	

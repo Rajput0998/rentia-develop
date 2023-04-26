@@ -5,7 +5,7 @@ import java.util.Date;
 import org.springframework.stereotype.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 import com.rentia.daos.UserDao;
-import com.rentia.models.Address;
+import com.rentia.models.UserAddress;
 import com.rentia.models.User;
 
 @Service
@@ -18,7 +18,7 @@ public class UserService {
 	{
 		try
 		{	
-			for (Address adr : user.getAdress()) 
+			for (UserAddress adr : user.getAdress()) 
 			{ 
 			    user.addAddress(adr); 
 			}

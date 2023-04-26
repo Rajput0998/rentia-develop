@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.rentia.models.Address;
+import com.rentia.models.UserAddress;
 import com.rentia.models.User;
 import com.rentia.services.UserService;
 
@@ -44,7 +44,7 @@ public class UserController
 }
 	
 	@GetMapping("/getUser/{userName}")
-	public ResponseEntity<User> getBook(@PathVariable("userName") String userName) {
+	public ResponseEntity<User> getUser(@PathVariable("userName") String userName) {
         User user = userService.getUserbyUserName(userName);
         if (user == null) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
