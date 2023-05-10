@@ -12,6 +12,15 @@ import javax.persistence.Table;
 @Table(name="ADDRESS")
 public class Address {
 
+	
+    
+
+	/*
+	 * public Address(String state, String city, int pin) { super(); this.state =
+	 * state; this.city = city; this.pin = pin; }
+	 * 
+	 * public Address() { super(); // TODO Auto-generated constructor stub }
+	 */
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long adrid;

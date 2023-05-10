@@ -1,10 +1,19 @@
 package com.rentia.models;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.validation.constraints.NotBlank;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import org.hibernate.annotations.Cascade;
+import org.hibernate.annotations.CascadeType;
 
 @Entity
 @Table(name="PROPERTY")
@@ -14,6 +23,8 @@ public class Property {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
+	@NotBlank(message = "Property Name field is required !!")
+	@Column(unique = true)
 	private String prpName;
 	
 	private Double price;
@@ -25,6 +36,20 @@ public class Property {
 	private int totalFloors;
 	
 	private boolean availabilty;
+	
+	@ManyToOne(fetch = FetchType.LAZY)
+	@Cascade(CascadeType.ALL)
+	@JoinColumn(name = "aid", nullable = false)
+	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
+	private Address address;
+
+	public Address getAddress() {
+		return address;
+	}
+
+	public void setAddress(Address address) {
+		this.address = address;
+	}
 
 	public Property() {
 		super();

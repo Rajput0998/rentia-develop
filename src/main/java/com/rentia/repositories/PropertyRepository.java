@@ -10,5 +10,6 @@ import com.rentia.models.User;
 
 public interface PropertyRepository extends JpaRepository<Property, Long> {
 	
+	Property findByPrpName(String prpName); 
 
 }
