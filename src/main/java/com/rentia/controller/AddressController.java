@@ -19,7 +19,7 @@ import com.rentia.services.UserService;
 
 @CrossOrigin
 @RestController
-@RequestMapping("/address")
+@RequestMapping("/api/common/address")
 public class AddressController {
 	
 	@Autowired

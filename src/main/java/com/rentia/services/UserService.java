@@ -4,6 +4,9 @@ import java.util.Date;
 
 import org.springframework.stereotype.Service;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
+
 import com.rentia.daos.UserDao;
 import com.rentia.models.UserAddress;
 import com.rentia.models.User;
@@ -13,6 +16,9 @@ public class UserService {
 	
 	@Autowired
 	private UserDao userDao;
+	
+	@Autowired
+	private PasswordEncoder passwordEncoder;
 
 	public User registerUser(User user)
 	{
@@ -22,9 +28,10 @@ public class UserService {
 			{ 
 			    user.addAddress(adr); 
 			}
-			user.setRole("TENANT");
 			user.setCreationDate(new Date());
-			User l_user = userDao.registerUser(user);
+			user.setPassword(this.passwordEncoder.encode(user.getPassword()));
+			System.out.println("mukul2" + user.getPassword());
+			User l_user = userDao.saveUser(user);
 			return l_user;
 		}
 		catch(Exception e)
@@ -34,9 +41,20 @@ public class UserService {
 		
 		
 	}
+	
+	public User updateUser(User user , Long UserId) {
+		User l_user = userDao.saveUser(user);
+		return l_user;
+	}
 
 	public User getUserbyUserName(String userName) {
 		User user = userDao.getUserbyUserName(userName);
+		return user != null ? user : null;
+		
+	}
+	
+	public User getUserbyUserId(Long userId) {
+		User user = userDao.getById(userId);
 		return user != null ? user : null;
 		
 	}

@@ -2,10 +2,14 @@ package com.rentia.models;
 
 import java.util.Date;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
+import javax.persistence.*;
 
 import javax.persistence.CascadeType;
+import javax.persistence.CollectionTable;
 import javax.persistence.Column;
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -18,6 +22,9 @@ import javax.validation.constraints.Size;
 
 
 import org.hibernate.annotations.CreationTimestamp;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
@@ -25,7 +32,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
 @Table(name="USERS")
-public class User {
+public class User implements UserDetails {
 
 	public User() {
 		super();
@@ -48,15 +55,56 @@ public class User {
 	private Long mobNum;
 	private String gender;
 	private String role;
-	@Size(min = 2,max = 20,message = "min 2 and max 20 characters are allowed !!")
-	//@JsonIgnore
+	/*
+	 * @Size(min = 2,max = 20,message =
+	 * "min 2 and max 20 characters are allowed !!") //@JsonIgnore
+	 */	
 	private String password;
 	@Column(nullable=false,updatable=false)
     @CreationTimestamp
     @JsonIgnore
 	private Date creationDate;
+    @ElementCollection
+    @CollectionTable(name = "doc_images", joinColumns = @JoinColumn(name = "user_id"))
+    @Column(name = "dosImage")
+    private List<String> aadharImage = new ArrayList<>();
+	private String selfImage;
+	
+	private Boolean isAccountNonExpired;
+	
+	private Boolean isCredentialsNonExpired;
+	
+	private Boolean isAccountNonlocked;
 		
 	
+	public Boolean getIsAccountNonExpired() {
+		return isAccountNonExpired;
+	}
+
+
+	public void setIsAccountNonExpired(Boolean isAccountNonExpired) {
+		this.isAccountNonExpired = isAccountNonExpired;
+	}
+
+
+	public Boolean getIsCredentialsNonExpired() {
+		return isCredentialsNonExpired;
+	}
+
+
+	public void setIsCredentialsNonExpired(Boolean isCredentialsNonExpired) {
+		this.isCredentialsNonExpired = isCredentialsNonExpired;
+	}
+
+
+	public Boolean getIsAccountNonlocked() {
+		return isAccountNonlocked;
+	}
+
+
+	public void setIsAccountNonlocked(Boolean isAccountNonlocked) {
+		this.isAccountNonlocked = isAccountNonlocked;
+	}
 	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch =
 	FetchType.LAZY, orphanRemoval = true)
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"}) 
@@ -160,8 +208,69 @@ public class User {
 		this.creationDate = creationDate;
 	}
 
+	
+	public List<String> getAadharImage() {
+		return aadharImage;
+	}
+
+
+	public void setAadharImage(List<String> fileNames) {
+		this.aadharImage = fileNames;
+	}
+
+
+	public String getSelfImage() {
+		return selfImage;
+	}
+
+
+	public void setSelfImage(String selfImage) {
+		this.selfImage = selfImage;
+	}
+
+
 	public List<UserAddress> getAdress() { return adress; }
 	 
-	public void setAdress(List<UserAddress> adress) { this.adress = adress; }	 
+	public void setAdress(List<UserAddress> adress) { this.adress = adress; }
+
+
+	@Override
+	public Collection<? extends GrantedAuthority> getAuthorities() {
+
+		SimpleGrantedAuthority simpleGrantedAuthority = new SimpleGrantedAuthority(this.role);
+		return List.of(simpleGrantedAuthority);
+	}
+
+
+	@Override
+	public String getUsername() {
+		return this.userName;
+	}
+
+
+	@Override
+	public boolean isAccountNonExpired() {
+		return true;
+	}
+
+
+	@Override
+	public boolean isAccountNonLocked() {
+		return true;
+	}
+
+
+	@Override
+	public boolean isCredentialsNonExpired() {
+		return true;
+	}
+
+
+	@Override
+	public boolean isEnabled() {
+		return true;
+	}	
+	
+	
 	  	 
 }

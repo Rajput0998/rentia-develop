@@ -21,7 +21,7 @@ import com.rentia.models.User;
 
 @RestController
 @CrossOrigin
-@RequestMapping("/property")
+@RequestMapping("/api/u1/regproperty")
 public class RegisterPropertyController {
 	
 	@Autowired
@@ -38,7 +38,6 @@ public class RegisterPropertyController {
 		}
 	}
 	
-
     @PutMapping("/register/{regId}")
     public ResponseEntity<TntProperty> updateProperty(@RequestBody String body, @PathVariable("regId") Long regId) {
         try {

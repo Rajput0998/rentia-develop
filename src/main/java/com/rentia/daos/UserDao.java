@@ -13,8 +13,11 @@ public class UserDao {
 	@Autowired
 	private UsersRepository usersRepository;
 
-	public User registerUser(User user) {
-		return usersRepository.save(user);
+	public User saveUser(User user) {
+		System.out.println("mukul3" + user.getAdress().size());
+		User l_user = usersRepository.save(user);
+		System.out.println("mukul4" + l_user.getAdress().size());
+		return l_user;
 	}
 
 	public User getUserbyUserName(String userName) {
@@ -23,6 +26,8 @@ public class UserDao {
 	}
 
 	public User getById(Long id) {
-		return usersRepository.getOne(id);
+		return usersRepository.findById(id).get();
 	}
+
+	
 }

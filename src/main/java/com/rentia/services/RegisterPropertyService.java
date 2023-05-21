@@ -94,6 +94,7 @@ public class RegisterPropertyService {
     
     public TntProperty getregTntProperty(Long regId) {
     	TntProperty tntProperty = registerPropertyDao.getById(regId);
+    	System.out.println(tntProperty);
 		return tntProperty != null ? tntProperty : null;
 		
 	}
