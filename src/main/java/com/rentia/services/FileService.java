@@ -12,6 +12,8 @@ import java.util.UUID;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
+import org.springframework.core.io.ClassPathResource;
+
 
 @Service
 public class FileService {
@@ -51,6 +53,15 @@ public class FileService {
 		InputStream is = new FileInputStream(fullPath);
 		// db logic to return inpustream
 		return is;
+	}
+
+
+
+	public void deleteImage(String fileName) throws IOException {
+		
+		File deleteFile = new ClassPathResource("static/img").getFile();
+		File file1 = new File(deleteFile, fileName);
+		file1.delete();	
 	}
 
 }

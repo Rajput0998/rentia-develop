@@ -69,7 +69,7 @@ public class AuthController {
 
 		} catch (BadCredentialsException e) {
 			System.out.println("Invalid Detials !!");
-			throw new BadCredentialsException("Invalid username or password !!");
+			throw new Exception("Invalid username or password !!");
 		}
 
 	}

@@ -29,5 +29,10 @@ public class UserDao {
 		return usersRepository.findById(id).get();
 	}
 
+	public User getUserByEmail(String email) {
+		User user = usersRepository.getUserByEmail(email);
+		return user;
+	}
+
 	
 }
