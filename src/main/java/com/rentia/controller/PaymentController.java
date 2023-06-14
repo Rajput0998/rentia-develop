@@ -2,7 +2,11 @@ package com.rentia.controller;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Map;
 
+import com.razorpay.*;
+
+import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.HttpStatus;
@@ -15,6 +19,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.rentia.models.Payment;
@@ -89,4 +94,31 @@ public class PaymentController {
 		 } 
         return ResponseEntity.ok(payments);
     }
+    
+  //creating order for payment
+	
+  	@PostMapping("/user/create_order")
+  	@ResponseBody
+  	public ResponseEntity<String> createOrder(@RequestBody Map<String, Object> data) throws Exception
+  	{
+  		//System.out.println("Hey order function ex.");
+  		System.out.println(data);
+  		
+  		int amt=Integer.parseInt(data.get("amount").toString());
+  		
+  		var client=new RazorpayClient("rzp_test_kpYk7aWlRwQBnT", "yLaAH75pioQ1cP4ApRpl0Ek2");
+  		
+  		JSONObject ob=new JSONObject();
+  		ob.put("amount", amt*100);
+  		ob.put("currency", "INR");
+  		ob.put("receipt", "txn_235425");
+  		
+  		//creating new order
+  		
+  		Order order = client.Orders.create(ob);
+  		System.out.println(order);
+  		
+  		//if you want you can save this to your data..		
+  		return ResponseEntity.ok(order.toString());
+  	}
 }

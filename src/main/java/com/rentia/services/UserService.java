@@ -115,5 +115,15 @@ public class UserService {
 		User user = userDao.getUserByEmail(email);
 		return user != null ? user : null;
 	}
+	
+
+	public void deleteUser(Long userId) throws Exception {
+		User user = this.userDao.getById(userId);
+		if( null == user ) {
+			throw new Exception("User not found");
+		}
+		this.userDao.deleteUser(user);
+
+	}
 
 }

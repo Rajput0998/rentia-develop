@@ -11,6 +11,7 @@ import org.springframework.security.config.annotation.authentication.builders.Au
 import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.config.http.SessionCreationPolicy;
@@ -30,11 +31,11 @@ import com.rentia.security.*;
 
 @Configuration
 @EnableWebSecurity
-@EnableWebMvc
+//@EnableWebMvc
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 public class SecurityConfig {
 
-    public static final String[] PUBLIC_URLS = {"/api/auth/**", "/v3/api-docs", "/v2/api-docs",
+    public static final String[] PUBLIC_URLS = {"/api/home/**", "/api/auth/**", "/v3/api-docs", "/v2/api-docs",
             "/swagger-resources/**", "/swagger-ui/**", "/webjars/**", "/api/u1/user/register"
 
     };
@@ -58,7 +59,9 @@ public class SecurityConfig {
                 .authorizeRequests()
                 .antMatchers(PUBLIC_URLS)
                 .permitAll()
-                //.antMatchers(HttpMethod.GET).permitAll()
+                .antMatchers("/**").permitAll()
+                .antMatchers(HttpMethod.GET).permitAll()
+                .antMatchers("/resources/**", "/static/**", "/css/**", "/js/**", "/images/**","/vendor/**","/fonts/**").permitAll()
                 .anyRequest()
                 .authenticated()
                 .and().exceptionHandling()
@@ -76,6 +79,8 @@ public class SecurityConfig {
 
 
     }
+    
+    
 
 	/*
 	@Override
@@ -119,6 +124,10 @@ public class SecurityConfig {
         return new BCryptPasswordEncoder();
     }
 
+    
+    public void configure(WebSecurity web) {
+        web.ignoring().antMatchers("/css/**", "/js/**");
+    }
 	/*
 	@Bean
 	@Override
@@ -143,32 +152,35 @@ public class SecurityConfig {
     public AuthenticationManager authenticationManagerBean(AuthenticationConfiguration configuration) throws Exception {
         return configuration.getAuthenticationManager();
     }
+    
 
 
-    @Bean
-    public FilterRegistrationBean coresFilter() {
-        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
-
-        CorsConfiguration corsConfiguration = new CorsConfiguration();
-        corsConfiguration.setAllowCredentials(true);
-        corsConfiguration.addAllowedOriginPattern("*");
-        corsConfiguration.addAllowedHeader("Authorization");
-        corsConfiguration.addAllowedHeader("Content-Type");
-        corsConfiguration.addAllowedHeader("Accept");
-        corsConfiguration.addAllowedMethod("POST");
-        corsConfiguration.addAllowedMethod("GET");
-        corsConfiguration.addAllowedMethod("DELETE");
-        corsConfiguration.addAllowedMethod("PUT");
-        corsConfiguration.addAllowedMethod("OPTIONS");
-        corsConfiguration.setMaxAge(3600L);
-
-        source.registerCorsConfiguration("/**", corsConfiguration);
-
-        FilterRegistrationBean bean = new FilterRegistrationBean(new CorsFilter(source));
-
-        bean.setOrder(-110);
-
-        return bean;
-    }
+	/*
+	 * @Bean public FilterRegistrationBean coresFilter() {
+	 * UrlBasedCorsConfigurationSource source = new
+	 * UrlBasedCorsConfigurationSource();
+	 * 
+	 * CorsConfiguration corsConfiguration = new CorsConfiguration();
+	 * corsConfiguration.setAllowCredentials(true);
+	 * corsConfiguration.addAllowedOriginPattern("*");
+	 * corsConfiguration.addAllowedHeader("Authorization");
+	 * corsConfiguration.addAllowedHeader("Content-Type");
+	 * corsConfiguration.addAllowedHeader("Accept");
+	 * corsConfiguration.addAllowedMethod("POST");
+	 * corsConfiguration.addAllowedMethod("GET");
+	 * corsConfiguration.addAllowedMethod("DELETE");
+	 * corsConfiguration.addAllowedMethod("PUT");
+	 * corsConfiguration.addAllowedMethod("OPTIONS");
+	 * corsConfiguration.setMaxAge(3600L);
+	 * 
+	 * source.registerCorsConfiguration("/**", corsConfiguration);
+	 * 
+	 * FilterRegistrationBean bean = new FilterRegistrationBean(new
+	 * CorsFilter(source));
+	 * 
+	 * bean.setOrder(-110);
+	 * 
+	 * return bean; }
+	 */
 
 }

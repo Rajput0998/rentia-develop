@@ -34,5 +34,10 @@ public class UserDao {
 		return user;
 	}
 
+	public void deleteUser(User user) {
+		usersRepository.delete(user);
+		
+	}
+
 	
 }

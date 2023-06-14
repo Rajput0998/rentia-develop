@@ -46,17 +46,18 @@ public class AuthController {
 	@Autowired
 	private UserService userService;
 
-	@PostMapping("/login")
-	public ResponseEntity<JwtAuthResponse> createToken(@RequestBody JwtAuthRequest request) throws Exception {
-		this.authenticate(request.getUsername(), request.getPassword());
-		UserDetails userDetails = this.userDetailsService.loadUserByUsername(request.getUsername());
-		String token = this.jwtTokenHelper.generateToken(userDetails);
-
-		JwtAuthResponse response = new JwtAuthResponse();
-		response.setToken(token);
-		//response.setUser((User) userDetails);
-		return new ResponseEntity<JwtAuthResponse>(response, HttpStatus.OK);
-	}
+	/*
+	 * @PostMapping("/login") public ResponseEntity<JwtAuthResponse>
+	 * createToken(@RequestBody JwtAuthRequest request) throws Exception {
+	 * this.authenticate(request.getUsername(), request.getPassword()); UserDetails
+	 * userDetails =
+	 * this.userDetailsService.loadUserByUsername(request.getUsername()); String
+	 * token = this.jwtTokenHelper.generateToken(userDetails);
+	 * 
+	 * JwtAuthResponse response = new JwtAuthResponse(); response.setToken(token);
+	 * //response.setUser((User) userDetails); return new
+	 * ResponseEntity<JwtAuthResponse>(response, HttpStatus.OK); }
+	 */
 
 	private void authenticate(String username, String password) throws Exception {
 

@@ -24,12 +24,12 @@ public class FileService {
 		// File name
 		String name = file.getOriginalFilename();
 		// abc.png
-		System.out.println("FileName :- "+name);
+		System.out.println("FileName :- "+name.substring(name.lastIndexOf(".")));
 
 		// random name generate file
 		String randomID = UUID.randomUUID().toString();
 		String fileName1 = randomID.concat(name.substring(name.lastIndexOf(".")));
-
+		System.out.println("fileName1 :- "+fileName1);
 		// Full path
 		String filePath = path + File.separator + fileName1;
 
@@ -51,16 +51,15 @@ public class FileService {
 	public InputStream getResource(String path, String fileName) throws FileNotFoundException {
 		String fullPath = path + File.separator + fileName;
 		InputStream is = new FileInputStream(fullPath);
-		// db logic to return inpustream
 		return is;
 	}
 
 
 
-	public void deleteImage(String fileName) throws IOException {
+	public void deleteImage(String fileName, String path) throws IOException {
 		
-		File deleteFile = new ClassPathResource("static/img").getFile();
-		File file1 = new File(deleteFile, fileName);
+		String fullPath = path + File.separator + fileName;
+		File file1 = new File(fullPath);
 		file1.delete();	
 	}
 
