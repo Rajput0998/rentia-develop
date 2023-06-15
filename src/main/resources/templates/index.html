@@ -16,24 +16,37 @@
                     <h1>Looking for <span>Coworking Space?</span></h1>
                     <p>Premium office spaces at central locations with all-inclusive services.</p>
 
-                    <div class="select_city">
-                      <form>
-                        <label class="LeadForm__label"><span> Where </span></label>
-                        <select>
-                          <option>Select City</option>
-                          <option value="Delhi">Delhi</option>
-                          <option value="Mumbai">Mumbai</option>
-                          <option value="Hyderabad">Hyderabad</option>
-                          <option value="Bangalore">Bangalore</option>
-                          <option value="Noida">Noida</option>
-                          <option value="Gurgaon">Gurgaon</option>
-                          <option value="Chennai">Chennai</option>
-                          <option value="Pune">Pune</option>
-                          <option value="Ahmedabad">Ahmedabad</option>
-                          <option value="Indore">Indore</option></select>
-                        <button type="submit" class="btn btn-primary mt-3">Submit</button>
-                     </form>
-                    </div>
+                   <div class="select_city">
+    <form>
+       <select id="citySelect" style="display: none;"><option value="Rampur">Rampur</option><option value="Noida">Noida</option><option value="Noida">Noida</option><option value="Noida">Noida</option><option value="Gurgaon">Gurgaon</option><option value="Gurgaon">Gurgaon</option><option value="Gurgaon">Gurgaon</option><option value="Mayur Vihar">Mayur Vihar</option><option value="Rajpath">Rajpath</option><option value="New delhi">New delhi</option></select>
+    </form>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        fetch('http://localhost:8083/api/common/address/getAddress/India')
+            .then(response => response.json())
+            .then(data => {
+                const citySelect = document.getElementById('citySelect');
+                citySelect.innerHTML = ''; // Clear existing options
+
+                data.forEach(item => {
+                    const option = document.createElement('option');
+                    option.value = item.city;
+                    option.text = item.city;
+                    citySelect.add(option);
+                });
+
+                console.log(citySelect);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+    });
+</script>
+
+
+
 
                 </div>
             </div>

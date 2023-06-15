@@ -1,5 +1,8 @@
 package com.rentia.controller;
 
+import java.util.Arrays;
+import java.util.List;
+
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
@@ -17,18 +20,26 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.rentia.models.Address;
+import com.rentia.services.AddressService;
+
+
+
 
 @Controller
 public class HomeController {
 
 	@Autowired
 	private BCryptPasswordEncoder passwordEncoder;
+	@Autowired
+    private AddressService addressService;
 
 
 	@RequestMapping("/")
 	public String home(Model model) {
-		model.addAttribute("title", "Home - Rentia");
-		return "home";
+		List<Address> cities = addressService.fetchAddressDetails(null, null); 
+        model.addAttribute("cities", cities);
+        return "index";
 	}
 
 	/*
