@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -22,9 +23,7 @@ import com.rentia.services.PropertyService;
 import com.rentia.services.RatingService;
 import com.rentia.services.UserService;
 
-@CrossOrigin
-@RestController
-@RequestMapping("/api/a1/property")
+@Controller
 public class PropertyController {
 	
 	@Autowired
@@ -33,7 +32,7 @@ public class PropertyController {
 	@Autowired
 	private RatingService ratingService;
 	
-	@PostMapping("/add")
+	@PostMapping("/api/a1/property/add")
 	public ResponseEntity<Property> addProperty(@RequestBody String body ) throws Exception {
 		
 		try{
@@ -47,16 +46,22 @@ public class PropertyController {
 		} 
 	}
 	
-	@GetMapping("/getProperty/{propertyName}")
-	public ResponseEntity<Property> getProperty(@PathVariable("propertyName") String propertyName) {
+	@RequestMapping("/api/a1/property/getProperty/{propertyName}")
+	public String getProperty(@PathVariable("propertyName") String propertyName) {
 		Property l_property = propertyService.getPropertybyPropertyName(propertyName);
-        if (l_property == null) {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
-        }
-        return new ResponseEntity<Property>(l_property, HttpStatus.OK);
+        return "space-detail";
     }
 	
-	@PutMapping("/update/{pid}")
+	/*
+	 * @GetMapping("/getProperty/{propertyName}") public ResponseEntity<Property>
+	 * getProperty(@PathVariable("propertyName") String propertyName) { Property
+	 * l_property = propertyService.getPropertybyPropertyName(propertyName); if
+	 * (l_property == null) { return
+	 * ResponseEntity.status(HttpStatus.NOT_FOUND).build(); } return new
+	 * ResponseEntity<Property>(l_property, HttpStatus.OK); }
+	 */
+	
+	@PutMapping("/api/a1/property/update/{pid}")
 	public ResponseEntity<Property> updateProperty(@RequestBody String body, @PathVariable("pid") Long pid ) throws Exception {
 		
 		try{
@@ -69,6 +74,15 @@ public class PropertyController {
 			//return new ResponseEntity<Property>(new Property(), HttpStatus.NOT_ACCEPTABLE);
 		} 
 	}
+	
+	@GetMapping("/api/a1/property/city/{addressID}")
+	public ResponseEntity<List<Property>> getProperty(@PathVariable("addressID") Long addressID) {
+		List<Property> l_property = propertyService.getPropertybyCity(addressID);
+        if (l_property == null) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+        }
+        return new ResponseEntity<List<Property>>(l_property, HttpStatus.OK);
+    }
 	
 
 }

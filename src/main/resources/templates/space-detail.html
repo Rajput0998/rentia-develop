@@ -15,7 +15,7 @@
                         <ul>
                            <li><a href="/">Home</a></li>
                            <li><a href="/">Coworking</a></li>
-                           <li class="breadcrumb_active" aria-current="page">Roseate House</li>
+						   <li th:class="${page == 'Roseate House' ? 'breadcrumb_active' : ''}" aria-current="page">Roseate House</li>
                         </ul>
                      </div>
                   </div>
@@ -33,28 +33,28 @@
                            <div class="row align-items-center">
                               <div class="office_detail_slider owl-carousel owl-theme">
                                  <div class="item">
-                                    <img src="assets/images/blogs-1.jpg" alt="Images">
+                                    <img src="" th:src="@{/assets/images/blogs-1.jpg}"/>
                                  </div>
                                  <div class="item">
-                                    <img src="assets/images/blogs-2.jpg" alt="Images">
+                                    <img src="" th:src="@{/assets/images/blogs-2.jpg}"/>
                                  </div>
                                  <div class="item">
-                                    <img src="assets/images/virtual-office.jpg" alt="Images">
+                                    <img src="" th:src="@{/assets/images/virtual-office.jpg}"/>
                                  </div>
                                  <div class="item">
-                                    <img src="assets/images/fixed-desk-cabins.jpg" alt="Images">
+                                    <img src="" th:src="@{/assets/images/fixed-desk-cabins.jpg}"/>
                                  </div>
                                  <div class="item">
-                                    <img src="assets/images/blogs-1.jpg" alt="Images">
+                                    <img src="" th:src="@{/assets/images/blogs-1.jpg}"/>
                                  </div>
                                  <div class="item">
-                                    <img src="assets/images/blogs-2.jpg" alt="Images">
+                                    <img src="" th:src="@{/assets/images/blogs-2.jpg}"/>
                                  </div>
                                  <div class="item">
-                                    <img src="assets/images/virtual-office.jpg" alt="Images">
+                                    <img src="" th:src="@{/assets/images/virtual-office.jpg}"/>
                                  </div>
                                  <div class="item">
-                                    <img src="assets/images/fixed-desk-cabins.jpg" alt="Images">
+                                    <img src="" th:src="@{/assets/images/fixed-desk-cabins.jpg}"/>
                                  </div>
                               </div>
                            </div>

@@ -1,6 +1,8 @@
 package com.rentia.services;
 
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -107,6 +109,11 @@ public class PropertyService {
 		Property property = propertyDao.getPropertyById(pid);
 		return property != null ? property : null;
 		
+	}
+
+	public List<Property> getPropertybyCity(Long addressID) {
+		List<Property> properties = propertyDao.getPropertybyCity(addressID);
+		return properties != null ? properties : null;
 	}
 	
 	

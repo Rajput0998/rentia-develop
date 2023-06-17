@@ -10,6 +10,11 @@ import com.rentia.models.User;
 
 public interface PropertyRepository extends JpaRepository<Property, Long> {
 	
-	Property findByPrpName(String prpName); 
+	Property findByPrpName(String prpName);
+	
+	
+	@Query("SELECT p FROM Property p " +
+	           "WHERE (:addressID IS NULL OR p.address.adrid = :addressID) ")
+	List<Property> findByAddressId(Long addressID); 
 
 }

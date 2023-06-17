@@ -18,32 +18,35 @@
 
                    <div class="select_city">
     <form>
-       <select id="citySelect" style="display: none;"><option value="Rampur">Rampur</option><option value="Noida">Noida</option><option value="Noida">Noida</option><option value="Noida">Noida</option><option value="Gurgaon">Gurgaon</option><option value="Gurgaon">Gurgaon</option><option value="Gurgaon">Gurgaon</option><option value="Mayur Vihar">Mayur Vihar</option><option value="Rajpath">Rajpath</option><option value="New delhi">New delhi</option></select>
+        <label class="LeadForm__label"><span>Where</span></label>
+        <select id="citySelect" onchange="filterRoomsByCity()">
+            <option>Select City</option>
+        </select>
     </form>
 </div>
 
 <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        fetch('http://localhost:8083/api/common/address/getAddress/India')
-            .then(response => response.json())
-            .then(data => {
-                const citySelect = document.getElementById('citySelect');
-                citySelect.innerHTML = ''; // Clear existing options
+  // Get the combobox element
+  const comboBox = document.getElementById("citySelect");
 
-                data.forEach(item => {
-                    const option = document.createElement('option');
-                    option.value = item.city;
-                    option.text = item.city;
-                    citySelect.add(option);
-                });
-
-                console.log(citySelect);
-            })
-            .catch(error => {
-                console.error('Error:', error);
-            });
+  // Make the API call
+  fetch("http://localhost:8083/api/common/address/getAddress/India")
+    .then(response => response.json())
+    .then(data => {
+      // Iterate over the data and create <option> elements
+      data.forEach(item => {
+        const option = document.createElement("option");
+        option.text = item.city; // Assuming each item has a "name" property
+        option.value = item.adrid; // Assuming each item has an "id" property
+        comboBox.appendChild(option);
+        console.log(option);
+      });
+    })
+    .catch(error => {
+      console.error("Error fetching data:", error);
     });
 </script>
+
 
 
 
@@ -64,121 +67,90 @@
                     <span class="sp-color">Whatever may be your need, we save a solution thatâ€™s right for you. Find yourself the most suitable coworking solution.</span>
                     
                 </div>
-                <div class="row pt-45">
+                <!DOCTYPE html>
+<html>
+<head>
+  <!-- Head content goes here -->
+</head>
+<body>
+  <!-- HTML content goes here -->
 
-                    <div class="col-lg-6">
-                        <div class="room-card-two">
-                            <div class="row align-items-center">
-                                <div class="col-lg-5 col-md-4 p-0">
-                                    <div class="room-card-img">
-                                        <a href="room-details.html">
-                                            <img src="assets/images/flexi-pass.jpg" alt="Images">
-                                        </a>
-                                    </div>
-                                </div>
+ <!--Start  Work Space Body -->
+ <div id="property123" class="row pt-45">
+  </div>
 
-                                <div class="col-lg-7 col-md-8 p-0">
-                                    <div class="room-card-content">
-                                         <h3>
-                                             <a href="room-details.html">Flexi Pass</a>
-                                        </h3>
-                                        <p>A flexible on-demand solution. No monthly rent, pay-per-use.</p>
-                                        <ul>
-                                            <li><i class='bx bx-user'></i> For individuals</li>
-                                            <li><i class='bx bx-credit-card'></i> Pay per use</li>
-                                        </ul>
-                                        <a href="#" class="book-more-btn">Explore flexi desks</a>
-                                    </div>
-                                </div>
-                            </div>
+  <script>
+    // Function to filter rooms based on the selected city
+    function filterRoomsByCity() {
+      const citySelect = document.getElementById("citySelect");
+      const selectedCity = citySelect.value;
+      console.log(citySelect.value);
+      console.log(citySelect);
+
+      // Fetch room data from the API based on the selected city
+      fetch(`http://localhost:8083/api/a1/property/city/${selectedCity}`)
+        .then(response => response.json())
+        .then(data => {
+          // Get the property element to append the dynamic content
+          const propertyElement = document.getElementById("property123");
+
+          // Check if the property element exists
+          if (propertyElement) {
+            // Clear the existing content of the property element
+            propertyElement.innerHTML = "";
+
+            // Loop through the filtered rooms data and generate the HTML dynamically
+            ////<img src="${room.imageUrl}" alt="Images">
+            // <!--<p>${room.description}</p>-->
+            data.forEach(property => {
+              const html = `
+                <div class="col-lg-6">
+                  <div class="room-card-two">
+                    <div class="row align-items-center">
+                      <div class="col-lg-5 col-md-4 p-0">
+                        <div class="room-card-img">
+                          <a href="/api/a1/property/getProperty/${property.prpName}">
+                            <img src="assets/images/fixed-desk-cabins.jpg" alt="Images">
+                          </a>
                         </div>
-                    </div>
-
-                    <div class="col-lg-6">
-                        <div class="room-card-two">
-                            <div class="row align-items-center">
-                                <div class="col-lg-5 col-md-4 p-0">
-                                    <div class="room-card-img">
-                                        <a href="room-details.html">
-                                            <img src="assets/images/fixed-desk-cabins.jpg" alt="Images">
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-7 col-md-8 p-0">
-                                    <div class="room-card-content">
-                                         <h3>
-                                             <a href="room-details.html">Fixed Desk & Cabins</a>
-                                        </h3>
-                                        <p>Choose a permanent desk or private offices or take up an entire floor.</p>
-                                        <ul>
-                                            <li><i class='bx bx-user'></i> For teams and individuals</li>
-                                            <li><i class='bx bx-credit-card'></i> Pay monthly</li>
-                                        </ul>
-                                        <a href="#" class="book-more-btn">Explore spaces</a>
-                                    </div>
-                                </div>
-                            </div>
+                      </div>
+                      <div class="col-lg-7 col-md-8 p-0">
+                        <div class="room-card-content">
+                          <h3>
+                            <a href="/api/a1/property/getProperty/${property.prpName}">${property.prpName}</a>
+                          </h3>
+                          <p>Choose a permanent desk or private offices or take up an entire floor.</p>
+                          <ul>
+                            <li><i class='material-icons'></i> Available Rooms : ${property.avlRoom}</li>
+							<li><i class='fa-bed'></i> Total Rooms : ${property.totalRoom}</li>
+                            <li><i class='fas fa-building'></i> Total Floors : ${property.totalFloors}</li>
+							<li><i class='bx bx-credit-card'></i> Price : ${property.price}</li>
+							<li><i class='fas fa-check-circle'></i> Available : ${property.availabilty}</li>
+                          </ul>
+                          <a href="#" class="book-more-btn">Explore ${property.prpName}</a>
                         </div>
+                      </div>
                     </div>
-
-                    <div class="col-lg-6">
-                        <div class="room-card-two">
-                            <div class="row align-items-center">
-                                <div class="col-lg-5 col-md-4 p-0">
-                                    <div class="room-card-img">
-                                        <a href="room-details.html">
-                                            <img src="assets/images/team-flexi-pass.jpg" alt="Images">
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-7 col-md-8 p-0">
-                                    <div class="room-card-content">
-                                         <h3>
-                                             <a href="room-details.html">Team Flexi Pass</a>
-                                        </h3>
-                                        <p>Perfect fit for remote teams. Give your team access to work from wherever.</p>
-                                        <ul>
-                                            <li><i class='bx bx-user'></i> For remote teams</li>
-                                            <li><i class='bx bx-credit-card'></i> Pay per use</li>
-                                        </ul>
-                                        <a href="#" class="book-more-btn">Explore team flexi pass</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6">
-                        <div class="room-card-two">
-                            <div class="row align-items-center">
-                                <div class="col-lg-5 col-md-4 p-0">
-                                    <div class="room-card-img">
-                                        <a href="room-details.html">
-                                            <img src="assets/images/virtual-office.jpg" alt="Images">
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-7 col-md-8 p-0">
-                                    <div class="room-card-content">
-                                         <h3>
-                                             <a href="room-details.html">Virtual Office</a>
-                                        </h3>
-                                        <p>Book a virtual office for new or expanding businesses. Manage your mails and reception from anywhere.</p>
-                                        <ul>
-                                            <li><i class='bx bx-user'></i> For businesses</li>
-                                            <li><i class='bx bx-credit-card'></i> Pay half-yearly/ annually</li>
-                                        </ul>
-                                        <a href="#" class="book-more-btn">Explore virtual office</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
+                  </div>
                 </div>
+              `;
+
+              // Append the generated HTML to the property element
+              propertyElement.innerHTML += html;
+            });
+          } else {
+            console.error("Property element not found.");
+          }
+        })
+        .catch(error => {
+          console.error("Error fetching room data:", error);
+        });
+    }
+  </script>
+ <!-- End Work Space Body -->
+</body>
+</html>
+
             </div>
         </div>
         <!-- Workspace solutions End -->

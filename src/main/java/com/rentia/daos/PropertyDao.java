@@ -1,5 +1,7 @@
 package com.rentia.daos;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -33,6 +35,11 @@ public class PropertyDao {
 	public Property getPropertyById(Long pid) {
 		// TODO Auto-generated method stub
 		return propertyRepository.findById(pid).get();
+	}
+
+	public List<Property> getPropertybyCity(Long addressID) {
+		List<Property> properties = propertyRepository.findByAddressId(addressID);
+		return properties != null ? properties : null;
 	}
 
 
