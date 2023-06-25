@@ -38,7 +38,8 @@ public class PropertyDao {
 	}
 
 	public List<Property> getPropertybyCity(Long addressID) {
-		List<Property> properties = propertyRepository.findByAddressId(addressID);
+		List<Property> properties = propertyRepository.findPropertyByAddressId(addressID);
+		System.out.println(properties);
 		return properties != null ? properties : null;
 	}
 

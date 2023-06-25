@@ -1,0 +1,358 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="base::layout(~{::section})">
+
+<head>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css'>
+
+</head>
+
+<body id="page">
+
+<section>        
+
+<div class="main-wrapper">
+
+        <!-- Office filter Area -->
+        <div class="registration_book">
+
+             <div class="container">
+                <div class="row align-items-center">
+
+                    <div class="col-lg-12 for_login_order for_space_otp">
+                        <div class="process_form_design">
+                            <h3>List Your Property With </h3>
+
+                            <!-- partial:index.partial.html -->
+                            <div class="container-fluid">
+                                <div class="row justify-content-center">
+                                    
+                                            <form id="msform">
+
+                                            <div class="col-7 pl-0">
+                                              <!-- progressbar -->
+                                                <ul id="progressbar">
+                                                    <li class="active" id="account"><strong>Step 1: Basic Detail</strong></li>
+                                                    <li id="personal"><strong>Step 2: Location</strong></li>
+                                                    <li id="payment"><strong>Step 3: Upload Images</strong></li>
+                                                </ul>
+                                                <div class="progress">
+                                                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div> <br> <!-- fieldsets -->
+                                                
+                                            </div>
+
+
+                                                <fieldset>
+                                                
+                                                    <div class="form-card">
+                                                        <div class="row">
+                                                        
+                                                            <div class="col-7">
+                                                                <div class="row w-100">
+                                                                  <div class="col-6">
+                                                                    <div class="form_designss">
+                                                                        <label class="fieldlabels">Name Of the Space <b>*</b></label>
+                                                                        <input type="email" name="email" placeholder="Email Id" />
+                                                                    </div>
+                                                                   </div>
+
+                                                                   <div class="col-6">
+                                                                    <div class="form_designss">
+                                                                        <label class="fieldlabels">Name Of the Space <b>*</b></label>
+                                                                        <input type="email" name="email" placeholder="Email Id" />
+                                                                    </div>
+                                                                   </div>
+
+                                                                   <div class="col-12">
+                                                                    <div class="form_designss">
+                                                                        <label class="fieldlabels">Property Description</label>
+                                                                        <textarea _ngcontent-hif-c60="" aria-label="About Space" placeholder="The co-living is students &amp; working professionals. This premise is situated in the heart of the city ,close to Metro Station. We offers Private Rooms &amp; Twin Sharing and equipped communal kitchen." formcontrolname="description" class="form-control ng-touched ng-dirty ng-invalid"></textarea>
+                                                                    </div>
+                                                                   </div>
+                                                                   <div class="col-12 check_small">
+                                                                    <div class="form_designss">
+                                                                        <label class="label_heading">Type Of Beds <b>*</b></label>
+                                                                        <div _ngcontent-hif-c60="" class="row align-item-center">
+                                                                            <div _ngcontent-hif-c60="" class="col-md-4">
+                                                                                <div _ngcontent-hif-c60="" class="form-check form-check-inline ng-star-inserted">
+                                                                                    <input _ngcontent-hif-c60="" type="checkbox" formarrayname="bed_Type" class="form-check-input ng-untouched ng-pristine ng-invalid ng-touched ng-dirty ng-valid" value="625698d3a91948671a4c590b" id="625698d3a91948671a4c590b">
+                                                                                    <label _ngcontent-hif-c60="" class="form-check-label" for="625698d3a91948671a4c590b"> Private room </label>
+                                                                                </div>
+                                                                                <div _ngcontent-hif-c60="" class="form-check form-check-inline ng-star-inserted">
+                                                                                    <input _ngcontent-hif-c60="" type="checkbox" formarrayname="bed_Type" class="form-check-input ng-untouched ng-pristine ng-invalid ng-touched ng-dirty ng-valid" value="625698e8a91948671a4c590c" id="625698e8a91948671a4c590c">
+                                                                                    <label _ngcontent-hif-c60="" class="form-check-label" for="625698e8a91948671a4c590c"> Double Sharing </label></div><div _ngcontent-hif-c60="" class="form-check form-check-inline ng-star-inserted"><input _ngcontent-hif-c60="" type="checkbox" formarrayname="bed_Type" class="form-check-input ng-untouched ng-pristine ng-invalid ng-touched ng-dirty ng-valid" value="625698f4a91948671a4c590d" id="625698f4a91948671a4c590d"><label _ngcontent-hif-c60="" class="form-check-label" for="625698f4a91948671a4c590d"> Triple Sharing </label></div>
+                                                                                    <div _ngcontent-hif-c60="" class="form-check form-check-inline ng-star-inserted"><input _ngcontent-hif-c60="" type="checkbox" formarrayname="bed_Type" class="form-check-input ng-untouched ng-pristine ng-invalid ng-touched ng-dirty ng-valid" value="6257ee3c6f4f5e6a7a1b04de" id="6257ee3c6f4f5e6a7a1b04de"><label _ngcontent-hif-c60="" class="form-check-label" for="6257ee3c6f4f5e6a7a1b04de"> Deluxe Room </label></div>
+                                                                                    <div _ngcontent-hif-c60="" class="form-check form-check-inline ng-star-inserted"><input _ngcontent-hif-c60="" type="checkbox" formarrayname="bed_Type" class="form-check-input ng-untouched ng-pristine ng-invalid ng-touched ng-dirty ng-valid" value="6267e6e3ad0b2760e3a9cf3d" id="6267e6e3ad0b2760e3a9cf3d"><label _ngcontent-hif-c60="" class="form-check-label" for="6267e6e3ad0b2760e3a9cf3d"> 4 Bed Sharing </label></div>
+                                                                                    <div _ngcontent-hif-c60="" class="form-check form-check-inline ng-star-inserted"><input _ngcontent-hif-c60="" type="checkbox" formarrayname="bed_Type" class="form-check-input ng-untouched ng-pristine ng-invalid ng-touched ng-dirty ng-valid" value="628766ace0847773482d6ac0" id="628766ace0847773482d6ac0"><label _ngcontent-hif-c60="" class="form-check-label" for="628766ace0847773482d6ac0"> 1 BHK </label></div>
+                                                                                    <div _ngcontent-hif-c60="" class="form-check form-check-inline ng-star-inserted"><input _ngcontent-hif-c60="" type="checkbox" formarrayname="bed_Type" class="form-check-input ng-untouched ng-pristine ng-invalid ng-touched ng-dirty ng-valid" value="628766b5e0847773482d6ac1" id="628766b5e0847773482d6ac1"><label _ngcontent-hif-c60="" class="form-check-label" for="628766b5e0847773482d6ac1"> 2BHK </label></div>
+                                                                                    <div _ngcontent-hif-c60="" class="form-check form-check-inline ng-star-inserted"><input _ngcontent-hif-c60="" type="checkbox" formarrayname="bed_Type" class="form-check-input ng-untouched ng-pristine ng-invalid ng-touched ng-dirty ng-valid" value="628766bde0847773482d6ac2" id="628766bde0847773482d6ac2"><label _ngcontent-hif-c60="" class="form-check-label" for="628766bde0847773482d6ac2"> 3BHK </label></div>
+                                                                                    <div _ngcontent-hif-c60="" class="form-check form-check-inline ng-star-inserted"><input _ngcontent-hif-c60="" type="checkbox" formarrayname="bed_Type" class="form-check-input ng-untouched ng-pristine ng-invalid ng-touched ng-dirty ng-valid" value="62876febe0847773482d6b16" id="62876febe0847773482d6b16"><label _ngcontent-hif-c60="" class="form-check-label" for="62876febe0847773482d6b16"> 1 RK </label></div><!----></div><!----></div>
+                                                                    </div>
+                                                                   </div>
+
+
+                                                                   <div class="col-12 amenities_small">
+                                                                   <label class="label_heading">Amenities (Select Multiple)<b>*</b></label>
+                                                                   <div _ngcontent-hif-c60="" class="radio-group"><div _ngcontent-hif-c60="" class="form-check form-check-inline ng-star-inserted"><input _ngcontent-hif-c60="" type="checkbox" formarrayname="amenitiesData" class="form-check-input ng-untouched ng-pristine ng-invalid ng-valid" value="5e32a8ebe004732fee473843" id="5e32a8ebe004732fee473843"><label _ngcontent-hif-c60="" class="form-check-label" for="5e32a8ebe004732fee473843"> Car Parking </label></div><div _ngcontent-hif-c60="" class="form-check form-check-inline ng-star-inserted"><input _ngcontent-hif-c60="" type="checkbox" formarrayname="amenitiesData" class="form-check-input ng-untouched ng-pristine ng-invalid ng-valid" value="5e32a8ebe004732fee473844" id="5e32a8ebe004732fee473844"><label _ngcontent-hif-c60="" class="form-check-label" for="5e32a8ebe004732fee473844"> Bike Parking </label></div><div _ngcontent-hif-c60="" class="form-check form-check-inline ng-star-inserted"><input _ngcontent-hif-c60="" type="checkbox" formarrayname="amenitiesData" class="form-check-input ng-untouched ng-pristine ng-invalid ng-valid" value="5f3911855f7bdf45cbfbe429" id="5f3911855f7bdf45cbfbe429"><label _ngcontent-hif-c60="" class="form-check-label" for="5f3911855f7bdf45cbfbe429"> Power Backup </label></div><div _ngcontent-hif-c60="" class="form-check form-check-inline ng-star-inserted"><input _ngcontent-hif-c60="" type="checkbox" formarrayname="amenitiesData" class="form-check-input ng-untouched ng-pristine ng-invalid ng-valid" value="5f3911855f7bdf45cbfbe42a" id="5f3911855f7bdf45cbfbe42a"><label _ngcontent-hif-c60="" class="form-check-label" for="5f3911855f7bdf45cbfbe42a"> Air-Conditioning </label></div><div _ngcontent-hif-c60="" class="form-check form-check-inline ng-star-inserted"><input _ngcontent-hif-c60="" type="checkbox" formarrayname="amenitiesData" class="form-check-input ng-untouched ng-pristine ng-invalid ng-valid" value="5f3911855f7bdf45cbfbe42b" id="5f3911855f7bdf45cbfbe42b"><label _ngcontent-hif-c60="" class="form-check-label" for="5f3911855f7bdf45cbfbe42b"> Lift </label></div><div _ngcontent-hif-c60="" class="form-check form-check-inline ng-star-inserted"><input _ngcontent-hif-c60="" type="checkbox" formarrayname="amenitiesData" class="form-check-input ng-untouched ng-pristine ng-invalid ng-valid" value="5f6a3ae14798243f512e3180" id="5f6a3ae14798243f512e3180"><label _ngcontent-hif-c60="" class="form-check-label" for="5f6a3ae14798243f512e3180"> TV </label></div><div _ngcontent-hif-c60="" class="form-check form-check-inline ng-star-inserted"><input _ngcontent-hif-c60="" type="checkbox" formarrayname="amenitiesData" class="form-check-input ng-untouched ng-pristine ng-invalid ng-valid" value="5f7175938c4e6961990e544d" id="5f7175938c4e6961990e544d"><label _ngcontent-hif-c60="" class="form-check-label" for="5f7175938c4e6961990e544d"> Work Desk </label></div><div _ngcontent-hif-c60="" class="form-check form-check-inline ng-star-inserted"><input _ngcontent-hif-c60="" type="checkbox" formarrayname="amenitiesData" class="form-check-input ng-untouched ng-pristine ng-invalid ng-valid" value="5f7175c88c4e6961990e544f" id="5f7175c88c4e6961990e544f"><label _ngcontent-hif-c60="" class="form-check-label" for="5f7175c88c4e6961990e544f"> Housekeeping </label></div><div _ngcontent-hif-c60="" class="form-check form-check-inline ng-star-inserted"><input _ngcontent-hif-c60="" type="checkbox" formarrayname="amenitiesData" class="form-check-input ng-untouched ng-pristine ng-invalid ng-valid" value="5f7175da8c4e6961990e5450" id="5f7175da8c4e6961990e5450"><label _ngcontent-hif-c60="" class="form-check-label" for="5f7175da8c4e6961990e5450"> 24x7 Security </label></div><div _ngcontent-hif-c60="" class="form-check form-check-inline ng-star-inserted"><input _ngcontent-hif-c60="" type="checkbox" formarrayname="amenitiesData" class="form-check-input ng-untouched ng-pristine ng-invalid ng-valid" value="5f7175eb8c4e6961990e5451" id="5f7175eb8c4e6961990e5451"><label _ngcontent-hif-c60="" class="form-check-label" for="5f7175eb8c4e6961990e5451"> Wi-Fi </label></div><div _ngcontent-hif-c60="" class="form-check form-check-inline ng-star-inserted"><input _ngcontent-hif-c60="" type="checkbox" formarrayname="amenitiesData" class="form-check-input ng-untouched ng-pristine ng-invalid ng-valid" value="5f7175f88c4e6961990e5452" id="5f7175f88c4e6961990e5452"><label _ngcontent-hif-c60="" class="form-check-label" for="5f7175f88c4e6961990e5452"> CCTV </label></div><div _ngcontent-hif-c60="" class="form-check form-check-inline ng-star-inserted"><input _ngcontent-hif-c60="" type="checkbox" formarrayname="amenitiesData" class="form-check-input ng-untouched ng-pristine ng-invalid ng-valid" value="5f71760c8c4e6961990e5453" id="5f71760c8c4e6961990e5453"><label _ngcontent-hif-c60="" class="form-check-label" for="5f71760c8c4e6961990e5453"> Netflix/Amazon </label></div><div _ngcontent-hif-c60="" class="form-check form-check-inline ng-star-inserted"><input _ngcontent-hif-c60="" type="checkbox" formarrayname="amenitiesData" class="form-check-input ng-untouched ng-pristine ng-invalid ng-valid" value="5f7176298c4e6961990e5454" id="5f7176298c4e6961990e5454"><label _ngcontent-hif-c60="" class="form-check-label" for="5f7176298c4e6961990e5454"> Gym </label></div><div _ngcontent-hif-c60="" class="form-check form-check-inline ng-star-inserted"><input _ngcontent-hif-c60="" type="checkbox" formarrayname="amenitiesData" class="form-check-input ng-untouched ng-pristine ng-invalid ng-valid" value="5f717b1a8c4e6961990e5458" id="5f717b1a8c4e6961990e5458"><label _ngcontent-hif-c60="" class="form-check-label" for="5f717b1a8c4e6961990e5458"> App </label></div><div _ngcontent-hif-c60="" class="form-check form-check-inline ng-star-inserted"><input _ngcontent-hif-c60="" type="checkbox" formarrayname="amenitiesData" class="form-check-input ng-untouched ng-pristine ng-invalid ng-valid" value="5f717b2c8c4e6961990e5459" id="5f717b2c8c4e6961990e5459"><label _ngcontent-hif-c60="" class="form-check-label" for="5f717b2c8c4e6961990e5459"> Refrigerator </label></div><div _ngcontent-hif-c60="" class="form-check form-check-inline ng-star-inserted"><input _ngcontent-hif-c60="" type="checkbox" formarrayname="amenitiesData" class="form-check-input ng-untouched ng-pristine ng-invalid ng-valid" value="5f717b538c4e6961990e545a" id="5f717b538c4e6961990e545a"><label _ngcontent-hif-c60="" class="form-check-label" for="5f717b538c4e6961990e545a"> Washing Machine </label></div><div _ngcontent-hif-c60="" class="form-check form-check-inline ng-star-inserted"><input _ngcontent-hif-c60="" type="checkbox" formarrayname="amenitiesData" class="form-check-input ng-untouched ng-pristine ng-invalid ng-valid" value="5f717bd38c4e6961990e5460" id="5f717bd38c4e6961990e5460"><label _ngcontent-hif-c60="" class="form-check-label" for="5f717bd38c4e6961990e5460"> Kitchen </label></div><div _ngcontent-hif-c60="" class="form-check form-check-inline ng-star-inserted"><input _ngcontent-hif-c60="" type="checkbox" formarrayname="amenitiesData" class="form-check-input ng-untouched ng-pristine ng-invalid ng-valid" value="5f717bf78c4e6961990e5462" id="5f717bf78c4e6961990e5462"><label _ngcontent-hif-c60="" class="form-check-label" for="5f717bf78c4e6961990e5462"> Geyser </label></div><div _ngcontent-hif-c60="" class="form-check form-check-inline ng-star-inserted"><input _ngcontent-hif-c60="" type="checkbox" formarrayname="amenitiesData" class="form-check-input ng-untouched ng-pristine ng-invalid ng-valid" value="5f717c058c4e6961990e5463" id="5f717c058c4e6961990e5463"><label _ngcontent-hif-c60="" class="form-check-label" for="5f717c058c4e6961990e5463"> Microwave </label></div><div _ngcontent-hif-c60="" class="form-check form-check-inline ng-star-inserted"><input _ngcontent-hif-c60="" type="checkbox" formarrayname="amenitiesData" class="form-check-input ng-untouched ng-pristine ng-invalid ng-valid" value="5f717c578c4e6961990e5464" id="5f717c578c4e6961990e5464"><label _ngcontent-hif-c60="" class="form-check-label" for="5f717c578c4e6961990e5464"> Induction </label></div><div _ngcontent-hif-c60="" class="form-check form-check-inline ng-star-inserted"><input _ngcontent-hif-c60="" type="checkbox" formarrayname="amenitiesData" class="form-check-input ng-untouched ng-pristine ng-invalid ng-valid" value="5f717c648c4e6961990e5465" id="5f717c648c4e6961990e5465"><label _ngcontent-hif-c60="" class="form-check-label" for="5f717c648c4e6961990e5465"> Cupboard </label></div><div _ngcontent-hif-c60="" class="form-check form-check-inline ng-star-inserted"><input _ngcontent-hif-c60="" type="checkbox" formarrayname="amenitiesData" class="form-check-input ng-untouched ng-pristine ng-invalid ng-valid" value="5f717c6e8c4e6961990e5466" id="5f717c6e8c4e6961990e5466"><label _ngcontent-hif-c60="" class="form-check-label" for="5f717c6e8c4e6961990e5466"> Side Table </label></div><div _ngcontent-hif-c60="" class="form-check form-check-inline ng-star-inserted"><input _ngcontent-hif-c60="" type="checkbox" formarrayname="amenitiesData" class="form-check-input ng-untouched ng-pristine ng-invalid ng-valid" value="5f717d148c4e6961990e546b" id="5f717d148c4e6961990e546b"><label _ngcontent-hif-c60="" class="form-check-label" for="5f717d148c4e6961990e546b"> Lounge </label></div><div _ngcontent-hif-c60="" class="form-check form-check-inline ng-star-inserted"><input _ngcontent-hif-c60="" type="checkbox" formarrayname="amenitiesData" class="form-check-input ng-untouched ng-pristine ng-invalid ng-valid" value="5f717d348c4e6961990e546c" id="5f717d348c4e6961990e546c"><label _ngcontent-hif-c60="" class="form-check-label" for="5f717d348c4e6961990e546c"> Veg Only </label></div><div _ngcontent-hif-c60="" class="form-check form-check-inline ng-star-inserted"><input _ngcontent-hif-c60="" type="checkbox" formarrayname="amenitiesData" class="form-check-input ng-untouched ng-pristine ng-invalid ng-valid" value="5f717d498c4e6961990e546d" id="5f717d498c4e6961990e546d"><label _ngcontent-hif-c60="" class="form-check-label" for="5f717d498c4e6961990e546d"> Veg &amp; Non-Veg </label></div><div _ngcontent-hif-c60="" class="form-check form-check-inline ng-star-inserted"><input _ngcontent-hif-c60="" type="checkbox" formarrayname="amenitiesData" class="form-check-input ng-untouched ng-pristine ng-invalid ng-valid" value="5f717d5e8c4e6961990e546e" id="5f717d5e8c4e6961990e546e"><label _ngcontent-hif-c60="" class="form-check-label" for="5f717d5e8c4e6961990e546e"> Pet Friendly </label></div><div _ngcontent-hif-c60="" class="form-check form-check-inline ng-star-inserted"><input _ngcontent-hif-c60="" type="checkbox" formarrayname="amenitiesData" class="form-check-input ng-untouched ng-pristine ng-invalid ng-valid" value="5fa54cc7c2502350f2501300" id="5fa54cc7c2502350f2501300"><label _ngcontent-hif-c60="" class="form-check-label" for="5fa54cc7c2502350f2501300"> Laundry </label></div><div _ngcontent-hif-c60="" class="form-check form-check-inline ng-star-inserted"><input _ngcontent-hif-c60="" type="checkbox" formarrayname="amenitiesData" class="form-check-input ng-untouched ng-pristine ng-invalid ng-valid" value="61a9efdb1491a66edf577b09" id="61a9efdb1491a66edf577b09"><label _ngcontent-hif-c60="" class="form-check-label" for="61a9efdb1491a66edf577b09"> Reception </label></div><!----><!----></div>
+                                                                   </div>
+
+                                                                 </div>
+                                                                 
+                                                            </div>
+                                                            <div class="col-5 image_with_bg_design">
+                                                                <img src="assets/images/personal-image.webp" alt="Images">
+                                                                <h4>Hi, Letâ€™s Get You Started With Property Listing</h4>
+                                                                <p>Let CoFynd help you rent your property at zero commission for suitable rental earnings and an easy rental process.</p>
+                                                            </div>
+
+                                                        </div> 
+                                                    </div> <input type="button" name="next" class="next action-button" value="Next" />
+                                                </fieldset>
+
+                                               
+                                                <fieldset>
+                                                
+                                                    <div class="form-card">
+                                                        <div class="row">
+                                                        
+                                                            <div class="col-7">
+                                                                <div class="row w-100">
+                                                                  <div class="col-12">
+                                                                    <div class="form_designss">
+                                                                        <label class="fieldlabels">City <b>*</b></label>
+                                                                        <select class="select_cities" id="inputState">
+                                                                            <option value="SelectState">Select State</option>
+                                                                            <option value="Andra Pradesh">Andra Pradesh</option>
+                                                                            <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                                                            <option value="Assam">Assam</option>
+                                                                            <option value="Bihar">Bihar</option>
+                                                                            <option value="Chhattisgarh">Chhattisgarh</option>
+                                                                            <option value="Goa">Goa</option>
+                                                                            <option value="Gujarat">Gujarat</option>
+                                                                            <option value="Haryana">Haryana</option>
+                                                                            <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                                                            <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                                                                            <option value="Jharkhand">Jharkhand</option>
+                                                                            <option value="Karnataka">Karnataka</option>
+                                                                            <option value="Kerala">Kerala</option>
+                                                                            <option value="Madya Pradesh">Madya Pradesh</option>
+                                                                            <option value="Maharashtra">Maharashtra</option>
+                                                                            <option value="Manipur">Manipur</option>
+                                                                            <option value="Meghalaya">Meghalaya</option>
+                                                                            <option value="Mizoram">Mizoram</option>
+                                                                            <option value="Nagaland">Nagaland</option>
+                                                                            <option value="Orissa">Orissa</option>
+                                                                            <option value="Punjab">Punjab</option>
+                                                                            <option value="Rajasthan">Rajasthan</option>
+                                                                            <option value="Sikkim">Sikkim</option>
+                                                                            <option value="Tamil Nadu">Tamil Nadu</option>
+                                                                            <option value="Telangana">Telangana</option>
+                                                                            <option value="Tripura">Tripura</option>
+                                                                            <option value="Uttaranchal">Uttaranchal</option>
+                                                                            <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                                                            <option value="West Bengal">West Bengal</option>
+                                                                            <option disabled style="background-color:#aaa; color:#fff">UNION Territories</option>
+                                                                            <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                                                                            <option value="Chandigarh">Chandigarh</option>
+                                                                            <option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+                                                                            <option value="Daman and Diu">Daman and Diu</option>
+                                                                            <option value="Delhi">Delhi</option>
+                                                                            <option value="Lakshadeep">Lakshadeep</option>
+                                                                            <option value="Pondicherry">Pondicherry</option>
+                                                                        </select>
+                                                                    </div>
+                                                                   </div>
+
+                                                                   <div class="col-12">
+                                                                    <div class="form_designss">
+                                                                        <label class="fieldlabels">Address <b>*</b></label>
+                                                                        <input type="email" name="email" placeholder="enter your address" />
+                                                                    </div>
+                                                                   </div>
+
+                                                                   <div class="col-12">
+                                                                    <div class="form_designss">
+                                                                        <label class="fieldlabels">Landmark <b>*</b></label>
+                                                                        <input type="email" name="email" placeholder="please enter landmark" />
+                                                                    </div>
+                                                                   </div>
+
+                                                                   <div class="col-12">
+                                                                    <div class="form_designss">
+                                                                        <label class="fieldlabels">Nearby Metro Station <b>*</b></label>
+                                                                        <input type="email" name="email" placeholder="please enter near by metro" />
+                                                                    </div>
+                                                                   </div>
+                                                                 </div>
+                                                                 
+                                                            </div>
+
+                                                            <div class="col-5 image_with_bg_design">
+                                                                <img src="assets/images/map.webp" alt="Images">
+                                                                <h4>Select Your Property Location</h4>
+                                                            <p>To find the best-verified tenants in your area, select your location or a nearby location.</p>
+                                                            </div>
+
+
+
+
+                                                        </div> 
+                                                    </div> <input type="button" name="previous" class="previous action-button-previous" value="Previous" /> <input type="button" name="next" class="next action-button" value="Next" />
+                                                </fieldset>
+
+
+                                                <fieldset>
+                                                    <div class="form-card">
+                                                        <div class="row">
+                                                            <div class="col-7">
+                                                                <div class="row w-100 uploader">
+
+                                                                <input id="file-upload" type="file" name="fileUpload" accept="image/*" />
+
+                                                                    <label for="file-upload" id="file-drag">
+                                                                    <img id="file-image" src="#" alt="Preview" class="hidden">
+                                                                    <div id="start">
+                                                                        <i class="fa fa-download" aria-hidden="true"></i>
+                                                                        <div>Select a file or drag here</div>
+                                                                        <div id="notimage" class="hidden">Please select an image</div>
+                                                                        <span id="file-upload-btn" class="btn btn-primary">Select a file</span>
+                                                                    </div>
+                                                                    <div id="response" class="hidden">
+                                                                        <div id="messages"></div>
+                                                                        <progress class="progress" id="file-progress" value="0">
+                                                                        <span>0</span>%
+                                                                        </progress>
+                                                                    </div>
+                                                                    </label>
+                                                                 </div>
+                                                            </div>
+
+                                                            <div class="col-5 image_with_bg_design">
+                                                                <img src="assets/images/personal-image.webp" alt="Images">
+                                                                <h4>Upload Photos Of Your Property</h4>
+                                                            <p>Make CoFynd work for you by uploading the best and most real photos of your property (image size - 1MB).</p>
+                                                            </div>
+
+                                                        </div> 
+                                                    </div> <input type="button" name="previous" class="previous action-button-previous" value="Previous" /> <input type="button" name="next" class="next action-button" value="Next" />
+                                                </fieldset>
+                                            </form>
+                                
+                                </div>
+                            </div>
+                            <!-- partial -->
+
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+
+
+        </div>
+        <!-- Office filter End -->
+
+
+
+
+</div>
+
+
+</section>
+
+<!-- Steps Form Start -->
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+  <script>
+
+$(document).ready(function(){
+
+var current_fs, next_fs, previous_fs; //fieldsets
+var opacity;
+var current = 1;
+var steps = $("fieldset").length;
+
+setProgressBar(current);
+
+$(".next").click(function(){
+
+current_fs = $(this).parent();
+next_fs = $(this).parent().next();
+
+//Add Class Active
+$("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+
+//show the next fieldset
+next_fs.show();
+//hide the current fieldset with style
+current_fs.animate({opacity: 0}, {
+step: function(now) {
+// for making fielset appear animation
+opacity = 1 - now;
+
+current_fs.css({
+'display': 'none',
+'position': 'relative'
+});
+next_fs.css({'opacity': opacity});
+},
+duration: 500
+});
+setProgressBar(++current);
+});
+
+$(".previous").click(function(){
+
+current_fs = $(this).parent();
+previous_fs = $(this).parent().prev();
+
+//Remove class active
+$("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
+
+//show the previous fieldset
+previous_fs.show();
+
+//hide the current fieldset with style
+current_fs.animate({opacity: 0}, {
+step: function(now) {
+// for making fielset appear animation
+opacity = 1 - now;
+
+current_fs.css({
+'display': 'none',
+'position': 'relative'
+});
+previous_fs.css({'opacity': opacity});
+},
+duration: 500
+});
+setProgressBar(--current);
+});
+
+function setProgressBar(curStep){
+var percent = parseFloat(100 / steps) * curStep;
+percent = percent.toFixed();
+$(".progress-bar")
+.css("width",percent+"%")
+}
+
+$(".submit").click(function(){
+return false;
+})
+
+});
+  </script>
+<!-- Steps Form End -->
+
+</body>
+
+</html>

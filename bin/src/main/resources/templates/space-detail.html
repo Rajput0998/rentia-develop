@@ -1,0 +1,418 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+   th:replace="base::layout(~{::section})">
+   <body id="page">
+      <section>
+         <div class="main-wrapper">
+            <!-- Office filter Area -->
+            <div class="office_filter_shop">
+               <div class="container-fluid">
+                  <div class="row pt-45">
+                     <div class="col-lg-6">
+                        <h3>Coworking Spaces in Delhi</h3>
+                     </div>
+                     <div class="col-lg-6 design_breadcrumb">
+                        <ul>
+                           <li><a href="/">Home</a></li>
+                           <li><a href="/">Coworking</a></li>
+						   <li th:class="${page == 'Roseate House' ? 'breadcrumb_active' : ''}" aria-current="page">Roseate House</li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- Office filter End -->
+            <!-- Workspace solutions -->
+            <div class="room-area pb-70 workspace_solutions out_open_category for_arrow">
+               <div class="container-fluid">
+                  <div class="section-title text-center">
+                  </div>
+                  <div class="row pt-45">
+                     <div class="col-lg-12">
+                        <div class="room-card-two">
+                           <div class="row align-items-center">
+                              <div class="office_detail_slider owl-carousel owl-theme">
+                                 <div class="item">
+                                    <img src="" th:src="@{/assets/images/blogs-1.jpg}"/>
+                                 </div>
+                                 <div class="item">
+                                    <img src="" th:src="@{/assets/images/blogs-2.jpg}"/>
+                                 </div>
+                                 <div class="item">
+                                    <img src="" th:src="@{/assets/images/virtual-office.jpg}"/>
+                                 </div>
+                                 <div class="item">
+                                    <img src="" th:src="@{/assets/images/fixed-desk-cabins.jpg}"/>
+                                 </div>
+                                 <div class="item">
+                                    <img src="" th:src="@{/assets/images/blogs-1.jpg}"/>
+                                 </div>
+                                 <div class="item">
+                                    <img src="" th:src="@{/assets/images/blogs-2.jpg}"/>
+                                 </div>
+                                 <div class="item">
+                                    <img src="" th:src="@{/assets/images/virtual-office.jpg}"/>
+                                 </div>
+                                 <div class="item">
+                                    <img src="" th:src="@{/assets/images/fixed-desk-cabins.jpg}"/>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="container both_detail">
+                  <div class="row align-items-center">
+                     <div class="col-lg-8 col-md-8 left_detail_post">
+                        <div class="room-card-content design_address">
+                           <ul>
+                              <li>Starting Price<br> <b><span>₹</span>8,800</b> / month</li>
+                           </ul>
+                           <div>
+                              <a>
+                                 <svg width="24" height="24" viewBox="0 0 24 24">
+                                    <path fill="currentColor" d="M12 12q.825 0 1.413-.588T14 10q0-.825-.588-1.413T12 8q-.825 0-1.413.588T10 10q0 .825.588 1.413T12 12Zm0 7.35q3.05-2.8 4.525-5.088T18 10.2q0-2.725-1.738-4.462T12 4Q9.475 4 7.737 5.738T6 10.2q0 1.775 1.475 4.063T12 19.35ZM12 22q-4.025-3.425-6.012-6.362T4 10.2q0-3.75 2.413-5.975T12 2q3.175 0 5.588 2.225T20 10.2q0 2.5-1.988 5.438T12 22Zm0-11.8Z"/>
+                                 </svg>
+                                 Nehru Place, New Delhi
+                              </a>
+                              <a>
+                                 <svg width="24" height="24" viewBox="0 0 24 24">
+                                    <path fill="currentColor" d="M9.025 15.175q.625-.45 1.388-.7t1.587-.25q.825 0 1.588.25t1.387.7L21.1 9.05q-1.95-1.475-4.263-2.263T12 6q-2.525 0-4.838.788T2.9 9.05l6.125 6.125Zm2.975 5.4q-.2 0-.375-.062T11.3 20.3L.7 9.7q-.3-.3-.288-.712T.725 8.3q2.35-2.125 5.238-3.213T12 4q3.175 0 6.063 1.088T23.274 8.3q.3.275.313.688T23.3 9.7L12.7 20.3q-.15.15-.325.213t-.375.062Z"/>
+                                 </svg>
+                                 High speed WiFi
+                              </a>
+                              <a>
+                                 <svg width="24" height="24" viewBox="0 0 1024 1024">
+                                    <path fill="currentColor" d="M275 281c19.9 0 36-16.1 36-36V36c0-19.9-16.1-36-36-36s-36 16.1-36 36v209c0 19.9 16.1 36 36 36zm613 144H768c0-39.8-32.2-72-72-72H200c-39.8 0-72 32.2-72 72v248c0 3.4.2 6.7.7 9.9c-.5 7-.7 14-.7 21.1c0 176.7 143.3 320 320 320c160.1 0 292.7-117.5 316.3-271H888c39.8 0 72-32.2 72-72V497c0-39.8-32.2-72-72-72zM696 681h-1.1c.7 7.6 1.1 15.2 1.1 23c0 137-111 248-248 248S200 841 200 704c0-7.8.4-15.4 1.1-23H200V425h496v256zm192-8H776V497h112v176zM613 281c19.9 0 36-16.1 36-36V36c0-19.9-16.1-36-36-36s-36 16.1-36 36v209c0 19.9 16.1 36 36 36zm-170 0c19.9 0 36-16.1 36-36V36c0-19.9-16.1-36-36-36s-36 16.1-36 36v209c0 19.9 16.1 36 36 36z"/>
+                                 </svg>
+                                 Cofee & Bar
+                              </a>
+                           </div>
+                        </div>
+                        <hr>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                        <br>
+                        <hr>
+                        <div class="working_days">
+                           <div>Mon - Fri : 10:00 AM to 07:00 PM</div>
+                           <div>Sat : 10:00 AM to 07:00 PM</div>
+                           <div>Sun : Closed</div>
+                        </div>
+                        <hr>
+                        <div class="dedicated_desk">
+                           <div class="main_price_box">
+                              <div class="img"><img src="assets/images/private-cabin.webp" alt="Images"></div>
+                              <div>
+                                 <h5 class="text-capitalize">Dedicated Desk</h5>
+                                 <p class="hideOnMobile tabhide">A fixed desk in a shared coworking space.</p>
+                                 <div class="action-box ng-star-inserted"></div>
+                              </div>
+                              <div class="right_slids">
+                                 <div class="price">
+                                    <span class="hideOnMobile tabhide">starting from</span>
+                                    <div class="ng-star-inserted"> ₹40,000<small><span>/Seat</span></small></div>
+                                 </div>
+                                 <button class="btn-link hideOnMobile tabhide" type="button">Enquire<small class="icon-next fas fa-angle-right" aria-hidden="true"></small></button>
+                              </div>
+                           </div>
+                           <div class="main_price_box">
+                              <div class="img"><img src="assets/images/dedicated-desk.webp" alt="Images"></div>
+                              <div>
+                                 <h5 class="text-capitalize">Private Cabin</h5>
+                                 <p class="hideOnMobile tabhide">Private office space dedicated to you and your team.</p>
+                                 <div class="action-box ng-star-inserted"></div>
+                              </div>
+                              <div class="right_slids">
+                                 <div class="price">
+                                    <span class="hideOnMobile tabhide">starting from</span>
+                                    <div class="ng-star-inserted"> ₹40,000<small><span>/Seat</span></small></div>
+                                 </div>
+                                 <button class="btn-link hideOnMobile tabhide" type="button">Enquire<small class="icon-next fas fa-angle-right" aria-hidden="true"></small></button>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="amenities_design">
+                           <h5 class="ng-tns-c6-1">Amenities</h5>
+                           <ul>
+                              <li><img src="assets/images/icons/wifi.svg" alt="Images"> WIFI/Internet</li>
+                              <li><img src="assets/images/icons/air-conditioning.svg" alt="Images"> Air Conditioning</li>
+                              <li><img src="assets/images/icons/round-table.svg" alt="Images"> Meeting Rooms</li>
+                              <li><img src="assets/images/icons/printer.svg" alt="Images"> Printer</li>
+                              <li><img src="assets/images/icons/pantry.svg" alt="Images"> Pantry</li>
+                              <li><img src="assets/images/icons/parking.svg" alt="Images"> Car / Bike Parking</li>
+                              <li><img src="assets/images/icons/reception.svg" alt="Images"> Reception</li>
+                              <li><img src="assets/images/icons/cleaning-tools.svg" alt="Images"> Super Housekeeping</li>
+                              <li><img src="assets/images/icons/coffee-machine.svg" alt="Images"> Tea/Coffee</li>
+                           </ul>
+                        </div>
+                        <div class="design_map">
+                           <h5 class="ng-tns-c6-1">You'll work here</h5>
+                           <div>
+                              <svg width="24" height="24" viewBox="0 0 24 24">
+                                 <path fill="currentColor" d="M12 12q.825 0 1.413-.588T14 10q0-.825-.588-1.413T12 8q-.825 0-1.413.588T10 10q0 .825.588 1.413T12 12Zm0 7.35q3.05-2.8 4.525-5.088T18 10.2q0-2.725-1.738-4.462T12 4Q9.475 4 7.737 5.738T6 10.2q0 1.775 1.475 4.063T12 19.35ZM12 22q-4.025-3.425-6.012-6.362T4 10.2q0-3.75 2.413-5.975T12 2q3.175 0 5.588 2.225T20 10.2q0 2.5-1.988 5.438T12 22Zm0-11.8Z"></path>
+                              </svg>
+                              Nehru Place, New Delhi
+                           </div>
+                           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d448196.05311984906!2d76.81304084547108!3d28.643795378541427!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x37205b715389640!2sDelhi!5e0!3m2!1sen!2sin!4v1683574879867!5m2!1sen!2sin" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                     </div>
+                     <div class="col-lg-4 col-md-4 right_detail_design">
+                        <div class="room-card-content">
+                           <div class="contact-form">
+                              <h4>Yes, I'm Interested!</h4>
+                              <p>Know More About this property</p>
+                              <form id="contactForm" novalidate="true">
+                                 <div class="row">
+                                    <div class="col-lg-12 col-sm-12">
+                                       <div class="form-group">
+                                          <input type="text" name="name" id="name" class="form-control" required="" data-error="Please enter your name" placeholder="Name">
+                                          <div class="help-block with-errors"></div>
+                                       </div>
+                                    </div>
+                                    <div class="col-lg-12 col-sm-12">
+                                       <div class="form-group">
+                                          <input type="email" name="email" id="email" class="form-control" required="" data-error="Please enter your email" placeholder="Email">
+                                          <div class="help-block with-errors"></div>
+                                       </div>
+                                    </div>
+                                    <div class="col-lg-12 col-sm-12">
+                                       <div class="form-group">
+                                          <input type="text" name="phone_number" id="phone_number" required="" data-error="Please enter your number" class="form-control" placeholder="Phone">
+                                          <div class="help-block with-errors"></div>
+                                       </div>
+                                    </div>
+                                    <div class="col-lg-6 col-sm-6 col-12">
+                                       <div class="form-group">
+                                          <select style="display: none;">
+                                             <option value="Office Type">Office Type</option>
+                                             <option value="Dedicated Desk">Dedicated Desk</option>
+                                             <option value="Private Cabin">Private Cabin</option>
+                                             <option  value="Office Suite">Office Suite</option>
+                                          </select>
+                                       </div>
+                                    </div>
+                                    <div class="col-lg-6 col-sm-6 col-12">
+                                       <div class="form-group">
+                                          <select style="display: none;">
+                                             <option value="No. of Seats">No. of Seats</option>
+                                             <option value="1-10">1-10</option>
+                                             <option value="11-20">11-20</option>
+                                             <option value="21-50">21-50</option>
+                                             <option  value="51-100">51-100</option>
+                                          </select>
+                                       </div>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 mt-40">
+                                       <div class="form-group checkbox-option">
+                                          <input type="checkbox" id="chb2">
+                                          <p>
+                                             Accept <a href="terms-condition.html">Terms &amp; Conditions</a> And <a href="privacy-policy.html">Privacy Policy.</a>
+                                          </p>
+                                       </div>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12">
+                                       <button type="submit" class="default-btn btn-bg-three disabled" style="pointer-events: all; cursor: pointer;">
+                                       Submit Detail
+                                       </button>
+                                       <div id="msgSubmit" class="h3 text-center hidden"></div>
+                                       <div class="clearfix"></div>
+                                    </div>
+                                 </div>
+                              </form>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- Workspace solutions End -->
+         <!-- Testimonials Area -->
+         <div class="design_similar_properties pt-100 pb-70 out_category_design for_arrow">
+            <div class="container">
+               <div class="section-title">
+                  <h3>Similar Properties</h3>
+               </div>
+               <div class="similar_properties_slider owl-carousel owl-theme">
+                  <div class="item">
+                     <div class="room-card-two">
+                        <div class="row align-items-center">
+                           <a href="room-details.html">
+                           <img src="assets/images/category-2.webp" alt="Images">
+                           </a>
+                           <div class="col-lg-12 col-md-12 p-0">
+                              <div class="room-card-content">
+                                 <h5>
+                                    <a href="room-details.html">
+                                       <svg width="24" height="24" viewBox="0 0 256 256">
+                                          <path fill="currentColor" d="M248 128a8 8 0 0 1-8 8h-16.67A48.08 48.08 0 0 1 176 176h-40v24h24a32 32 0 0 1 32 32a8 8 0 0 1-16 0a16 16 0 0 0-16-16h-24v16a8 8 0 0 1-16 0v-16H96a16 16 0 0 0-16 16a8 8 0 0 1-16 0a32 32 0 0 1 32-32h24v-24H80a48.08 48.08 0 0 1-47.33-40H16a8 8 0 0 1 0-16h24a8 8 0 0 1 8 8a32 32 0 0 0 32 32h96a32 32 0 0 0 32-32a8 8 0 0 1 8-8h24a8 8 0 0 1 8 8ZM67.91 138.48a16 16 0 0 1-3.75-12.74l13.72-96A16.08 16.08 0 0 1 93.72 16h68.56a16.08 16.08 0 0 1 15.84 13.74l13.72 96A16 16 0 0 1 176 144H80a16 16 0 0 1-12.09-5.52ZM80 128h96l-13.72-96H93.71Z"/>
+                                       </svg>
+                                       91springboard Nehru Place
+                                    </a>
+                                 </h5>
+                                 <a>
+                                    <svg width="24" height="24" viewBox="0 0 24 24">
+                                       <path fill="currentColor" d="M12 12q.825 0 1.413-.588T14 10q0-.825-.588-1.413T12 8q-.825 0-1.413.588T10 10q0 .825.588 1.413T12 12Zm0 7.35q3.05-2.8 4.525-5.088T18 10.2q0-2.725-1.738-4.462T12 4Q9.475 4 7.737 5.738T6 10.2q0 1.775 1.475 4.063T12 19.35ZM12 22q-4.025-3.425-6.012-6.362T4 10.2q0-3.75 2.413-5.975T12 2q3.175 0 5.588 2.225T20 10.2q0 2.5-1.988 5.438T12 22Zm0-11.8Z"/>
+                                    </svg>
+                                    Nehru Place, New Delhi
+                                 </a>
+                                 <a>
+                                    <svg width="24" height="24" viewBox="0 0 24 24">
+                                       <path fill="currentColor" d="M9.025 15.175q.625-.45 1.388-.7t1.587-.25q.825 0 1.588.25t1.387.7L21.1 9.05q-1.95-1.475-4.263-2.263T12 6q-2.525 0-4.838.788T2.9 9.05l6.125 6.125Zm2.975 5.4q-.2 0-.375-.062T11.3 20.3L.7 9.7q-.3-.3-.288-.712T.725 8.3q2.35-2.125 5.238-3.213T12 4q3.175 0 6.063 1.088T23.274 8.3q.3.275.313.688T23.3 9.7L12.7 20.3q-.15.15-.325.213t-.375.062Z"/>
+                                    </svg>
+                                    High speed WiFi
+                                 </a>
+                                 <a>
+                                    <svg width="24" height="24" viewBox="0 0 1024 1024">
+                                       <path fill="currentColor" d="M275 281c19.9 0 36-16.1 36-36V36c0-19.9-16.1-36-36-36s-36 16.1-36 36v209c0 19.9 16.1 36 36 36zm613 144H768c0-39.8-32.2-72-72-72H200c-39.8 0-72 32.2-72 72v248c0 3.4.2 6.7.7 9.9c-.5 7-.7 14-.7 21.1c0 176.7 143.3 320 320 320c160.1 0 292.7-117.5 316.3-271H888c39.8 0 72-32.2 72-72V497c0-39.8-32.2-72-72-72zM696 681h-1.1c.7 7.6 1.1 15.2 1.1 23c0 137-111 248-248 248S200 841 200 704c0-7.8.4-15.4 1.1-23H200V425h496v256zm192-8H776V497h112v176zM613 281c19.9 0 36-16.1 36-36V36c0-19.9-16.1-36-36-36s-36 16.1-36 36v209c0 19.9 16.1 36 36 36zm-170 0c19.9 0 36-16.1 36-36V36c0-19.9-16.1-36-36-36s-36 16.1-36 36v209c0 19.9 16.1 36 36 36z"/>
+                                    </svg>
+                                    Cofee & Bar
+                                 </a>
+                                 <ul>
+                                    <li>Starting Price<br> <b><span>₹</span>8,800</b> / month</li>
+                                    <li><a href="#" class="book-more-btn">Explore More</a></li>
+                                 </ul>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="item">
+                     <div class="room-card-two">
+                        <div class="row align-items-center">
+                           <a href="room-details.html">
+                           <img src="assets/images/category-1.webp" alt="Images">
+                           </a>
+                           <div class="col-lg-12 col-md-12 p-0">
+                              <div class="room-card-content">
+                                 <h5>
+                                    <a href="room-details.html">
+                                       <svg width="24" height="24" viewBox="0 0 256 256">
+                                          <path fill="currentColor" d="M248 128a8 8 0 0 1-8 8h-16.67A48.08 48.08 0 0 1 176 176h-40v24h24a32 32 0 0 1 32 32a8 8 0 0 1-16 0a16 16 0 0 0-16-16h-24v16a8 8 0 0 1-16 0v-16H96a16 16 0 0 0-16 16a8 8 0 0 1-16 0a32 32 0 0 1 32-32h24v-24H80a48.08 48.08 0 0 1-47.33-40H16a8 8 0 0 1 0-16h24a8 8 0 0 1 8 8a32 32 0 0 0 32 32h96a32 32 0 0 0 32-32a8 8 0 0 1 8-8h24a8 8 0 0 1 8 8ZM67.91 138.48a16 16 0 0 1-3.75-12.74l13.72-96A16.08 16.08 0 0 1 93.72 16h68.56a16.08 16.08 0 0 1 15.84 13.74l13.72 96A16 16 0 0 1 176 144H80a16 16 0 0 1-12.09-5.52ZM80 128h96l-13.72-96H93.71Z"/>
+                                       </svg>
+                                       91springboard Nehru Place
+                                    </a>
+                                 </h5>
+                                 <a>
+                                    <svg width="24" height="24" viewBox="0 0 24 24">
+                                       <path fill="currentColor" d="M12 12q.825 0 1.413-.588T14 10q0-.825-.588-1.413T12 8q-.825 0-1.413.588T10 10q0 .825.588 1.413T12 12Zm0 7.35q3.05-2.8 4.525-5.088T18 10.2q0-2.725-1.738-4.462T12 4Q9.475 4 7.737 5.738T6 10.2q0 1.775 1.475 4.063T12 19.35ZM12 22q-4.025-3.425-6.012-6.362T4 10.2q0-3.75 2.413-5.975T12 2q3.175 0 5.588 2.225T20 10.2q0 2.5-1.988 5.438T12 22Zm0-11.8Z"/>
+                                    </svg>
+                                    Nehru Place, New Delhi
+                                 </a>
+                                 <a>
+                                    <svg width="24" height="24" viewBox="0 0 24 24">
+                                       <path fill="currentColor" d="M9.025 15.175q.625-.45 1.388-.7t1.587-.25q.825 0 1.588.25t1.387.7L21.1 9.05q-1.95-1.475-4.263-2.263T12 6q-2.525 0-4.838.788T2.9 9.05l6.125 6.125Zm2.975 5.4q-.2 0-.375-.062T11.3 20.3L.7 9.7q-.3-.3-.288-.712T.725 8.3q2.35-2.125 5.238-3.213T12 4q3.175 0 6.063 1.088T23.274 8.3q.3.275.313.688T23.3 9.7L12.7 20.3q-.15.15-.325.213t-.375.062Z"/>
+                                    </svg>
+                                    High speed WiFi
+                                 </a>
+                                 <a>
+                                    <svg width="24" height="24" viewBox="0 0 1024 1024">
+                                       <path fill="currentColor" d="M275 281c19.9 0 36-16.1 36-36V36c0-19.9-16.1-36-36-36s-36 16.1-36 36v209c0 19.9 16.1 36 36 36zm613 144H768c0-39.8-32.2-72-72-72H200c-39.8 0-72 32.2-72 72v248c0 3.4.2 6.7.7 9.9c-.5 7-.7 14-.7 21.1c0 176.7 143.3 320 320 320c160.1 0 292.7-117.5 316.3-271H888c39.8 0 72-32.2 72-72V497c0-39.8-32.2-72-72-72zM696 681h-1.1c.7 7.6 1.1 15.2 1.1 23c0 137-111 248-248 248S200 841 200 704c0-7.8.4-15.4 1.1-23H200V425h496v256zm192-8H776V497h112v176zM613 281c19.9 0 36-16.1 36-36V36c0-19.9-16.1-36-36-36s-36 16.1-36 36v209c0 19.9 16.1 36 36 36zm-170 0c19.9 0 36-16.1 36-36V36c0-19.9-16.1-36-36-36s-36 16.1-36 36v209c0 19.9 16.1 36 36 36z"/>
+                                    </svg>
+                                    Cofee & Bar
+                                 </a>
+                                 <ul>
+                                    <li>Starting Price<br> <b><span>₹</span>8,800</b> / month</li>
+                                    <li><a href="#" class="book-more-btn">Explore More</a></li>
+                                 </ul>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="item">
+                     <div class="room-card-two">
+                        <div class="row align-items-center">
+                           <a href="room-details.html">
+                           <img src="assets/images/category-3.webp" alt="Images">
+                           </a>
+                           <div class="col-lg-12 col-md-12 p-0">
+                              <div class="room-card-content">
+                                 <h5>
+                                    <a href="room-details.html">
+                                       <svg width="24" height="24" viewBox="0 0 256 256">
+                                          <path fill="currentColor" d="M248 128a8 8 0 0 1-8 8h-16.67A48.08 48.08 0 0 1 176 176h-40v24h24a32 32 0 0 1 32 32a8 8 0 0 1-16 0a16 16 0 0 0-16-16h-24v16a8 8 0 0 1-16 0v-16H96a16 16 0 0 0-16 16a8 8 0 0 1-16 0a32 32 0 0 1 32-32h24v-24H80a48.08 48.08 0 0 1-47.33-40H16a8 8 0 0 1 0-16h24a8 8 0 0 1 8 8a32 32 0 0 0 32 32h96a32 32 0 0 0 32-32a8 8 0 0 1 8-8h24a8 8 0 0 1 8 8ZM67.91 138.48a16 16 0 0 1-3.75-12.74l13.72-96A16.08 16.08 0 0 1 93.72 16h68.56a16.08 16.08 0 0 1 15.84 13.74l13.72 96A16 16 0 0 1 176 144H80a16 16 0 0 1-12.09-5.52ZM80 128h96l-13.72-96H93.71Z"/>
+                                       </svg>
+                                       91springboard Nehru Place
+                                    </a>
+                                 </h5>
+                                 <a>
+                                    <svg width="24" height="24" viewBox="0 0 24 24">
+                                       <path fill="currentColor" d="M12 12q.825 0 1.413-.588T14 10q0-.825-.588-1.413T12 8q-.825 0-1.413.588T10 10q0 .825.588 1.413T12 12Zm0 7.35q3.05-2.8 4.525-5.088T18 10.2q0-2.725-1.738-4.462T12 4Q9.475 4 7.737 5.738T6 10.2q0 1.775 1.475 4.063T12 19.35ZM12 22q-4.025-3.425-6.012-6.362T4 10.2q0-3.75 2.413-5.975T12 2q3.175 0 5.588 2.225T20 10.2q0 2.5-1.988 5.438T12 22Zm0-11.8Z"/>
+                                    </svg>
+                                    Nehru Place, New Delhi
+                                 </a>
+                                 <a>
+                                    <svg width="24" height="24" viewBox="0 0 24 24">
+                                       <path fill="currentColor" d="M9.025 15.175q.625-.45 1.388-.7t1.587-.25q.825 0 1.588.25t1.387.7L21.1 9.05q-1.95-1.475-4.263-2.263T12 6q-2.525 0-4.838.788T2.9 9.05l6.125 6.125Zm2.975 5.4q-.2 0-.375-.062T11.3 20.3L.7 9.7q-.3-.3-.288-.712T.725 8.3q2.35-2.125 5.238-3.213T12 4q3.175 0 6.063 1.088T23.274 8.3q.3.275.313.688T23.3 9.7L12.7 20.3q-.15.15-.325.213t-.375.062Z"/>
+                                    </svg>
+                                    High speed WiFi
+                                 </a>
+                                 <a>
+                                    <svg width="24" height="24" viewBox="0 0 1024 1024">
+                                       <path fill="currentColor" d="M275 281c19.9 0 36-16.1 36-36V36c0-19.9-16.1-36-36-36s-36 16.1-36 36v209c0 19.9 16.1 36 36 36zm613 144H768c0-39.8-32.2-72-72-72H200c-39.8 0-72 32.2-72 72v248c0 3.4.2 6.7.7 9.9c-.5 7-.7 14-.7 21.1c0 176.7 143.3 320 320 320c160.1 0 292.7-117.5 316.3-271H888c39.8 0 72-32.2 72-72V497c0-39.8-32.2-72-72-72zM696 681h-1.1c.7 7.6 1.1 15.2 1.1 23c0 137-111 248-248 248S200 841 200 704c0-7.8.4-15.4 1.1-23H200V425h496v256zm192-8H776V497h112v176zM613 281c19.9 0 36-16.1 36-36V36c0-19.9-16.1-36-36-36s-36 16.1-36 36v209c0 19.9 16.1 36 36 36zm-170 0c19.9 0 36-16.1 36-36V36c0-19.9-16.1-36-36-36s-36 16.1-36 36v209c0 19.9 16.1 36 36 36z"/>
+                                    </svg>
+                                    Cofee & Bar
+                                 </a>
+                                 <ul>
+                                    <li>Starting Price<br> <b><span>₹</span>8,800</b> / month</li>
+                                    <li><a href="#" class="book-more-btn">Explore More</a></li>
+                                 </ul>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="item">
+                     <div class="room-card-two">
+                        <div class="row align-items-center">
+                           <a href="room-details.html">
+                           <img src="assets/images/category-4.webp" alt="Images">
+                           </a>
+                           <div class="col-lg-12 col-md-12 p-0">
+                              <div class="room-card-content">
+                                 <h5>
+                                    <a href="room-details.html">
+                                       <svg width="24" height="24" viewBox="0 0 256 256">
+                                          <path fill="currentColor" d="M248 128a8 8 0 0 1-8 8h-16.67A48.08 48.08 0 0 1 176 176h-40v24h24a32 32 0 0 1 32 32a8 8 0 0 1-16 0a16 16 0 0 0-16-16h-24v16a8 8 0 0 1-16 0v-16H96a16 16 0 0 0-16 16a8 8 0 0 1-16 0a32 32 0 0 1 32-32h24v-24H80a48.08 48.08 0 0 1-47.33-40H16a8 8 0 0 1 0-16h24a8 8 0 0 1 8 8a32 32 0 0 0 32 32h96a32 32 0 0 0 32-32a8 8 0 0 1 8-8h24a8 8 0 0 1 8 8ZM67.91 138.48a16 16 0 0 1-3.75-12.74l13.72-96A16.08 16.08 0 0 1 93.72 16h68.56a16.08 16.08 0 0 1 15.84 13.74l13.72 96A16 16 0 0 1 176 144H80a16 16 0 0 1-12.09-5.52ZM80 128h96l-13.72-96H93.71Z"/>
+                                       </svg>
+                                       91springboard Nehru Place
+                                    </a>
+                                 </h5>
+                                 <a>
+                                    <svg width="24" height="24" viewBox="0 0 24 24">
+                                       <path fill="currentColor" d="M12 12q.825 0 1.413-.588T14 10q0-.825-.588-1.413T12 8q-.825 0-1.413.588T10 10q0 .825.588 1.413T12 12Zm0 7.35q3.05-2.8 4.525-5.088T18 10.2q0-2.725-1.738-4.462T12 4Q9.475 4 7.737 5.738T6 10.2q0 1.775 1.475 4.063T12 19.35ZM12 22q-4.025-3.425-6.012-6.362T4 10.2q0-3.75 2.413-5.975T12 2q3.175 0 5.588 2.225T20 10.2q0 2.5-1.988 5.438T12 22Zm0-11.8Z"/>
+                                    </svg>
+                                    Nehru Place, New Delhi
+                                 </a>
+                                 <a>
+                                    <svg width="24" height="24" viewBox="0 0 24 24">
+                                       <path fill="currentColor" d="M9.025 15.175q.625-.45 1.388-.7t1.587-.25q.825 0 1.588.25t1.387.7L21.1 9.05q-1.95-1.475-4.263-2.263T12 6q-2.525 0-4.838.788T2.9 9.05l6.125 6.125Zm2.975 5.4q-.2 0-.375-.062T11.3 20.3L.7 9.7q-.3-.3-.288-.712T.725 8.3q2.35-2.125 5.238-3.213T12 4q3.175 0 6.063 1.088T23.274 8.3q.3.275.313.688T23.3 9.7L12.7 20.3q-.15.15-.325.213t-.375.062Z"/>
+                                    </svg>
+                                    High speed WiFi
+                                 </a>
+                                 <a>
+                                    <svg width="24" height="24" viewBox="0 0 1024 1024">
+                                       <path fill="currentColor" d="M275 281c19.9 0 36-16.1 36-36V36c0-19.9-16.1-36-36-36s-36 16.1-36 36v209c0 19.9 16.1 36 36 36zm613 144H768c0-39.8-32.2-72-72-72H200c-39.8 0-72 32.2-72 72v248c0 3.4.2 6.7.7 9.9c-.5 7-.7 14-.7 21.1c0 176.7 143.3 320 320 320c160.1 0 292.7-117.5 316.3-271H888c39.8 0 72-32.2 72-72V497c0-39.8-32.2-72-72-72zM696 681h-1.1c.7 7.6 1.1 15.2 1.1 23c0 137-111 248-248 248S200 841 200 704c0-7.8.4-15.4 1.1-23H200V425h496v256zm192-8H776V497h112v176zM613 281c19.9 0 36-16.1 36-36V36c0-19.9-16.1-36-36-36s-36 16.1-36 36v209c0 19.9 16.1 36 36 36zm-170 0c19.9 0 36-16.1 36-36V36c0-19.9-16.1-36-36-36s-36 16.1-36 36v209c0 19.9 16.1 36 36 36z"/>
+                                    </svg>
+                                    Cofee & Bar
+                                 </a>
+                                 <ul>
+                                    <li>Starting Price<br> <b><span>₹</span>8,800</b> / month</li>
+                                    <li><a href="#" class="book-more-btn">Explore More</a></li>
+                                 </ul>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- Testimonials Area End -->
+        
+      </section>
+   </body>
+</html>

@@ -11,6 +11,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 
 import com.rentia.daos.UserDao;
 import com.rentia.models.UserAddress;
+import com.rentia.models.IntUser;
 import com.rentia.models.User;
 
 @Service
@@ -66,6 +67,8 @@ public class UserService {
 			l_user.setGender(user.getGender());
 			l_user.setMobNum(user.getMobNum());
 			l_user.setRole(user.getRole());
+			l_user.setAadharImage(user.getAadharImage());
+			l_user.setSelfImage(user.getSelfImage());
 			l_user.setIsAccountNonExpired(user.getIsAccountNonExpired());
 			l_user.setIsAccountNonlocked(user.getIsAccountNonlocked());
 			l_user.setIsCredentialsNonExpired(user.getIsCredentialsNonExpired());
@@ -124,6 +127,16 @@ public class UserService {
 		}
 		this.userDao.deleteUser(user);
 
+	}
+
+	public IntUser registerInterestedUser(IntUser user) {
+		try {
+			user.setCreationDate(new Date());
+			IntUser l_user = userDao.saveUser(user);
+			return l_user;
+		} catch (Exception e) {
+			return null;
+		}
 	}
 
 }

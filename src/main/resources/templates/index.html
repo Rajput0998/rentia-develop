@@ -109,8 +109,8 @@
                     <div class="row align-items-center">
                       <div class="col-lg-5 col-md-4 p-0">
                         <div class="room-card-img">
-                          <a href="/api/a1/property/getProperty/${property.prpName}">
-                            <img src="assets/images/fixed-desk-cabins.jpg" alt="Images">
+                          <a href="/api/a1/property/getProperty/${property.id}">
+                            <img class = "property-image" src="/api/a1/property/post/image/${property.displayImage}" alt="Images">
                           </a>
                         </div>
                       </div>
@@ -119,7 +119,7 @@
                           <h3>
                             <a href="/api/a1/property/getProperty/${property.prpName}">${property.prpName}</a>
                           </h3>
-                          <p>Choose a permanent desk or private offices or take up an entire floor.</p>
+                          <p>${property.detail}</p>
                           <ul>
                             <li><i class='material-icons'></i> Available Rooms : ${property.avlRoom}</li>
 							<li><i class='fa-bed'></i> Total Rooms : ${property.totalRoom}</li>

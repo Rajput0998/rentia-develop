@@ -3,7 +3,9 @@ package com.rentia.daos;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import com.rentia.models.IntUser;
 import com.rentia.models.User;
+import com.rentia.repositories.IntUserRepository;
 import com.rentia.repositories.UsersRepository;
 
 
@@ -12,6 +14,9 @@ public class UserDao {
 
 	@Autowired
 	private UsersRepository usersRepository;
+	
+	@Autowired
+	private IntUserRepository intUsersRepository;
 
 	public User saveUser(User user) {
 		System.out.println("mukul3" + user.getAdress().size());
@@ -37,6 +42,11 @@ public class UserDao {
 	public void deleteUser(User user) {
 		usersRepository.delete(user);
 		
+	}
+
+	public IntUser saveUser(IntUser user) {
+		IntUser l_user = intUsersRepository.save(user);
+		return l_user;
 	}
 
 	

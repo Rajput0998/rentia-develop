@@ -7014,4 +7014,19 @@ Buy Now Btn End
     margin-top: 22px;
 }
 
+.property-image {
+        width: 110%;
+        height: 310px; /* Adjust the height as needed */
+        object-fit: cover;
+    }
+
+.success-message {
+  color: green;
+  font-weight: bold;
+}
+
+.error-message {
+  color: red;
+  font-weight: bold;
+}
 
