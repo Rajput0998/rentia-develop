@@ -1,11 +1,6 @@
 package com.rentia.models;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import javax.persistence.CollectionTable;
 import javax.persistence.Column;
-import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -13,7 +8,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
 
@@ -48,27 +42,6 @@ public class Property {
 	@JoinColumn(name = "aid", nullable = false)
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 	private Address address;
-	
-	@ElementCollection
-	@CollectionTable(name = "prop_images", joinColumns = @JoinColumn(name = "property_Id"))
-	@Column(name = "propImage")
-	private List<String> propertyImages = new ArrayList<>();
-	private String displayImage;
-	
-	private String detail;
-	
-	@OneToOne(mappedBy = "property", fetch = FetchType.LAZY, orphanRemoval = true)
-	@Cascade(CascadeType.ALL)
-	@JsonIgnoreProperties("property")
-    private PropertyFacility propertyFacility;
-
-	public String getDetail() {
-		return detail;
-	}
-
-	public void setDetail(String detail) {
-		this.detail = detail;
-	}
 
 	public Address getAddress() {
 		return address;
@@ -138,36 +111,6 @@ public class Property {
 	public void setAvailabilty(boolean availabilty) {
 		this.availabilty = availabilty;
 	}
-
-	public List<String> getPropertyImages() {
-		return propertyImages;
-	}
-
-	public void setPropertyImages(List<String> propertyImages) {
-		this.propertyImages = propertyImages;
-	}
-
-	public String getDisplayImage() {
-		return displayImage;
-	}
-
-	public void setDisplayImage(String displayImage) {
-		this.displayImage = displayImage;
-	}
-
-	public PropertyFacility getPropertyFacility() {
-		return propertyFacility;
-	}
-
-	public void setPropertyFacility(PropertyFacility propertyFacility) {
-		this.propertyFacility = propertyFacility;
-        propertyFacility.setProperty(this);
-	}
-
-	
-	
-	
-
 	
 	
 	

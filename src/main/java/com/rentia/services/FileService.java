@@ -32,7 +32,7 @@ public class FileService {
 		System.out.println("fileName1 :- "+fileName1);
 		// Full path
 		String filePath = path + File.separator + fileName1;
-		System.out.println("filePath :- "+filePath);
+
 		// create folder if not created
 		File f = new File(path);
 		if (!f.exists()) {

@@ -16,67 +16,33 @@
     });
 
 
-    function submitForm() {
-    // Initiate Variables With Form Content
-    var name = $("#name").val();
-    var email = $("#email").val();
-    var mobNum = $("#mobNum").val();
-    var pgType = $("#pg_type").val();
-    var budget = $("#budget").val();
-    
-    // Set minAmount and maxAmount based on selected value
-    var minAmount, maxAmount;
-    if (budget === "1000-5000") {
-        minAmount = 1000.0;
-        maxAmount = 5000.0;
-    } else if (budget === "5000-10000") {
-        minAmount = 5000.0;
-        maxAmount = 10000.0;
-    } else if (budget === "10000-15000") {
-        minAmount = 10000.0;
-        maxAmount = 15000.0;
-    } else if (budget === "15000-20000") {
-        minAmount = 15000.0;
-        maxAmount = 20000.0;
-    } else {
-        minAmount = null;
-        maxAmount = null;
-    }
-    
-    
+    function submitForm(){
+        // Initiate Variables With Form Content
+        var name = $("#name").val();
+        var email = $("#email").val();
+        var msg_subject = $("#msg_subject").val();
+        var phone_number = $("#phone_number").val();
+        var message = $("#message").val();
 
-    // Create JSON object
-    var formData = {
-        "name": name,
-        "email": email,
-        "mobNum": mobNum,
-        "pgType": pgType,
-        "minAmount": minAmount,
-        "maxAmount": maxAmount
-    };
 
-    $.ajax({
-        type: "POST",
-        url: "/api/u1/user/interested/register",
-        data: JSON.stringify(formData), // Convert JSON object to string
-        contentType: "application/json", // Set content type to JSON
-        success: function (response, status, xhr) {
-			console.log(response.id);
-			console.log(status);
-			console.log(xhr);
-            if (status === "success") {
-                formSuccess();
-            } else {
-                formError();
-                submitMSG(false, response);
+        $.ajax({
+            type: "POST",
+            url: "assets/php/form-process.php",
+            data: "name=" + name + "&email=" + email + "&msg_subject=" + msg_subject + "&phone_number=" + phone_number + "&message=" + message,
+            success : function(text){
+                if (text == "success"){
+                    formSuccess();
+                } else {
+                    formError();
+                    submitMSG(false,text);
+                }
             }
-        }
-    });
-}
+        });
+    }
 
-    /*function formSuccess(){
+    function formSuccess(){
         $("#contactForm")[0].reset();
-        submitMSG(true, "Thank you for the interseted in the Property!")
+        submitMSG(true, "Message Submitted!")
     }
 
     function formError(){
@@ -91,26 +57,6 @@
         } else {
             var msgClasses = "h4 text-danger";
         }
-        $("#msgSubmit").text(msg);
-    }*/
-    function formSuccess(){
-    $("#contactForm")[0].reset();
-    $("#success-message").text("Thank you for your interest in the property!").show();
-    $("#error-message").hide();
-}
-
-function formError(){
-    $("#success-message").hide();
-    $("#error-message").show();
-}
-
-function submitMSG(status, msg){
-    if(status === true){
-        $("#success-message").text(msg).show();
-        $("#error-message").hide();
-    } else {
-        $("#success-message").hide();
-        $("#error-message").text(msg).show();
+        $("#msgSubmit").removeClass().addClass(msgClasses).text(msg);
     }
-}
 }(jQuery)); // End of use strict
