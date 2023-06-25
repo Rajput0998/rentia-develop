@@ -2,6 +2,7 @@ package com.rentia.controller;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -35,14 +36,15 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.rentia.helper.Message;
+import com.rentia.models.IntUser;
 import com.rentia.models.User;
 import com.rentia.services.EmailService;
 import com.rentia.services.FileService;
 import com.rentia.services.UserService;
 import com.rentia.utilities.JsonUtil;
 
-@CrossOrigin
-@RestController
+
+@Controller
 @RequestMapping("/api/u1/user")
 public class UserController {
 
@@ -57,7 +59,7 @@ public class UserController {
 	@Autowired
 	private FileService fileService;
 
-	@Value("${project.image}")
+	@Value("${project.image.property}")
 	private String path;
 
 	@PostMapping("/register")
@@ -73,6 +75,19 @@ public class UserController {
 
 		} catch (Exception ex) {
 			return new ResponseEntity<User>(new User(), HttpStatus.NOT_ACCEPTABLE);
+		}
+	}
+	
+	@PostMapping("/interested/register")
+	public ResponseEntity<IntUser> registerInterestedUser(@RequestBody IntUser user, HttpSession session) {
+
+		try {
+			System.out.println("mukul1" + user);
+			IntUser l_user = userService.registerInterestedUser(user);
+			return new ResponseEntity<IntUser>(l_user, HttpStatus.OK);
+
+		} catch (Exception ex) {
+			return new ResponseEntity<IntUser>(new IntUser(), HttpStatus.NOT_ACCEPTABLE);
 		}
 	}
 	
