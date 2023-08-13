@@ -114,9 +114,9 @@ public class PropertyController {
 		} 
 	}
 	
-	@GetMapping("/api/a1/property/city/{addressID}")
-	public ResponseEntity<List<Property>> getProperty(@PathVariable("addressID") Long addressID) {
-		List<Property> l_property = propertyService.getPropertybyCity(addressID);
+	@GetMapping("/api/a1/property/city/{city}")
+	public ResponseEntity<List<Property>> getProperty(@PathVariable("city") String city) {
+		List<Property> l_property = propertyService.getPropertybyCity(city);
         if (l_property == null) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
         }

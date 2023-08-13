@@ -17,6 +17,10 @@ public interface PropertyRepository extends JpaRepository<Property, Long> {
 	@Query("SELECT p FROM Property p " +
 	           "WHERE p.address.adrid = :addressID")
 	List<Property> findPropertyByAddressId(Long addressID); 
+	
+	@Query("SELECT p FROM Property p " +
+	           "WHERE p.address.city = :city")
+	List<Property> findPropertyByCity(String city); 
 
  
 }

@@ -78,7 +78,22 @@ public class PropertyService {
 		try
 		{	
 			System.out.println(property.getAddress().getAdrid());
-			Address address = addressDao.getById(property.getAddress().getAdrid());
+			Address address = new Address();
+			if( null != property.getAddress().getAdrid() ) {
+				address = addressDao.getById(property.getAddress().getAdrid());
+			} else {
+				/*
+				 * address.setCity(property.getAddress()); address.setCountry(null);
+				 * address.setPin(0); address.setState(null); address.setStreet(null);
+				 * address.setOther(null);
+				 */
+				/*
+				 * Long maxAdrid = addressDao.getMaxAdrid(); System.out.println("ADRID MPS" +
+				 * maxAdrid); property.getAddress().setAdrid(maxAdrid+1);
+				 */
+				address = addressDao.saveAddress(property.getAddress());
+			}
+		    
 			property.setAddress(address);
 			/*
 			 * for (Amenity amenity : property.getPropertyFacility().getAmenities()) {
@@ -159,6 +174,12 @@ public class PropertyService {
 
 	public List<Property> getPropertybyCity(Long addressID) {
 		List<Property> properties = propertyDao.getPropertybyCity(addressID);
+		System.out.println(properties);
+		return properties != null ? properties : null;
+	}
+	
+	public List<Property> getPropertybyCity(String city) {
+		List<Property> properties = propertyDao.getPropertybyCity(city);
 		System.out.println(properties);
 		return properties != null ? properties : null;
 	}

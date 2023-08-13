@@ -33,11 +33,14 @@
   fetch("http://localhost:8083/api/common/address/getAddress/India")
     .then(response => response.json())
     .then(data => {
+	  var uniqueCity = Array.from(new Set(data.map(address => address.city)));	
+	  console.log(uniqueCity);
       // Iterate over the data and create <option> elements
-      data.forEach(item => {
+      uniqueCity.forEach(item => {
         const option = document.createElement("option");
-        option.text = item.city; // Assuming each item has a "name" property
-        option.value = item.adrid; // Assuming each item has an "id" property
+        console.log(item);
+        option.text = item // Assuming each item has a "name" property
+        option.value = item // Assuming each item has an "id" property
         comboBox.appendChild(option);
         console.log(option);
       });

@@ -11,6 +11,7 @@ import org.springframework.data.repository.query.QueryByExampleExecutor;
 import org.springframework.stereotype.Repository;
 
 import com.rentia.models.Address;
+import com.rentia.models.Property;
 
 @Repository
 public interface AddressRepository extends CrudRepository<Address, Long>, QueryByExampleExecutor<Address> {
@@ -30,5 +31,8 @@ public interface AddressRepository extends CrudRepository<Address, Long>, QueryB
             "AND (:state is null OR a.state = :state) ")
 	
     List<Address> findByCityAndState(String city, String state);
+	
+	@Query("SELECT max(a.adrid) FROM Address a")
+	Long getMaxAdrid(); 
 
 }

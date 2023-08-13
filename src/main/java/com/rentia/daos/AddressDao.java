@@ -8,6 +8,7 @@ import org.springframework.data.domain.ExampleMatcher;
 import org.springframework.stereotype.Component;
 
 import com.rentia.models.Address;
+import com.rentia.models.Property;
 import com.rentia.models.TntProperty;
 import com.rentia.repositories.AddressRepository;
 import com.rentia.repositories.UsersRepository;
@@ -39,4 +40,15 @@ public class AddressDao {
 		System.out.println(address);
 		return address;
 	}
+	
+	public Address saveAddress(Address address) {
+		return addressRepository.save(address);
+	}
+
+	public Long getMaxAdrid() {
+		
+		return addressRepository.getMaxAdrid();
+	}
+	
+	
 }

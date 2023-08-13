@@ -84,6 +84,31 @@ public class UserController {
 		try {
 			System.out.println("mukul1" + user);
 			IntUser l_user = userService.registerInterestedUser(user);
+	        String recipientEmail = "arychauhan654@gmail.com";
+
+	        // Email content and formatting
+	        String subject = "New User Registration";
+	        String name = l_user.getName();
+	        String email = l_user.getEmail();
+	        Long mobNum = l_user.getMobNum();
+	        String pgType = l_user.getPgType();
+	        double minAmount = l_user.getMinAmount();
+	        double maxAmount = l_user.getMaxAmount();
+	        
+	        String message = "Dear Admin,\n\n" +
+	                "A new user has registered with the following details:\n\n" +
+	        		"<html><body style=\"font-family: Arial, sans-serif;\">"
+	                + "<h2 style=\"color: #008000;\">New User Registration</h2>"
+	                + "<p><strong>Name:</strong> " + name + "</p>"
+	                + "<p><strong>Email:</strong> " + email + "</p>"
+	                + "<p><strong>Mobile Number:</strong> " + mobNum + "</p>"
+	                + "<p><strong>PG Type:</strong> " + pgType + "</p>"
+	                + "<p><strong>Budget Range:</strong> $" + minAmount + " - $" + maxAmount + "</p>"
+	                + "</body></html>"+
+	                "Please take appropriate action.\n\n" +
+	                "Best regards,\n" +
+	                "Rentia";;
+	        boolean flag = this.emailService.sendEmail(subject, message, recipientEmail);
 			return new ResponseEntity<IntUser>(l_user, HttpStatus.OK);
 
 		} catch (Exception ex) {

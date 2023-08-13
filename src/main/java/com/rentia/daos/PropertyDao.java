@@ -42,6 +42,12 @@ public class PropertyDao {
 		System.out.println(properties);
 		return properties != null ? properties : null;
 	}
+	
+	public List<Property> getPropertybyCity(String city) {
+		List<Property> properties = propertyRepository.findPropertyByCity(city);
+		System.out.println(properties);
+		return properties != null ? properties : null;
+	}
 
 
 }
