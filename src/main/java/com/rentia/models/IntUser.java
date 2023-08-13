@@ -43,7 +43,7 @@ public class IntUser {
 	private Long id;
 	@NotBlank(message = "Name field is required !!")
 	private String name;
-	//@Column(unique = true)
+	@Column(unique = true)
 	private String email;
 	private Double minAmount;
 	private Double maxAmount;
