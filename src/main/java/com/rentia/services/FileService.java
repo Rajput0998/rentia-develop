@@ -21,6 +21,13 @@ public class FileService {
 
 	public String uploadImage(String path, MultipartFile file) throws IOException {
 
+		String fullPath = System.getProperty("user.dir") + "/" + path;
+		System.out.println("fullPath :- "+fullPath);
+		File directory = new File(fullPath);
+		if (!directory.exists()) {
+			directory.mkdirs(); // Create the directory if it doesn't exist
+		}
+
 		// File name
 		String name = file.getOriginalFilename();
 		// abc.png

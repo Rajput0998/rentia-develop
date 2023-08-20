@@ -1,7 +1,42 @@
 
 
+@media screen and (max-width:1600px) {
+
+.banner-content {
+  padding: 12px 47px 73px;
+  max-width: 558px;
+}
+
+
+}
+
 
 @media screen and (max-width:1440px) {
+
+.banner-content {
+    padding: 19px 47px 61px;
+    max-width: 460px;
+}
+
+.banner-content h1 {
+  font-size:35px;
+}
+.banner-content p {
+  font-size:17px;
+}
+
+
+
+.blog-card .blog-content h3 {
+    font-size: 20px;
+  }
+.section-title h2 {
+    font-size: 28px;
+    margin-top: 14px;
+    line-height: 1.5;
+    margin-bottom: 4px;
+}
+
 
 .registration_book .container {
     padding: 0 15em;
@@ -27,9 +62,7 @@
     height: 40px;
     font-size: 14px;
 }
-.create_account_design .default-btn {
-    padding: 6px 42px;
-}
+
 .registration_book {
     padding:3em 0;
 }
@@ -43,12 +76,15 @@
 
 @media screen and (max-width:1280px) {
 .registration_book .container {
-    padding: 0 10em;
+    padding:0 10em;
 }
 .login_contact h4 {
-    font-size: 15px;
+    font-size:15px;
 }
 
+.banner-area {
+  height: 57vh;
+}
 
 }
 
@@ -350,6 +386,7 @@
     font-size: 19px;
     max-width: 320px;
   }
+
   .service-item-two {
     text-align: center;
     padding: 30px 20px;
@@ -1398,7 +1435,7 @@
     left: -30px;
   }
   .specialty-list .specialty-list-card {
-    padding-left: 140px;
+    padding-left: 35px;
   }
   .specialty-list .specialty-list-card i {
     left: 40px;
@@ -1537,6 +1574,7 @@
     display: flex;
     flex-direction: column;
     gap: 9px;
+    align-items: flex-start;
   }
   .book-img-2::before {
     height: 109%;
@@ -1554,3 +1592,42 @@
     height: 475px;
   }
 }
+
+
+@media only screen and (max-width:980px) {
+
+.video_design_part {
+  position: inherit;
+}
+.services-area img {
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+.banner-area video {
+  top: 3rem;
+  position: inherit;
+}
+
+.banner-area {
+  height: auto;
+  position: initial;
+}
+.banner-content h1 {
+  font-size: 30px;
+  margin-top: 0;
+}
+.banner-content {
+  padding:0px 0 14px;
+  margin-left: auto;
+  max-width: inherit;
+  margin: 10px 0 0 0;
+}
+
+.services-item h3 {
+  max-width: inherit;
+}
+
+
+}
+
+/*# sourceMappingURL=responsive.css.map */

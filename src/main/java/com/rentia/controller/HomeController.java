@@ -35,7 +35,7 @@ public class HomeController {
     private AddressService addressService;
 
 
-	@RequestMapping("/")
+	@RequestMapping("/home")
 	public String home(Model model) {
 		List<Address> cities = addressService.fetchAddressDetails(null, null); 
         model.addAttribute("cities", cities);

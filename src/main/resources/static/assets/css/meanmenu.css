@@ -136,7 +136,7 @@
     display: none;
 }
 .mobile-nav.mean-container .mean-nav ul li a.active {
-    color: #b56952;
+    color: #000;
 }
 .main-nav {
     background: #000;
@@ -184,7 +184,7 @@
     color: #b56952;
 }
 .main-nav nav .navbar-nav .nav-item:hover a {
-    color: #EE786C;
+    color: #000000;
 }
 .main-nav nav .navbar-nav .nav-item .dropdown-menu {
     -webkit-box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.05);
@@ -268,6 +268,7 @@
 
 /* Responsive Style */
 @media only screen and (max-width: 991px) {
+
     .mobile-nav {
         display: block;
         position: relative;
@@ -275,7 +276,7 @@
     .mobile-nav .logo {
 		text-decoration: none;
         position: absolute;
-        top: 11px;
+        top: 4px;
         z-index: 999;
         left: 15px;
         color: #fff;
@@ -283,6 +284,18 @@
         text-transform: uppercase;
         font-size: 20px;
     }
+
+    .mobile-nav .logo svg {
+        width: 50px;
+    }
+
+    .mobile-nav .logo .st1 {
+        fill: #2c2c2c;
+    }
+    .mobile-nav .logo .st2 {
+        fill: #2c2c2c;
+    }
+
     .mean-container .mean-bar {
         background-color: #ffffff;
         padding: 0;

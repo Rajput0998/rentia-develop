@@ -1,172 +1,463 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!doctype html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org"
-   th:replace="base::layout(~{::section})">
-   <body id="page">
-      <section>
-         <div class="main-wrapper">
-            <!-- Office filter Area -->
-            <div class="office_filter_shop">
-               <div class="container-fluid">
-                  <div class="row pt-45">
-                     <div class="col-lg-6">
-                        <h3>Coworking Spaces in Delhi</h3>
-                     </div>
-                     <div class="col-lg-6 design_breadcrumb">
-                        <ul>
-                           <li><a href="/">Home</a></li>
-                           <li><a href="/">Coworking</a></li>
-                           <li th:class="${page == 'Roseate House' ? 'breadcrumb_active' : ''}" aria-current="page">Roseate House</li>
-                        </ul>
-                     </div>
-                  </div>
-               </div>
+	th:fragment="layout(content)">
+<head>
+<title>Rentia</title>	
+<!-- Required Meta Tags -->
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" th:href="@{/assets/css/bootstrap.min.css}"/>
+      <!-- Animate Min CSS -->
+      <link rel="stylesheet" th:href="@{/assets/css/animate.min.css}"/>
+      <!-- Flaticon CSS -->
+      <link rel="stylesheet" th:href="@{/assets/fonts/flaticon.css}"/>
+      <!-- Boxicons CSS -->
+      <link rel="stylesheet" th:href="@{/assets/css/boxicons.min.css}"/>
+      <!-- Magnific Popup CSS -->
+      <link rel="stylesheet" th:href="@{/assets/css/magnific-popup.css}"/>
+      <!-- Owl Carousel Min CSS -->
+      <link rel="stylesheet" th:href="@{/assets/css/owl.carousel.min.css}"/>
+      <link rel="stylesheet" th:href="@{/assets/css/owl.theme.default.min.css}"/>
+      <!-- Meanmenu CSS -->
+      <link rel="stylesheet" th:href="@{/assets/css/meanmenu.css}"/>
+      <!-- Jquery Ui CSS -->
+      <link rel="stylesheet" th:href="@{/assets/css/jquery-ui.css}"/>
+      <!-- Nice Select Min CSS -->
+      <link rel="stylesheet" th:href="@{/assets/css/nice-select.min.css}"/>
+      <!-- Responsive CSS -->
+      <link rel="stylesheet" th:href="@{/assets/css/responsive.css}"/>
+      <!-- Theme Dark CSS -->
+      <link rel="stylesheet" th:href="@{/assets/css/theme-dark.css}"/>
+      <!-- Style CSS -->
+      <link rel="stylesheet" th:href="@{/assets/css/style.css}"/>
+      <!-- Favicon -->
+      <link rel="icon" type="image/png" th:href="@{assets/img/favicon.webp}"/>
+      <!-- Process Form -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"/>
+      
+</head>
+<body id="page">
+  <!-- Top Header Start -->
+  <header class="top-header top-header-bg">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <div class="col-lg-2 col-md-2 pr-0 col-6">
+                <div class="header-right add_header_number">
+                <ul>
+                     <li>
+                        <i class='bx bx-phone-call'></i>
+                        <a href="tel:9319144228">+91-9319144228</a>
+                    </li>
+                </ul>
+                </div>
             </div>
-            <!-- Office filter End -->
-            <!-- Workspace solutions -->
-            <div class="room-area pb-70 workspace_solutions out_open_category for_arrow">
-               <div class="container-fluid">
-                  <div class="section-title text-center">
-                  </div>
-                  <div class="row pt-45">
-                     <div class="col-lg-12">
+
+            <div class="col-lg-10 col-md-10 col-6">
+                <div class="header-right">
+                    <ul>
+                        <li class="none_for_mobile">
+                            <i class='bx bx-home-alt'></i>
+                            <a href="#">123 Virgil A Stanton, Virginia, USA</a>
+                        </li>
+                        <li>
+                            <i class='bx bx-envelope'></i>
+                            <a href="mailto:info@rentia.com">info@rentia.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- Top Header End -->
+
+<!-- Start Navbar Area -->
+<div class="navbar-area">
+    <!-- Menu For Mobile Device -->
+    <div class="mobile-nav">
+        <a href="\" class="logo">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+viewBox="0 0 1000 983" style="enable-background:new 0 0 1000 983;" xml:space="preserve">
+<style type="text/css">
+.st0{display:none;fill:#FEFEFE;}
+.st1{fill:#0157FE;}
+.st2{fill:#0057FE;}
+</style>
+<g>
+<path class="st0" d="M1001,984c-333.3,0-666.7,0-1000,0C1,656.3,1,328.7,1,1c333.3,0,666.7,0,1000,0
+C1001,328.7,1001,656.3,1001,984z M458.8,293.3C384,304.2,291,376.7,296.5,499.8c2.5,55,26,101.8,68,138
+c42.4,36.5,92,52.9,147.8,47.9c104.2-9.3,167.6-93,176.3-160.5c-22.7,0-45.3,0.1-68-0.1c-3.8,0-5.4,1-6.7,4.6
+c-20.6,59.5-81.4,95.9-146.4,81.8c-67.9-14.7-109.3-78.4-97.3-146.4c6.1-34.8,24.4-62.6,54.1-82c10.6-7,22.6-11.9,34.4-18
+C458.8,341.9,458.8,317.6,458.8,293.3z M833.9,452.7c24.3,0,47.9,0,71.9,0c0-1.6,0-2.9,0-4.2c0-46.2,0-92.3,0.1-138.5
+c0-19.9-0.6-39.6-4.8-59.2c-11.1-51.1-37.1-93-77.7-125.5c-39.4-31.5-85-46.5-135-47.2c-50.6-0.7-101.3-0.1-152-0.2
+c-4.1,0-5.4,1.3-5.3,5.5c0.2,20.8,0.1,41.7,0.1,62.5c0,1.4,0.2,2.9,0.3,4.8c2.1,0,3.9,0,5.7,0c50,0,100-0.1,150,0.1
+c9.1,0,18.3,0.7,27.3,2.3c38,6.6,68.4,26,91.4,56.8c20.1,27,28.5,57.8,28,91.2c-0.1,9.7-0.8,19.3-0.8,29
+c0.1,14.8,0.7,29.6,0.8,44.5c0.1,24.2,0,48.3,0,72.5C833.9,448.8,833.9,450.6,833.9,452.7z M157,452.8c0-2.2,0-4,0-5.8
+c0-49.8-0.1-99.6,0.1-149.5c0-9,0.5-18.2,1.9-27.1c5.6-35.1,22.8-63.7,49.8-86.4c27.9-23.3,60.4-33.6,96.7-33.4
+c49.3,0.3,98.6,0.1,148,0.1c1.7,0,3.5,0,5.5,0c0-23.6-0.1-46.4,0-69.3c0-4.1-2.6-3.5-5-3.5c-53.9,0.3-107.9,0.4-161.8,1.2
+c-13.2,0.2-26.7,1.9-39.5,5c-71.3,17.6-121.8,60.5-151.4,127.6c-9.6,21.7-15.8,44.7-16.1,68.5c-0.7,55.6-0.3,111.3-0.4,166.9
+c0,1.8,0,3.6,0,5.5C109,452.8,132.6,452.8,157,452.8z M531.3,827.9c0,2.1,0,3.6,0,5.1c0,20.3,0.2,40.7-0.1,61
+c-0.1,4.7,1.1,6.1,6,6.1c50.8-0.2,101.6,0.1,152.5-0.3c11.9-0.1,23.9-1.2,35.7-3.2c40.2-6.8,75.9-23.5,106.3-50.7
+c48-42.8,73-96.7,74-161c0.8-51.3,0.2-102.6,0.2-154c0-1.9,0-3.8,0-5.5c-24.5,0-48.1,0-71.9,0c0,2.4,0,4.3,0,6.3
+c0,48.8,0.1,97.6-0.1,146.5c0,8.8-0.5,17.7-1.8,26.3c-5.6,38.5-24.4,69.5-55,93.2c-26.6,20.7-57.2,30-90.7,30c-49.7,0-99.3,0-149,0
+C535.6,827.9,533.8,827.9,531.3,827.9z M458.8,827.9c-2.2,0-4.1,0-5.9,0c-50.5,0-101,0.1-151.5-0.1c-8.4,0-16.9-0.7-25.1-2.2
+c-37.3-6.9-67.8-25.3-90.7-55.6c-17.9-23.7-28.3-50.5-28.6-80.4c-0.5-52.6-0.1-105.3,0-158c0-2.1-0.3-4.2-0.4-6.3
+c-24.1,0-47.7,0-71.5,0c-0.1,1.6-0.2,2.9-0.2,4.2c0,52.7,0,105.3,0,158c0,14.1,1.7,28,4.8,41.8c11.1,49.1,36,89.8,74.9,121.7
+c38.6,31.7,83.2,47.9,132.8,48.8c52,1,104,0.2,156,0.2c1.8,0,3.6-0.2,5.6-0.3C458.8,875.7,458.8,852.1,458.8,827.9z M560,365.7
+c-0.9,27.9,22.5,55,54.8,55.2c29.9,0.2,54.9-24.6,55.3-53.9c0.4-30.7-22.1-56-53-56.6C578,309.7,559.1,341,560,365.7z"/>
+<path class="st1" d="M458.8,293.3c0,24.3,0,48.6,0,71.8c-11.8,6.1-23.8,11.1-34.4,18c-29.7,19.4-48,47.2-54.1,82
+c-12,68.1,29.4,131.7,97.3,146.4c65,14.1,125.8-22.3,146.4-81.8c1.2-3.6,2.9-4.7,6.7-4.6c22.6,0.2,45.3,0.1,68,0.1
+c-8.8,67.5-72.2,151.3-176.3,160.5c-55.8,5-105.4-11.4-147.8-47.9c-42-36.2-65.6-83-68-138C291,376.7,384,304.2,458.8,293.3z"/>
+<path class="st1" d="M833.9,452.7c0-2.1,0-3.9,0-5.7c0-24.2,0.1-48.3,0-72.5c-0.1-14.8-0.7-29.6-0.8-44.5c0-9.7,0.7-19.3,0.8-29
+c0.5-33.4-7.9-64.2-28-91.2c-23-30.8-53.4-50.2-91.4-56.8c-9-1.6-18.2-2.2-27.3-2.3c-50-0.2-100-0.1-150-0.1c-1.8,0-3.6,0-5.7,0
+c-0.1-1.9-0.3-3.4-0.3-4.8c0-20.8,0.1-41.7-0.1-62.5c0-4.2,1.2-5.5,5.3-5.5c50.7,0.1,101.3-0.5,152,0.2c50,0.7,95.6,15.7,135,47.2
+c40.7,32.6,66.7,74.4,77.7,125.5c4.2,19.6,4.8,39.3,4.8,59.2c-0.1,46.2-0.1,92.3-0.1,138.5c0,1.3,0,2.6,0,4.2
+C881.7,452.7,858.2,452.7,833.9,452.7z"/>
+<path class="st1" d="M157,452.8c-24.4,0-48,0-72.2,0c0-2,0-3.7,0-5.5c0.1-55.6-0.3-111.3,0.4-166.9c0.3-23.8,6.5-46.7,16.1-68.5
+c29.6-67.1,80.1-110,151.4-127.6c12.8-3.2,26.3-4.8,39.5-5c53.9-0.9,107.8-0.9,161.8-1.2c2.5,0,5.1-0.5,5,3.5
+c-0.1,22.8,0,45.6,0,69.3c-2,0-3.7,0-5.5,0c-49.3,0-98.6,0.3-148-0.1c-36.3-0.3-68.8,10.1-96.7,33.4c-27,22.6-44.2,51.3-49.8,86.4
+c-1.4,8.9-1.9,18.1-1.9,27.1c-0.2,49.8-0.1,99.6-0.1,149.5C157,448.8,157,450.6,157,452.8z"/>
+<path class="st1" d="M531.3,827.9c2.5,0,4.3,0,6.1,0c49.7,0,99.3,0,149,0c33.5,0,64.1-9.3,90.7-30c30.5-23.8,49.3-54.8,55-93.2
+c1.3-8.7,1.8-17.6,1.8-26.3c0.2-48.8,0.1-97.6,0.1-146.5c0-2,0-4,0-6.3c23.8,0,47.4,0,71.9,0c0,1.7,0,3.6,0,5.5
+c0,51.3,0.6,102.7-0.2,154c-1,64.3-25.9,118.1-74,161c-30.5,27.2-66.2,43.8-106.3,50.7c-11.7,2-23.8,3.1-35.7,3.2
+c-50.8,0.3-101.6,0.1-152.5,0.3c-4.9,0-6.1-1.4-6-6.1c0.2-20.3,0.1-40.7,0.1-61C531.3,831.5,531.3,830.1,531.3,827.9z"/>
+<path class="st2" d="M458.8,827.9c0,24.2,0,47.8,0,71.8c-2,0.1-3.8,0.2-5.6,0.3c-52,0-104,0.8-156-0.2
+c-49.6-1-94.2-17.2-132.8-48.8c-38.9-31.9-63.9-72.6-74.9-121.7c-3.1-13.7-4.8-27.6-4.8-41.8c0.1-52.7,0-105.3,0-158
+c0-1.3,0.1-2.6,0.2-4.2c23.8,0,47.4,0,71.5,0c0.1,2.1,0.4,4.2,0.4,6.3c0,52.7-0.4,105.3,0,158c0.3,29.9,10.7,56.7,28.6,80.4
+c22.9,30.3,53.4,48.8,90.7,55.6c8.2,1.5,16.7,2.2,25.1,2.2c50.5,0.2,101,0.1,151.5,0.1C454.7,827.9,456.5,827.9,458.8,827.9z"/>
+<path class="st1" d="M560,365.7c-0.9-24.7,18-56,57.1-55.2c30.8,0.6,53.3,25.9,53,56.6c-0.4,29.3-25.3,54.1-55.3,53.9
+C582.5,420.7,559.1,393.6,560,365.7z"/>
+</g>
+</svg>
+
+        </a> 
+    </div>
+
+    <!-- Menu For Desktop Device -->
+    <div class="main-nav">
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-md navbar-light ">
+                <a class="navbar-brand rentia_logo" href="\">
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+viewBox="0 0 1000 983" style="enable-background:new 0 0 1000 983;" xml:space="preserve">
+<g>
+<path class="st0" d="M1001,984c-333.3,0-666.7,0-1000,0C1,656.3,1,328.7,1,1c333.3,0,666.7,0,1000,0
+C1001,328.7,1001,656.3,1001,984z M458.8,293.3C384,304.2,291,376.7,296.5,499.8c2.5,55,26,101.8,68,138
+c42.4,36.5,92,52.9,147.8,47.9c104.2-9.3,167.6-93,176.3-160.5c-22.7,0-45.3,0.1-68-0.1c-3.8,0-5.4,1-6.7,4.6
+c-20.6,59.5-81.4,95.9-146.4,81.8c-67.9-14.7-109.3-78.4-97.3-146.4c6.1-34.8,24.4-62.6,54.1-82c10.6-7,22.6-11.9,34.4-18
+C458.8,341.9,458.8,317.6,458.8,293.3z M833.9,452.7c24.3,0,47.9,0,71.9,0c0-1.6,0-2.9,0-4.2c0-46.2,0-92.3,0.1-138.5
+c0-19.9-0.6-39.6-4.8-59.2c-11.1-51.1-37.1-93-77.7-125.5c-39.4-31.5-85-46.5-135-47.2c-50.6-0.7-101.3-0.1-152-0.2
+c-4.1,0-5.4,1.3-5.3,5.5c0.2,20.8,0.1,41.7,0.1,62.5c0,1.4,0.2,2.9,0.3,4.8c2.1,0,3.9,0,5.7,0c50,0,100-0.1,150,0.1
+c9.1,0,18.3,0.7,27.3,2.3c38,6.6,68.4,26,91.4,56.8c20.1,27,28.5,57.8,28,91.2c-0.1,9.7-0.8,19.3-0.8,29
+c0.1,14.8,0.7,29.6,0.8,44.5c0.1,24.2,0,48.3,0,72.5C833.9,448.8,833.9,450.6,833.9,452.7z M157,452.8c0-2.2,0-4,0-5.8
+c0-49.8-0.1-99.6,0.1-149.5c0-9,0.5-18.2,1.9-27.1c5.6-35.1,22.8-63.7,49.8-86.4c27.9-23.3,60.4-33.6,96.7-33.4
+c49.3,0.3,98.6,0.1,148,0.1c1.7,0,3.5,0,5.5,0c0-23.6-0.1-46.4,0-69.3c0-4.1-2.6-3.5-5-3.5c-53.9,0.3-107.9,0.4-161.8,1.2
+c-13.2,0.2-26.7,1.9-39.5,5c-71.3,17.6-121.8,60.5-151.4,127.6c-9.6,21.7-15.8,44.7-16.1,68.5c-0.7,55.6-0.3,111.3-0.4,166.9
+c0,1.8,0,3.6,0,5.5C109,452.8,132.6,452.8,157,452.8z M531.3,827.9c0,2.1,0,3.6,0,5.1c0,20.3,0.2,40.7-0.1,61
+c-0.1,4.7,1.1,6.1,6,6.1c50.8-0.2,101.6,0.1,152.5-0.3c11.9-0.1,23.9-1.2,35.7-3.2c40.2-6.8,75.9-23.5,106.3-50.7
+c48-42.8,73-96.7,74-161c0.8-51.3,0.2-102.6,0.2-154c0-1.9,0-3.8,0-5.5c-24.5,0-48.1,0-71.9,0c0,2.4,0,4.3,0,6.3
+c0,48.8,0.1,97.6-0.1,146.5c0,8.8-0.5,17.7-1.8,26.3c-5.6,38.5-24.4,69.5-55,93.2c-26.6,20.7-57.2,30-90.7,30c-49.7,0-99.3,0-149,0
+C535.6,827.9,533.8,827.9,531.3,827.9z M458.8,827.9c-2.2,0-4.1,0-5.9,0c-50.5,0-101,0.1-151.5-0.1c-8.4,0-16.9-0.7-25.1-2.2
+c-37.3-6.9-67.8-25.3-90.7-55.6c-17.9-23.7-28.3-50.5-28.6-80.4c-0.5-52.6-0.1-105.3,0-158c0-2.1-0.3-4.2-0.4-6.3
+c-24.1,0-47.7,0-71.5,0c-0.1,1.6-0.2,2.9-0.2,4.2c0,52.7,0,105.3,0,158c0,14.1,1.7,28,4.8,41.8c11.1,49.1,36,89.8,74.9,121.7
+c38.6,31.7,83.2,47.9,132.8,48.8c52,1,104,0.2,156,0.2c1.8,0,3.6-0.2,5.6-0.3C458.8,875.7,458.8,852.1,458.8,827.9z M560,365.7
+c-0.9,27.9,22.5,55,54.8,55.2c29.9,0.2,54.9-24.6,55.3-53.9c0.4-30.7-22.1-56-53-56.6C578,309.7,559.1,341,560,365.7z"/>
+<path class="st1" d="M458.8,293.3c0,24.3,0,48.6,0,71.8c-11.8,6.1-23.8,11.1-34.4,18c-29.7,19.4-48,47.2-54.1,82
+c-12,68.1,29.4,131.7,97.3,146.4c65,14.1,125.8-22.3,146.4-81.8c1.2-3.6,2.9-4.7,6.7-4.6c22.6,0.2,45.3,0.1,68,0.1
+c-8.8,67.5-72.2,151.3-176.3,160.5c-55.8,5-105.4-11.4-147.8-47.9c-42-36.2-65.6-83-68-138C291,376.7,384,304.2,458.8,293.3z"/>
+<path class="st1" d="M833.9,452.7c0-2.1,0-3.9,0-5.7c0-24.2,0.1-48.3,0-72.5c-0.1-14.8-0.7-29.6-0.8-44.5c0-9.7,0.7-19.3,0.8-29
+c0.5-33.4-7.9-64.2-28-91.2c-23-30.8-53.4-50.2-91.4-56.8c-9-1.6-18.2-2.2-27.3-2.3c-50-0.2-100-0.1-150-0.1c-1.8,0-3.6,0-5.7,0
+c-0.1-1.9-0.3-3.4-0.3-4.8c0-20.8,0.1-41.7-0.1-62.5c0-4.2,1.2-5.5,5.3-5.5c50.7,0.1,101.3-0.5,152,0.2c50,0.7,95.6,15.7,135,47.2
+c40.7,32.6,66.7,74.4,77.7,125.5c4.2,19.6,4.8,39.3,4.8,59.2c-0.1,46.2-0.1,92.3-0.1,138.5c0,1.3,0,2.6,0,4.2
+C881.7,452.7,858.2,452.7,833.9,452.7z"/>
+<path class="st1" d="M157,452.8c-24.4,0-48,0-72.2,0c0-2,0-3.7,0-5.5c0.1-55.6-0.3-111.3,0.4-166.9c0.3-23.8,6.5-46.7,16.1-68.5
+c29.6-67.1,80.1-110,151.4-127.6c12.8-3.2,26.3-4.8,39.5-5c53.9-0.9,107.8-0.9,161.8-1.2c2.5,0,5.1-0.5,5,3.5
+c-0.1,22.8,0,45.6,0,69.3c-2,0-3.7,0-5.5,0c-49.3,0-98.6,0.3-148-0.1c-36.3-0.3-68.8,10.1-96.7,33.4c-27,22.6-44.2,51.3-49.8,86.4
+c-1.4,8.9-1.9,18.1-1.9,27.1c-0.2,49.8-0.1,99.6-0.1,149.5C157,448.8,157,450.6,157,452.8z"/>
+<path class="st1" d="M531.3,827.9c2.5,0,4.3,0,6.1,0c49.7,0,99.3,0,149,0c33.5,0,64.1-9.3,90.7-30c30.5-23.8,49.3-54.8,55-93.2
+c1.3-8.7,1.8-17.6,1.8-26.3c0.2-48.8,0.1-97.6,0.1-146.5c0-2,0-4,0-6.3c23.8,0,47.4,0,71.9,0c0,1.7,0,3.6,0,5.5
+c0,51.3,0.6,102.7-0.2,154c-1,64.3-25.9,118.1-74,161c-30.5,27.2-66.2,43.8-106.3,50.7c-11.7,2-23.8,3.1-35.7,3.2
+c-50.8,0.3-101.6,0.1-152.5,0.3c-4.9,0-6.1-1.4-6-6.1c0.2-20.3,0.1-40.7,0.1-61C531.3,831.5,531.3,830.1,531.3,827.9z"/>
+<path class="st2" d="M458.8,827.9c0,24.2,0,47.8,0,71.8c-2,0.1-3.8,0.2-5.6,0.3c-52,0-104,0.8-156-0.2
+c-49.6-1-94.2-17.2-132.8-48.8c-38.9-31.9-63.9-72.6-74.9-121.7c-3.1-13.7-4.8-27.6-4.8-41.8c0.1-52.7,0-105.3,0-158
+c0-1.3,0.1-2.6,0.2-4.2c23.8,0,47.4,0,71.5,0c0.1,2.1,0.4,4.2,0.4,6.3c0,52.7-0.4,105.3,0,158c0.3,29.9,10.7,56.7,28.6,80.4
+c22.9,30.3,53.4,48.8,90.7,55.6c8.2,1.5,16.7,2.2,25.1,2.2c50.5,0.2,101,0.1,151.5,0.1C454.7,827.9,456.5,827.9,458.8,827.9z"/>
+<path class="st1" d="M560,365.7c-0.9-24.7,18-56,57.1-55.2c30.8,0.6,53.3,25.9,53,56.6c-0.4,29.3-25.3,54.1-55.3,53.9
+C582.5,420.7,559.1,393.6,560,365.7z"/>
+</g>
+</svg> Rentia
+
+                </a> 
+
+                <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
+                    <ul class="navbar-nav m-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link active">
+                                Home
+                            </a>
+                            
+                        </li>
+
+
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                About
+                            </a>
+                        </li>
+                        
+
+                        <!-- <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                Services 
+                                <i class='bx bx-chevron-down'></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="nav-item">
+                                    <a href="category.php" class="nav-link">
+                                        Services Style One 
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        Services Style Two 
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        Service Details 
+                                    </a>
+                                </li>
+                            </ul>
+                        </li> -->
+
+                        <li class="nav-item">
+                            <a href="blogs.html" class="nav-link">
+                                Blogs
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                List Property
+                                <i class='bx bx-chevron-down'></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        Delhi
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        Mumbai
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        Hyderabad
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        Bangalore
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item-btn">
+                            <a href="#" class="default-btn btn-bg-one border-radius-5">Book Now</a>
+                        </li>
+                    </ul>
+
+                    <div class="nav-btn">
+                        <a href="#" class="default-btn btn-bg-one border-radius-5">Book Now</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+</div>
+<!-- End Navbar Area -->
+
+
+<div class="cl"></div>
+
+
+        
+<div class="main-wrapper">
+
+
+        <!-- Office filter Area -->
+        <div class="office_filter_shop">
+            <div class="container-fluid">
+                <div class="row pt-45">
+                    <div class="col-lg-6">
+                        <h3>Coworking Spaces in Delhi</h3>
+                   </div>
+
+                   <div class="col-lg-6 design_breadcrumb">
+                    <ul><li><a href="/">Home</a></li><li><a href="/">Coworking</a></li><li class="breadcrumb_active" aria-current="page">Roseate House</li></ul>
+                   </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Office filter End -->
+
+
+
+
+        <!-- Workspace solutions -->
+        <div class="room-area pb-70 workspace_solutions out_open_category for_arrow">
+            <div class="container-fluid">
+                <div class="section-title text-center">
+                                      
+                </div>
+                <div class="row pt-45">
+
+                    <div class="col-lg-12">
                         <div class="room-card-two">
-                           <div class="row align-items-center">
-                              <div class="office_detail_slider owl-carousel owl-theme">
+                            <div class="row align-items-center">
+                                <div class="office_detail_slider owl-carousel owl-theme">
                                  <div th:each="image : ${property.propertyImages}" class = "item">
                                     <img th:src="@{/api/a1/property/post/image/{displayImage}(displayImage=${image})}" alt="Images">
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="container both_detail">
-                  <div class="row align-items-center">
-                     <div class="col-lg-8 col-md-8 left_detail_post">
-                        <div class="room-card-content design_address">
-                           <ul>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    </div>
+                    <div class="container both_detail">
+                            <div class="row align-items-center">
+                                <div class="col-lg-8 col-md-8 left_detail_post">
+                                    <div class="room-card-content design_address">
+                                        <ul>
                               <li>Starting Price<br> <b><span th:text="${property.price}"></span></b> / month</li>
-                           </ul>
-                           <div>
-                              <a>
-                                 <svg width="24" height="24" viewBox="0 0 24 24">
-                                    <path fill="currentColor" d="M12 12q.825 0 1.413-.588T14 10q0-.825-.588-1.413T12 8q-.825 0-1.413.588T10 10q0 .825.588 1.413T12 12Zm0 7.35q3.05-2.8 4.525-5.088T18 10.2q0-2.725-1.738-4.462T12 4Q9.475 4 7.737 5.738T6 10.2q0 1.775 1.475 4.063T12 19.35ZM12 22q-4.025-3.425-6.012-6.362T4 10.2q0-3.75 2.413-5.975T12 2q3.175 0 5.588 2.225T20 10.2q0 2.5-1.988 5.438T12 22Zm0-11.8Z"/>
-                                 </svg>
-                                 <span th:text="${property.address.city}"></span>
-                              </a>
-                              <a>
-                                 <svg width="24" height="24" viewBox="0 0 24 24">
-                                    <path fill="currentColor" d="M9.025 15.175q.625-.45 1.388-.7t1.587-.25q.825 0 1.588.25t1.387.7L21.1 9.05q-1.95-1.475-4.263-2.263T12 6q-2.525 0-4.838.788T2.9 9.05l6.125 6.125Zm2.975 5.4q-.2 0-.375-.062T11.3 20.3L.7 9.7q-.3-.3-.288-.712T.725 8.3q2.35-2.125 5.238-3.213T12 4q3.175 0 6.063 1.088T23.274 8.3q.3.275.313.688T23.3 9.7L12.7 20.3q-.15.15-.325.213t-.375.062Z"/>
-                                 </svg>
-                                 High speed WiFi
-                              </a>
-                              <a>
-                                 <svg width="24" height="24" viewBox="0 0 1024 1024">
-                                    <path fill="currentColor" d="M275 281c19.9 0 36-16.1 36-36V36c0-19.9-16.1-36-36-36s-36 16.1-36 36v209c0 19.9 16.1 36 36 36zm613 144H768c0-39.8-32.2-72-72-72H200c-39.8 0-72 32.2-72 72v248c0 3.4.2 6.7.7 9.9c-.5 7-.7 14-.7 21.1c0 176.7 143.3 320 320 320c160.1 0 292.7-117.5 316.3-271H888c39.8 0 72-32.2 72-72V497c0-39.8-32.2-72-72-72zM696 681h-1.1c.7 7.6 1.1 15.2 1.1 23c0 137-111 248-248 248S200 841 200 704c0-7.8.4-15.4 1.1-23H200V425h496v256zm192-8H776V497h112v176zM613 281c19.9 0 36-16.1 36-36V36c0-19.9-16.1-36-36-36s-36 16.1-36 36v209c0 19.9 16.1 36 36 36zm-170 0c19.9 0 36-16.1 36-36V36c0-19.9-16.1-36-36-36s-36 16.1-36 36v209c0 19.9 16.1 36 36 36z"/>
-                                 </svg>
-                                 Cofee & Bar
-                              </a>
-                           </div>
-                        </div>
-                        <hr>
+                                        </ul>
+
+                                        <div>
+                                            <a><svg width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 12q.825 0 1.413-.588T14 10q0-.825-.588-1.413T12 8q-.825 0-1.413.588T10 10q0 .825.588 1.413T12 12Zm0 7.35q3.05-2.8 4.525-5.088T18 10.2q0-2.725-1.738-4.462T12 4Q9.475 4 7.737 5.738T6 10.2q0 1.775 1.475 4.063T12 19.35ZM12 22q-4.025-3.425-6.012-6.362T4 10.2q0-3.75 2.413-5.975T12 2q3.175 0 5.588 2.225T20 10.2q0 2.5-1.988 5.438T12 22Zm0-11.8Z"/></svg> <span th:text="${property.address.city}"></span></a>
+                                            
+                                            <a><svg width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M9.025 15.175q.625-.45 1.388-.7t1.587-.25q.825 0 1.588.25t1.387.7L21.1 9.05q-1.95-1.475-4.263-2.263T12 6q-2.525 0-4.838.788T2.9 9.05l6.125 6.125Zm2.975 5.4q-.2 0-.375-.062T11.3 20.3L.7 9.7q-.3-.3-.288-.712T.725 8.3q2.35-2.125 5.238-3.213T12 4q3.175 0 6.063 1.088T23.274 8.3q.3.275.313.688T23.3 9.7L12.7 20.3q-.15.15-.325.213t-.375.062Z"/></svg> High speed WiFi</a>
+                                            
+                                            <a><svg width="24" height="24" viewBox="0 0 1024 1024"><path fill="currentColor" d="M275 281c19.9 0 36-16.1 36-36V36c0-19.9-16.1-36-36-36s-36 16.1-36 36v209c0 19.9 16.1 36 36 36zm613 144H768c0-39.8-32.2-72-72-72H200c-39.8 0-72 32.2-72 72v248c0 3.4.2 6.7.7 9.9c-.5 7-.7 14-.7 21.1c0 176.7 143.3 320 320 320c160.1 0 292.7-117.5 316.3-271H888c39.8 0 72-32.2 72-72V497c0-39.8-32.2-72-72-72zM696 681h-1.1c.7 7.6 1.1 15.2 1.1 23c0 137-111 248-248 248S200 841 200 704c0-7.8.4-15.4 1.1-23H200V425h496v256zm192-8H776V497h112v176zM613 281c19.9 0 36-16.1 36-36V36c0-19.9-16.1-36-36-36s-36 16.1-36 36v209c0 19.9 16.1 36 36 36zm-170 0c19.9 0 36-16.1 36-36V36c0-19.9-16.1-36-36-36s-36 16.1-36 36v209c0 19.9 16.1 36 36 36z"/></svg> Cofee & Bar</a>
+
+                                        </div>
+                                    </div>
+
+                                    <hr>
                         <p th:text="${property.detail}"></p>
-                        <br>
-                        <hr>
-                        <div class="working_days">
-                           <div>Mon - Fri : 10:00 AM to 07:00 PM</div>
-                           <div>Sat : 10:00 AM to 07:00 PM</div>
-                           <div>Sun : Closed</div>
-                        </div>
-                        <hr>
-                        <div class="dedicated_desk">
-                           <div class="main_price_box">
-                              <div class="img"><img src="" th:src="@{/assets/images/private-cabin.webp}" alt="Images"></div>
-                              <div>
-                                 <h5 class="text-capitalize">Double Sharing</h5>
-                                 <p class="hideOnMobile tabhide">It is the Basic plan include only residences.</p>
-                                 <div class="action-box ng-star-inserted"></div>
-                              </div>
-                              <div class="right_slids">
-                                 <div class="price">
-                                    <span class="hideOnMobile tabhide">starting from</span>
-                                    <div class="ng-star-inserted"><span th:text="${property.propertyFacility.doubleSharingPrice}"></span><small><span>/month</span></small></div>
-                                 </div>
-                                 <button class="btn-link hideOnMobile tabhide" type="button">Enquire<small class="icon-next fas fa-angle-right" aria-hidden="true"></small></button>
-                              </div>
-                           </div>
-                           <div class="main_price_box">
-                              <div class="img"><img src="" th:src="@{/assets/images/dedicated-desk.webp}" alt="Images"></div>
-                              <div>
-                                 <h5 class="text-capitalize">Private Room</h5>
-                                 <p class="hideOnMobile tabhide">It is the Basic plan include only residences.</p>
-                                 <div class="action-box ng-star-inserted"></div>
-                              </div>
-                              <div class="right_slids">
-                                 <div class="price">
-                                    <span class="hideOnMobile tabhide">starting from</span>
-                                    <div class="ng-star-inserted"><span th:text="${property.propertyFacility.singleSharingPrice}"></span><small><span>/month</span></small></div>
-                                 </div>
-                                 <button class="btn-link hideOnMobile tabhide" type="button">Enquire<small class="icon-next fas fa-angle-right" aria-hidden="true"></small></button>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="amenities_design">
-                           <h5 class="ng-tns-c6-1">Amenities</h5>
-                           <ul>
+                                    <br>
+
+                                    <hr>
+
+                                    <div class="working_days"><div>Mon - Fri : 10:00 AM to 07:00 PM</div><div>Sat : 10:00 AM to 07:00 PM</div><div>Sun : Closed</div></div>
+
+
+                                    <hr>
+
+
+                                         <div class="dedicated_desk">
+                                            <div class="main_price_box">
+                                            <div class="img"><img src="" th:src="@{/assets/images/private-cabin.webp}" alt="Images"></div>
+                                            <div>
+                                                <h5 class="text-capitalize">Double Sharing</h5>
+                                                <p class="hideOnMobile tabhide">It is the Basic plan include only residences.</p>
+                                                <div class="action-box ng-star-inserted"></div>
+                                            </div>
+
+                                            <div class="right_slids">
+                                                <div class="price"><span class="hideOnMobile tabhide">starting from</span><div class="ng-star-inserted"> <span th:text="${property.propertyFacility.doubleSharingPrice}"></span><small><span>/month</span></small></div></div>
+
+                                                <button class="btn-link hideOnMobile tabhide" type="button">Enquire<small class="icon-next fas fa-angle-right" aria-hidden="true"></small></button></div>
+                                            </div>
+
+                                            <div class="main_price_box">
+                                            <div class="img"><img src="" th:src="@{/assets/images/dedicated-desk.webp}" alt="Images"></div>
+                                            <div>
+                                                <h5 class="text-capitalize">Private Room</h5>
+                                                <p class="hideOnMobile tabhide">It is the Basic plan include only residences.</p>
+                                                <div class="action-box ng-star-inserted"></div>
+                                            </div>
+
+                                            <div class="right_slids">
+                                                <div class="price"><span class="hideOnMobile tabhide">starting from</span><div class="ng-star-inserted"><span th:text="${property.propertyFacility.singleSharingPrice}"></span><small><span>/Seat</span></small></div></div>
+
+                                                <button class="btn-link hideOnMobile tabhide" type="button">Enquire<small class="icon-next fas fa-angle-right" aria-hidden="true"></small></button></div>
+                                            </div>
+
+                                        </div>
+
+
+
+                                         <div class="amenities_design">
+                                            <h5 class="ng-tns-c6-1">Amenities</h5>
+                                            <ul>
                               <li th:each="amenity : ${property.propertyFacility.amenities}">
                                  <img th:src="@{'/api/a1/property/post/image/' + ${amenity.name} + '.jpg'}" alt="Images"> <span th:text="${amenity.name}"></span>
                               </li>
-                           </ul>
-                        </div>
-                        <div class="design_map">
-                           <h5 class="ng-tns-c6-1">You'll work here</h5>
-                           <div>
-                              <svg width="24" height="24" viewBox="0 0 24 24">
-                                 <path fill="currentColor" d="M12 12q.825 0 1.413-.588T14 10q0-.825-.588-1.413T12 8q-.825 0-1.413.588T10 10q0 .825.588 1.413T12 12Zm0 7.35q3.05-2.8 4.525-5.088T18 10.2q0-2.725-1.738-4.462T12 4Q9.475 4 7.737 5.738T6 10.2q0 1.775 1.475 4.063T12 19.35ZM12 22q-4.025-3.425-6.012-6.362T4 10.2q0-3.75 2.413-5.975T12 2q3.175 0 5.588 2.225T20 10.2q0 2.5-1.988 5.438T12 22Zm0-11.8Z"></path>
-                              </svg>
-                              <li><i class='material-icons'></i> <span th:text="${property.address}"></span></li>
-                           </div>
-                           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d448196.05311984906!2d76.81304084547108!3d28.643795378541427!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x37205b715389640!2sDelhi!5e0!3m2!1sen!2sin!4v1683574879867!5m2!1sen!2sin" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        </div>
-                     </div>
-                     <div class="col-lg-4 col-md-4 right_detail_design">
-                        <div class="room-card-content">
-                           <div class="contact-form">
-                              <h4>Yes, I'm Interested!</h4>
-                              <p>Know More About this property</p>
-                              <form id="contactForm" novalidate="true">
-                                 <div class="row">
-                                    <div class="col-lg-12 col-sm-12">
-                                       <div class="form-group">
-                                          <input type="text" name="name" id="name" class="form-control" required="" data-error="Please enter your name" placeholder="Name">
-                                          <div class="help-block with-errors"></div>
-                                       </div>
+                                            </ul>
+                                        </div>
+
+
+
+                                    <div class="design_map">
+                                        <h5 class="ng-tns-c6-1">You'll work here</h5>
+                                        <div><svg width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 12q.825 0 1.413-.588T14 10q0-.825-.588-1.413T12 8q-.825 0-1.413.588T10 10q0 .825.588 1.413T12 12Zm0 7.35q3.05-2.8 4.525-5.088T18 10.2q0-2.725-1.738-4.462T12 4Q9.475 4 7.737 5.738T6 10.2q0 1.775 1.475 4.063T12 19.35ZM12 22q-4.025-3.425-6.012-6.362T4 10.2q0-3.75 2.413-5.975T12 2q3.175 0 5.588 2.225T20 10.2q0 2.5-1.988 5.438T12 22Zm0-11.8Z"></path></svg> <span th:text="${property.address.city}"></span></div>
+
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d448196.05311984906!2d76.81304084547108!3d28.643795378541427!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x37205b715389640!2sDelhi!5e0!3m2!1sen!2sin!4v1683574879867!5m2!1sen!2sin" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                                     </div>
-                                    <div class="col-lg-12 col-sm-12">
-                                       <div class="form-group">
-                                          <input type="email" name="email" id="email" class="form-control" required="" data-error="Please enter your email" placeholder="Email">
-                                          <div class="help-block with-errors"></div>
-                                       </div>
+
+
                                     </div>
-                                    <div class="col-lg-12 col-sm-12">
-                                       <div class="form-group">
+
+
+
+                         <div class="col-lg-4 col-md-4 right_detail_design">
+                                    <div class="room-card-content">
+                                        
+
+                                        <div class="contact-form">
+                                            <h4>Yes, I'm Interested!</h4>
+                                            <p>Know More About this property</p>
+                                                <form id="contactForm" novalidate="true">
+                                                    <div class="row">
+                                                        <div class="col-lg-12 col-sm-12">
+                                                            <div class="form-group">
+                                                                <input type="text" name="name" id="name" class="form-control" required="" data-error="Please enter your name" placeholder="Name">
+                                                                <div class="help-block with-errors"></div>
+                                                            </div>
+                                                        </div>
+                        
+                                                        <div class="col-lg-12 col-sm-12">
+                                                            <div class="form-group">
+                                                                <input type="email" name="email" id="email" class="form-control" required="" data-error="Please enter your email" placeholder="Email">
+                                                                <div class="help-block with-errors"></div>
+                                                            </div>
+                                                        </div>
+                        
+                                                        <div class="col-lg-12 col-sm-12">
+                                                            <div class="form-group">
                                           <input type="text" name="mobNum" id="mobNum" required="" data-error="Please enter your number" class="form-control" placeholder="Phone">
-                                          <div class="help-block with-errors"></div>
-                                       </div>
-                                    </div>
-                                    <div class="col-lg-6 col-sm-6 col-12">
-                                       <div class="form-group">
+                                                                <div class="help-block with-errors"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6 col-sm-6 col-12">
+                                                            <div class="form-group">
                                           <select id="pg_type" name="pg_type" style="display: none;">
                                              <option value="Type">Type</option>
                                              <option value="Private Room">Private Room</option>
                                              <option value="Double Sharing">Double Sharing</option>
                                              <option  value="Any Other">Any Other</option>
                                           </select>
-                                       </div>
-                                    </div>
-                                    <div class="col-lg-6 col-sm-6 col-12">
-                                       <div class="form-group">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6 col-sm-6 col-12">
+                                                            <div class="form-group">
                                           <select id="budget" name="budget" style="display: none;">
                                              <option value="Budget">Budget</option>
                                              <option value="1000-5000">1000-5000</option>
@@ -174,89 +465,359 @@
                                              <option value="10000-15000">1000-5000</option>
                                              <option  value="15000-20000">1000-5000</option>
                                           </select>
-                                       </div>
-                                    </div>
-                                    <div class="col-lg-12 col-md-12 mt-40">
-                                       <div class="form-group checkbox-option">
-                                          <input type="checkbox" id="chb2">
-                                          <p>
-                                             Accept <a href="terms-condition.html">Terms &amp; Conditions</a> And <a href="privacy-policy.html">Privacy Policy.</a>
-                                          </p>
-                                       </div>
-                                    </div>
-                                    <div class="col-lg-12 col-md-12">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-12 col-md-12 mt-40">
+                                                            <div class="form-group checkbox-option">
+                                                                <input type="checkbox" id="chb2">
+                                                                <p>
+                                                                    Accept <a href="terms-condition.html">Terms &amp; Conditions</a> And <a href="privacy-policy.html">Privacy Policy.</a>
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                        
+                                                        <div class="col-lg-12 col-md-12">
                                        <button type="submit" class="default-btn btn-bg-three disabled" style="pointer-events: all; cursor: pointer;">
-                                       Submit Detail
-                                       </button>
+                                                              Submit Detail
+                                                             </button>
                                        <div id="success-message" class="success-message"></div>
                                        <div id="error-message" class="error-message"></div>
-                                       <div class="clearfix"></div>
+                                                            <div class="clearfix"></div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
                                     </div>
-                                 </div>
-                              </form>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <!-- Workspace solutions End -->
-         <!-- Testimonials Area -->
-         <div class="design_similar_properties pt-100 pb-70 out_category_design for_arrow">
+                                </div>
+                                </div>
+                            </div>
+                    </div>
+        </div>
+        <!-- Workspace solutions End -->
+        <!-- Testimonials Area -->
+        <div class="design_similar_properties pt-100 pb-70 out_category_design for_arrow">
             <div class="container">
-               <div class="section-title">
-                  <h3>Similar Properties</h3>
-               </div>
-               <div class="similar_properties_slider owl-carousel owl-theme">
+                <div class="section-title">
+                    <h3>Similar Properties</h3>
+                </div>
+
+
+
+
+                <div class="similar_properties_slider owl-carousel owl-theme">
                   <div class="item" th:each="property : ${propertyList}">
                      <div class="room-card-two">
-                        <div class="row align-items-center">
-                            <a th:href="@{/api/a1/property/getProperty/{prpName}(prpName=${property.id})}">
+                            <div class="row align-items-center">
+                            <a th:href="@{/api/a1/property/getProperty/{prpName}(prpName=${property.prpName})}">
                                  <img th:src="@{/api/a1/property/post/image/{displayImage}(displayImage=${property.displayImage})}" alt="Images">
-                                 </a>
-                           <div class="col-lg-12 col-md-12 p-0">
-                              <div class="room-card-content">
-                                 <h5>
-                                    <a th:href="@{/api/a1/property/getProperty/{prpName}(prpName=${property.id})}">
-                                       <svg width="24" height="24" viewBox="0 0 256 256">
-                                          <path fill="currentColor" d="M248 128a8 8 0 0 1-8 8h-16.67A48.08 48.08 0 0 1 176 176h-40v24h24a32 32 0 0 1 32 32a8 8 0 0 1-16 0a16 16 0 0 0-16-16h-24v16a8 8 0 0 1-16 0v-16H96a16 16 0 0 0-16 16a8 8 0 0 1-16 0a32 32 0 0 1 32-32h24v-24H80a48.08 48.08 0 0 1-47.33-40H16a8 8 0 0 1 0-16h24a8 8 0 0 1 8 8a32 32 0 0 0 32 32h96a32 32 0 0 0 32-32a8 8 0 0 1 8-8h24a8 8 0 0 1 8 8ZM67.91 138.48a16 16 0 0 1-3.75-12.74l13.72-96A16.08 16.08 0 0 1 93.72 16h68.56a16.08 16.08 0 0 1 15.84 13.74l13.72 96A16 16 0 0 1 176 144H80a16 16 0 0 1-12.09-5.52ZM80 128h96l-13.72-96H93.71Z"/>
-                                       </svg>
-                                       <a th:text="${property.prpName}"></a>
-                                    </a>
-                                 </h5>
-                                 <a>
-                                    <svg width="24" height="24" viewBox="0 0 24 24">
-                                       <path fill="currentColor" d="M12 12q.825 0 1.413-.588T14 10q0-.825-.588-1.413T12 8q-.825 0-1.413.588T10 10q0 .825.588 1.413T12 12Zm0 7.35q3.05-2.8 4.525-5.088T18 10.2q0-2.725-1.738-4.462T12 4Q9.475 4 7.737 5.738T6 10.2q0 1.775 1.475 4.063T12 19.35ZM12 22q-4.025-3.425-6.012-6.362T4 10.2q0-3.75 2.413-5.975T12 2q3.175 0 5.588 2.225T20 10.2q0 2.5-1.988 5.438T12 22Zm0-11.8Z"/>
-                                    </svg>
-                                    <span th:text="${property.address.city}"></span>
-                                 </a>
-                                 <a>
-                                    <svg width="24" height="24" viewBox="0 0 24 24">
-                                       <path fill="currentColor" d="M9.025 15.175q.625-.45 1.388-.7t1.587-.25q.825 0 1.588.25t1.387.7L21.1 9.05q-1.95-1.475-4.263-2.263T12 6q-2.525 0-4.838.788T2.9 9.05l6.125 6.125Zm2.975 5.4q-.2 0-.375-.062T11.3 20.3L.7 9.7q-.3-.3-.288-.712T.725 8.3q2.35-2.125 5.238-3.213T12 4q3.175 0 6.063 1.088T23.274 8.3q.3.275.313.688T23.3 9.7L12.7 20.3q-.15.15-.325.213t-.375.062Z"/>
-                                    </svg>
-                                    High speed WiFi
-                                 </a>
-                                 <a>
-                                    <svg width="24" height="24" viewBox="0 0 1024 1024">
-                                       <path fill="currentColor" d="M275 281c19.9 0 36-16.1 36-36V36c0-19.9-16.1-36-36-36s-36 16.1-36 36v209c0 19.9 16.1 36 36 36zm613 144H768c0-39.8-32.2-72-72-72H200c-39.8 0-72 32.2-72 72v248c0 3.4.2 6.7.7 9.9c-.5 7-.7 14-.7 21.1c0 176.7 143.3 320 320 320c160.1 0 292.7-117.5 316.3-271H888c39.8 0 72-32.2 72-72V497c0-39.8-32.2-72-72-72zM696 681h-1.1c.7 7.6 1.1 15.2 1.1 23c0 137-111 248-248 248S200 841 200 704c0-7.8.4-15.4 1.1-23H200V425h496v256zm192-8H776V497h112v176zM613 281c19.9 0 36-16.1 36-36V36c0-19.9-16.1-36-36-36s-36 16.1-36 36v209c0 19.9 16.1 36 36 36zm-170 0c19.9 0 36-16.1 36-36V36c0-19.9-16.1-36-36-36s-36 16.1-36 36v209c0 19.9 16.1 36 36 36z"/>
-                                    </svg>
-                                    Cofee & Bar
-                                 </a>
-                                 <ul>
-                                   <li>Starting Price<br> <b><span th:text="${property.price}"></span></b> / month</li>
-                                   <li><a href="#" class="book-more-btn">Explore More</a></li>
-                                 </ul>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
+                                      </a>
+                                <div class="col-lg-12 col-md-12 p-0">
+                                    <div class="room-card-content">
+                                         <h5><a href="room-details.html"><svg width="24" height="24" viewBox="0 0 256 256"><path fill="currentColor" d="M248 128a8 8 0 0 1-8 8h-16.67A48.08 48.08 0 0 1 176 176h-40v24h24a32 32 0 0 1 32 32a8 8 0 0 1-16 0a16 16 0 0 0-16-16h-24v16a8 8 0 0 1-16 0v-16H96a16 16 0 0 0-16 16a8 8 0 0 1-16 0a32 32 0 0 1 32-32h24v-24H80a48.08 48.08 0 0 1-47.33-40H16a8 8 0 0 1 0-16h24a8 8 0 0 1 8 8a32 32 0 0 0 32 32h96a32 32 0 0 0 32-32a8 8 0 0 1 8-8h24a8 8 0 0 1 8 8ZM67.91 138.48a16 16 0 0 1-3.75-12.74l13.72-96A16.08 16.08 0 0 1 93.72 16h68.56a16.08 16.08 0 0 1 15.84 13.74l13.72 96A16 16 0 0 1 176 144H80a16 16 0 0 1-12.09-5.52ZM80 128h96l-13.72-96H93.71Z"/></svg> <span th:text="${property.prpName}"></span></a></h5>
+                                        
+                                        <a><svg width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 12q.825 0 1.413-.588T14 10q0-.825-.588-1.413T12 8q-.825 0-1.413.588T10 10q0 .825.588 1.413T12 12Zm0 7.35q3.05-2.8 4.525-5.088T18 10.2q0-2.725-1.738-4.462T12 4Q9.475 4 7.737 5.738T6 10.2q0 1.775 1.475 4.063T12 19.35ZM12 22q-4.025-3.425-6.012-6.362T4 10.2q0-3.75 2.413-5.975T12 2q3.175 0 5.588 2.225T20 10.2q0 2.5-1.988 5.438T12 22Zm0-11.8Z"/></svg> <span th:text="${property.address.city}"></span></a>
+                                        
+                                        <a><svg width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M9.025 15.175q.625-.45 1.388-.7t1.587-.25q.825 0 1.588.25t1.387.7L21.1 9.05q-1.95-1.475-4.263-2.263T12 6q-2.525 0-4.838.788T2.9 9.05l6.125 6.125Zm2.975 5.4q-.2 0-.375-.062T11.3 20.3L.7 9.7q-.3-.3-.288-.712T.725 8.3q2.35-2.125 5.238-3.213T12 4q3.175 0 6.063 1.088T23.274 8.3q.3.275.313.688T23.3 9.7L12.7 20.3q-.15.15-.325.213t-.375.062Z"/></svg> High speed WiFi</a>
+                                        
+                                        <a><svg width="24" height="24" viewBox="0 0 1024 1024"><path fill="currentColor" d="M275 281c19.9 0 36-16.1 36-36V36c0-19.9-16.1-36-36-36s-36 16.1-36 36v209c0 19.9 16.1 36 36 36zm613 144H768c0-39.8-32.2-72-72-72H200c-39.8 0-72 32.2-72 72v248c0 3.4.2 6.7.7 9.9c-.5 7-.7 14-.7 21.1c0 176.7 143.3 320 320 320c160.1 0 292.7-117.5 316.3-271H888c39.8 0 72-32.2 72-72V497c0-39.8-32.2-72-72-72zM696 681h-1.1c.7 7.6 1.1 15.2 1.1 23c0 137-111 248-248 248S200 841 200 704c0-7.8.4-15.4 1.1-23H200V425h496v256zm192-8H776V497h112v176zM613 281c19.9 0 36-16.1 36-36V36c0-19.9-16.1-36-36-36s-36 16.1-36 36v209c0 19.9 16.1 36 36 36zm-170 0c19.9 0 36-16.1 36-36V36c0-19.9-16.1-36-36-36s-36 16.1-36 36v209c0 19.9 16.1 36 36 36z"/></svg> Cofee & Bar</a>
+                                        <ul>
+                                            <li>Starting Price<br> <b><span>₹</span><span th:text="${property.price}"></span></b> / month</li>
+                                            <li><a th:href="@{/api/a1/property/getProperty/{prpName}(prpName=${property.prpName})}" class="book-more-btn">Explore More</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div></div>
+                    
+                    
+                   
+                    
+                </div>
+
+
+                
+
+
             </div>
-         </div>
-         <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
-         <!-- Testimonials Area End -->
-      </section>
-   </body>
+        </div>
+        <!-- Testimonials Area End -->
+
+
+
+
+</div>
+
+
+
+
+
+       <!-- Footer Area -->
+       <footer class="footer-area footer-bg">
+        <div class="container">
+            <div class="footer-top pt-100 pb-70">
+                <div class="row align-items-center">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget">
+                            <div class="footer-logo">
+                                <a href="\">
+                                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+ viewBox="0 0 1000 983" style="enable-background:new 0 0 1000 983;" xml:space="preserve">
+<g>
+<path class="st0" d="M1001,984c-333.3,0-666.7,0-1000,0C1,656.3,1,328.7,1,1c333.3,0,666.7,0,1000,0
+    C1001,328.7,1001,656.3,1001,984z M458.8,293.3C384,304.2,291,376.7,296.5,499.8c2.5,55,26,101.8,68,138
+    c42.4,36.5,92,52.9,147.8,47.9c104.2-9.3,167.6-93,176.3-160.5c-22.7,0-45.3,0.1-68-0.1c-3.8,0-5.4,1-6.7,4.6
+    c-20.6,59.5-81.4,95.9-146.4,81.8c-67.9-14.7-109.3-78.4-97.3-146.4c6.1-34.8,24.4-62.6,54.1-82c10.6-7,22.6-11.9,34.4-18
+    C458.8,341.9,458.8,317.6,458.8,293.3z M833.9,452.7c24.3,0,47.9,0,71.9,0c0-1.6,0-2.9,0-4.2c0-46.2,0-92.3,0.1-138.5
+    c0-19.9-0.6-39.6-4.8-59.2c-11.1-51.1-37.1-93-77.7-125.5c-39.4-31.5-85-46.5-135-47.2c-50.6-0.7-101.3-0.1-152-0.2
+    c-4.1,0-5.4,1.3-5.3,5.5c0.2,20.8,0.1,41.7,0.1,62.5c0,1.4,0.2,2.9,0.3,4.8c2.1,0,3.9,0,5.7,0c50,0,100-0.1,150,0.1
+    c9.1,0,18.3,0.7,27.3,2.3c38,6.6,68.4,26,91.4,56.8c20.1,27,28.5,57.8,28,91.2c-0.1,9.7-0.8,19.3-0.8,29
+    c0.1,14.8,0.7,29.6,0.8,44.5c0.1,24.2,0,48.3,0,72.5C833.9,448.8,833.9,450.6,833.9,452.7z M157,452.8c0-2.2,0-4,0-5.8
+    c0-49.8-0.1-99.6,0.1-149.5c0-9,0.5-18.2,1.9-27.1c5.6-35.1,22.8-63.7,49.8-86.4c27.9-23.3,60.4-33.6,96.7-33.4
+    c49.3,0.3,98.6,0.1,148,0.1c1.7,0,3.5,0,5.5,0c0-23.6-0.1-46.4,0-69.3c0-4.1-2.6-3.5-5-3.5c-53.9,0.3-107.9,0.4-161.8,1.2
+    c-13.2,0.2-26.7,1.9-39.5,5c-71.3,17.6-121.8,60.5-151.4,127.6c-9.6,21.7-15.8,44.7-16.1,68.5c-0.7,55.6-0.3,111.3-0.4,166.9
+    c0,1.8,0,3.6,0,5.5C109,452.8,132.6,452.8,157,452.8z M531.3,827.9c0,2.1,0,3.6,0,5.1c0,20.3,0.2,40.7-0.1,61
+    c-0.1,4.7,1.1,6.1,6,6.1c50.8-0.2,101.6,0.1,152.5-0.3c11.9-0.1,23.9-1.2,35.7-3.2c40.2-6.8,75.9-23.5,106.3-50.7
+    c48-42.8,73-96.7,74-161c0.8-51.3,0.2-102.6,0.2-154c0-1.9,0-3.8,0-5.5c-24.5,0-48.1,0-71.9,0c0,2.4,0,4.3,0,6.3
+    c0,48.8,0.1,97.6-0.1,146.5c0,8.8-0.5,17.7-1.8,26.3c-5.6,38.5-24.4,69.5-55,93.2c-26.6,20.7-57.2,30-90.7,30c-49.7,0-99.3,0-149,0
+    C535.6,827.9,533.8,827.9,531.3,827.9z M458.8,827.9c-2.2,0-4.1,0-5.9,0c-50.5,0-101,0.1-151.5-0.1c-8.4,0-16.9-0.7-25.1-2.2
+    c-37.3-6.9-67.8-25.3-90.7-55.6c-17.9-23.7-28.3-50.5-28.6-80.4c-0.5-52.6-0.1-105.3,0-158c0-2.1-0.3-4.2-0.4-6.3
+    c-24.1,0-47.7,0-71.5,0c-0.1,1.6-0.2,2.9-0.2,4.2c0,52.7,0,105.3,0,158c0,14.1,1.7,28,4.8,41.8c11.1,49.1,36,89.8,74.9,121.7
+    c38.6,31.7,83.2,47.9,132.8,48.8c52,1,104,0.2,156,0.2c1.8,0,3.6-0.2,5.6-0.3C458.8,875.7,458.8,852.1,458.8,827.9z M560,365.7
+    c-0.9,27.9,22.5,55,54.8,55.2c29.9,0.2,54.9-24.6,55.3-53.9c0.4-30.7-22.1-56-53-56.6C578,309.7,559.1,341,560,365.7z"/>
+<path class="st1" d="M458.8,293.3c0,24.3,0,48.6,0,71.8c-11.8,6.1-23.8,11.1-34.4,18c-29.7,19.4-48,47.2-54.1,82
+    c-12,68.1,29.4,131.7,97.3,146.4c65,14.1,125.8-22.3,146.4-81.8c1.2-3.6,2.9-4.7,6.7-4.6c22.6,0.2,45.3,0.1,68,0.1
+    c-8.8,67.5-72.2,151.3-176.3,160.5c-55.8,5-105.4-11.4-147.8-47.9c-42-36.2-65.6-83-68-138C291,376.7,384,304.2,458.8,293.3z"/>
+<path class="st1" d="M833.9,452.7c0-2.1,0-3.9,0-5.7c0-24.2,0.1-48.3,0-72.5c-0.1-14.8-0.7-29.6-0.8-44.5c0-9.7,0.7-19.3,0.8-29
+    c0.5-33.4-7.9-64.2-28-91.2c-23-30.8-53.4-50.2-91.4-56.8c-9-1.6-18.2-2.2-27.3-2.3c-50-0.2-100-0.1-150-0.1c-1.8,0-3.6,0-5.7,0
+    c-0.1-1.9-0.3-3.4-0.3-4.8c0-20.8,0.1-41.7-0.1-62.5c0-4.2,1.2-5.5,5.3-5.5c50.7,0.1,101.3-0.5,152,0.2c50,0.7,95.6,15.7,135,47.2
+    c40.7,32.6,66.7,74.4,77.7,125.5c4.2,19.6,4.8,39.3,4.8,59.2c-0.1,46.2-0.1,92.3-0.1,138.5c0,1.3,0,2.6,0,4.2
+    C881.7,452.7,858.2,452.7,833.9,452.7z"/>
+<path class="st1" d="M157,452.8c-24.4,0-48,0-72.2,0c0-2,0-3.7,0-5.5c0.1-55.6-0.3-111.3,0.4-166.9c0.3-23.8,6.5-46.7,16.1-68.5
+    c29.6-67.1,80.1-110,151.4-127.6c12.8-3.2,26.3-4.8,39.5-5c53.9-0.9,107.8-0.9,161.8-1.2c2.5,0,5.1-0.5,5,3.5
+    c-0.1,22.8,0,45.6,0,69.3c-2,0-3.7,0-5.5,0c-49.3,0-98.6,0.3-148-0.1c-36.3-0.3-68.8,10.1-96.7,33.4c-27,22.6-44.2,51.3-49.8,86.4
+    c-1.4,8.9-1.9,18.1-1.9,27.1c-0.2,49.8-0.1,99.6-0.1,149.5C157,448.8,157,450.6,157,452.8z"/>
+<path class="st1" d="M531.3,827.9c2.5,0,4.3,0,6.1,0c49.7,0,99.3,0,149,0c33.5,0,64.1-9.3,90.7-30c30.5-23.8,49.3-54.8,55-93.2
+    c1.3-8.7,1.8-17.6,1.8-26.3c0.2-48.8,0.1-97.6,0.1-146.5c0-2,0-4,0-6.3c23.8,0,47.4,0,71.9,0c0,1.7,0,3.6,0,5.5
+    c0,51.3,0.6,102.7-0.2,154c-1,64.3-25.9,118.1-74,161c-30.5,27.2-66.2,43.8-106.3,50.7c-11.7,2-23.8,3.1-35.7,3.2
+    c-50.8,0.3-101.6,0.1-152.5,0.3c-4.9,0-6.1-1.4-6-6.1c0.2-20.3,0.1-40.7,0.1-61C531.3,831.5,531.3,830.1,531.3,827.9z"/>
+<path class="st2" d="M458.8,827.9c0,24.2,0,47.8,0,71.8c-2,0.1-3.8,0.2-5.6,0.3c-52,0-104,0.8-156-0.2
+    c-49.6-1-94.2-17.2-132.8-48.8c-38.9-31.9-63.9-72.6-74.9-121.7c-3.1-13.7-4.8-27.6-4.8-41.8c0.1-52.7,0-105.3,0-158
+    c0-1.3,0.1-2.6,0.2-4.2c23.8,0,47.4,0,71.5,0c0.1,2.1,0.4,4.2,0.4,6.3c0,52.7-0.4,105.3,0,158c0.3,29.9,10.7,56.7,28.6,80.4
+    c22.9,30.3,53.4,48.8,90.7,55.6c8.2,1.5,16.7,2.2,25.1,2.2c50.5,0.2,101,0.1,151.5,0.1C454.7,827.9,456.5,827.9,458.8,827.9z"/>
+<path class="st1" d="M560,365.7c-0.9-24.7,18-56,57.1-55.2c30.8,0.6,53.3,25.9,53,56.6c-0.4,29.3-25.3,54.1-55.3,53.9
+    C582.5,420.7,559.1,393.6,560,365.7z"/>
+</g>
+</svg> Rentia
+                                </a>
+                            </div>
+                            <p>
+                                Rentia is a platform that aims to make co-living accessible and convenient for everyone. The platform connects tenants with the best co-living brands in Gurugram, providing them with detailed information about different brands and their properties. This makes it easier for tenants to find a room that fits their budget and needs.
+                            </p>
+                            <ul class="footer-list-contact">
+                                <li>
+                                    <i class='bx bx-home-alt'></i>
+                                    <a href="#">House no.Q20, Q1 block South City 2 gurugram harayana</a>
+                                </li>
+                                <li>
+                                    <i class='bx bx-phone-call'></i>
+                                    <a href="tel:9319144228">+91-9319144228</a>
+                                </li>
+                                <li>
+                                    <i class='bx bx-envelope'></i>
+                                    <a href="mailto:info@rentia.com">info@rentia.com</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget pl-5">
+                            <h3>Links</h3>
+                            <ul class="footer-list">
+                                <li>
+                                    <a href="#" target="_blank">
+                                        <i class='bx bx-caret-right'></i>
+                                        About Us
+                                    </a>
+                                </li> 
+                                <li>
+                                    <a href="#" target="_blank">
+                                        <i class='bx bx-caret-right'></i>
+                                        Services
+                                    </a>
+                                </li> 
+                                <li>
+                                    <a href="#" target="_blank">
+                                        <i class='bx bx-caret-right'></i>
+                                        Team
+                                    </a>
+                                </li> 
+                                <li>
+                                    <a href="#" target="_blank">
+                                        <i class='bx bx-caret-right'></i>
+                                        Gallery
+                                    </a>
+                                </li> 
+                                <li>
+                                    <a href="#" target="_blank">
+                                        <i class='bx bx-caret-right'></i>
+                                        Terms 
+                                    </a>
+                                </li> 
+                                <li>
+                                    <a href="#" target="_blank">
+                                        <i class='bx bx-caret-right'></i>
+                                        Privacy Policy
+                                    </a>
+                                </li> 
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget">
+                            <h3>Useful Links</h3>
+                            <ul class="footer-list">
+                                <li>
+                                    <a href="\" target="_blank">
+                                        <i class='bx bx-caret-right'></i>
+                                        Home
+                                    </a>
+                                </li> 
+                                <li>
+                                    <a href="#" target="_blank">
+                                        <i class='bx bx-caret-right'></i>
+                                        Blog
+                                    </a>
+                                </li> 
+                                <li>
+                                    <a href="#" target="_blank">
+                                        <i class='bx bx-caret-right'></i>
+                                        FAQ
+                                    </a>
+                                </li> 
+                                <li>
+                                    <a href="#" target="_blank">
+                                        <i class='bx bx-caret-right'></i>
+                                        Testimonials
+                                    </a>
+                                </li> 
+                                <li>
+                                    <a href="#" target="_blank">
+                                        <i class='bx bx-caret-right'></i>
+                                        Gallery
+                                    </a>
+                                </li> 
+                                <li>
+                                    <a href="#" target="_blank">
+                                        <i class='bx bx-caret-right'></i>
+                                        Contact Us
+                                    </a>
+                                </li> 
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget">
+                            <h3>Newsletter</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                Nullam tempor eget ante fringilla rutrum aenean sed venenatis .
+                            </p>
+                            <div class="footer-form">
+                                <form class="newsletter-form" data-toggle="validator" method="POST">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="form-group">
+                                                <input type="email" class="form-control" placeholder="Your Email*" name="EMAIL" required autocomplete="off">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-12 col-md-12">
+                                            <button style="border: 1px solid;" type="submit" class="default-btn btn-bg-one">
+                                                Subscribe Now
+                                            </button>
+                                            <div id="validator-newsletter" class="form-result"></div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="copy-right-area">
+                <div class="row">
+                    <div class="col-lg-8 col-md-8">
+                        <div class="copy-right-text text-align1">
+                            <p>
+                                Copyright @<script>document.write(new Date().getFullYear())</script> Rentia All Rights Reserved
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4">
+                        <div class="social-icon text-align2">
+                            <ul class="social-link">
+                                <li>
+                                    <a href="#" target="_blank"><i class='bx bxl-facebook'></i></a>
+                                </li> 
+                                <li>
+                                    <a href="#" target="_blank"><i class='bx bxl-twitter'></i></a>
+                                </li> 
+                                <li>
+                                    <a href="#" target="_blank"><i class='bx bxl-instagram'></i></a>
+                                </li> 
+                                <li>
+                                    <a href="#" target="_blank"><i class='bx bxl-pinterest-alt'></i></a>
+                                </li> 
+                                <li>
+                                    <a href="#" target="_blank"><i class='bx bxl-youtube'></i></a>
+                                </li> 
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Area End -->
+
+
+
+<script src="assets/js/process-form.js"></script>
+
+<!-- Home Page Product Tabs Start
+            --------------------------------------------------------------------------------------------------->
+         <script th:src="@{/assets/js/main.js}"></script>
+         <script th:src="@{/assets/js/jquery.min.js}"></script>
+         <!-- Bootstrap Bundle Min JS -->
+         <script th:src="@{/assets/js/bootstrap.bundle.min.js}"></script>
+         <!-- Magnific Popup Min JS -->
+         <script th:src="@{/assets/js/jquery.magnific-popup.min.js}"></script>
+         <!-- Owl Carousel Min JS -->
+         <script th:src="@{/assets/js/owl.carousel.min.js}"></script>
+         <!-- Nice Select Min JS -->
+         <script th:src="@{/assets/js/jquery.nice-select.min.js}"></script>
+         <!-- Wow Min JS -->
+         <script th:src="@{/assets/js/wow.min.js}"></script>
+         <!-- Jquery Ui JS -->
+         <script th:src="@{/assets/js/jquery-ui.js}"></script>
+         <!-- Meanmenu JS -->
+         <script th:src="@{/assets/js/meanmenu.js}"></script>
+         <!-- Ajaxchimp Min JS -->
+         <script th:src="@{/assets/js/jquery.ajaxchimp.min.js}"></script>
+         <!-- Form Validator Min JS -->
+         <script th:src="@{/assets/js/form-validator.min.js}"></script>
+         <!-- Contact Form JS -->
+         <script th:src="@{/assets/js/contact-form-script.js}"></script>
+         <!-- Custom JS -->
+         <script th:src="@{/assets/js/custom.js}"></script>
+         <!-- Home Page Product Tabs End
+--------------------------------------------------------------------------------------------------->
+
+</body>
+
 </html>

@@ -91,15 +91,19 @@ public class PropertyController {
         return "space-detail";
     }
 	
-	/*
-	 * @GetMapping("/getProperty/{propertyName}") public ResponseEntity<Property>
-	 * getProperty(@PathVariable("propertyName") String propertyName) { Property
-	 * l_property = propertyService.getPropertybyPropertyName(propertyName); if
-	 * (l_property == null) { return
-	 * ResponseEntity.status(HttpStatus.NOT_FOUND).build(); } return new
-	 * ResponseEntity<Property>(l_property, HttpStatus.OK); }
-	 */
-	
+
+	  @GetMapping("/api/a1/property/getProperty/{propertyName}")
+	  public String getPropertyByName(@PathVariable("propertyName") String propertyName, Model model) {
+		  Property property = propertyService.getPropertybyPropertyName(propertyName);
+		  System.out.println("property MPS : " + property);
+		  List<Property> propertyList = propertyService.getPropertybyCity(property.getAddress().getAdrid());
+		  model.addAttribute("property", property);
+		  model.addAttribute("propertyList", propertyList);
+		  System.out.println(model);
+		  return "space-detail";
+	  }
+
+
 	@PutMapping("/api/a1/property/update/{pid}")
 	public ResponseEntity<Property> updateProperty(@RequestBody String body, @PathVariable("pid") Long pid ) throws Exception {
 		
@@ -137,10 +141,11 @@ public class PropertyController {
 		String profileImageName = this.fileService.uploadImage(path, profileImageFile);
 
 		List<String> docImageName = new ArrayList<>();
-		
-		for (MultipartFile file : propertyImagesFile) {
-			String fileName = this.fileService.uploadImage(path, file);
-			docImageName.add(fileName);
+		if( propertyImagesFile != null && propertyImagesFile.size() > 0) {
+			for (MultipartFile file : propertyImagesFile) {
+				String fileName = this.fileService.uploadImage(path, file);
+				docImageName.add(fileName);
+			}
 		}
 		property.setDisplayImage(profileImageName);
 		property.setPropertyImages(docImageName);
