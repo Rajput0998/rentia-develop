@@ -37,6 +37,7 @@ import com.rentia.services.RatingService;
 import com.rentia.services.UserService;
 
 @Controller
+@CrossOrigin(origins = "http://www.rentia.in")
 public class PropertyController {
 	
 	@Autowired
@@ -69,15 +70,35 @@ public class PropertyController {
 	
 	 
 	@PostMapping("/api/a1/property/add")
-	public String registerProperty(@ModelAttribute Property property) throws Exception {
+	public String registerProperty(@ModelAttribute Property property, @RequestParam(value = "profileImage", required = false) MultipartFile profileImageFile,
+								   @RequestParam(value = "prpMultipleImages", required = false) List<MultipartFile> propertyImagesFile) throws Exception {
 		// Perform any necessary processing of the uploaded images
         System.out.println("MPS" + property);
 		// Save the property to the database
 		Property savedProperty = propertyService.addProperty(property);
+		if( null != savedProperty.getId()) {
+			if (null != property.getDisplayImage()) {
+				this.fileService.deleteImage(path, property.getDisplayImage());
+			}
+
+			String profileImageName = this.fileService.uploadImage(path, profileImageFile);
+
+			List<String> docImageName = new ArrayList<>();
+			if( propertyImagesFile != null && propertyImagesFile.size() > 0) {
+				for (MultipartFile file : propertyImagesFile) {
+					String fileName = this.fileService.uploadImage(path, file);
+					docImageName.add(fileName);
+				}
+			}
+			property.setDisplayImage(profileImageName);
+			property.setPropertyImages(docImageName);
+			System.out.println(property);
+			Property updateProperty = propertyService.updateProperty(property, savedProperty.getId());
+		}
 
 		// Redirect to a success page or display a success message
 
-		return "redirect:/property/" + savedProperty.getId();
+		return "propertyAdd";
 	}
 	
 	@RequestMapping("/api/a1/property/getProperty/{propertyID}")
@@ -90,6 +111,18 @@ public class PropertyController {
 		System.out.println(model);
         return "space-detail";
     }
+
+	@RequestMapping("/api/a1/property/addProperty/rentia/qwerty/1603213054/gotoAddPropertyPage")
+	public String addPropertyTempPage( Model model) {
+		return "propertyAdd";
+	}
+
+	@RequestMapping("/api/a1/property/addProperty/rentia/qwerty/1603213054/gotoAddPropertyImages/{propertyName}")
+	public String addPropertyImageTempPage(@PathVariable("propertyName") String propertyName, Model model) {
+		Long prpId = propertyService.getPropertybyPropertyName(propertyName).getId();
+		model.addAttribute("prpId", prpId);
+		return "propertyImage";
+	}
 	
 
 	  @GetMapping("/api/a1/property/getProperty/{propertyName}")
@@ -128,8 +161,8 @@ public class PropertyController {
     }
 	
 	@PostMapping("/api/a1/property/post/image/upload/{propertyId}")
-	public ResponseEntity<Property> uploadUserImage(@RequestParam(value = "displayImage", required = false) MultipartFile profileImageFile,
-			@RequestParam(value = "propertyImages", required = false) List<MultipartFile> propertyImagesFile, @PathVariable Long propertyId)
+	public ResponseEntity<Property> uploadUserImage(@RequestParam(value = "profileImage", required = false) MultipartFile profileImageFile,
+			@RequestParam(value = "prpMultipleImages", required = false) List<MultipartFile> propertyImagesFile, @PathVariable Long propertyId)
 			throws Exception {
 
 		Property property = propertyService.getPropertybyId(propertyId);
@@ -144,11 +177,10 @@ public class PropertyController {
 		if( propertyImagesFile != null && propertyImagesFile.size() > 0) {
 			for (MultipartFile file : propertyImagesFile) {
 				String fileName = this.fileService.uploadImage(path, file);
-				docImageName.add(fileName);
+				property.getPropertyImages().add(fileName);
 			}
 		}
 		property.setDisplayImage(profileImageName);
-		property.setPropertyImages(docImageName);
 		System.out.println(property);
 		Property updateProperty = propertyService.updateProperty(property, propertyId);
 		return new ResponseEntity<Property>(updateProperty, HttpStatus.OK);

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Lakefront Apartments</title>
+  <!-- Include Bootstrap CSS (you can adjust the URL to your project's setup) -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+  <div class="row justify-content-center mt-5">
+    <div class="col-lg-6">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title text-center">Register Your Property</h4>
+          <h1>Upload Property Images</h1>
+          <!-- Display prpId using Thymeleaf syntax -->
+          <form method="post" enctype="multipart/form-data" th:action="@{'/api/a1/property/post/image/upload/' + ${prpId}}" th:object="${imageUploadForm}">
+          <input type="file" name="profileImage" accept="image/*" />
+            <input type="file" name="prpMultipleImages" accept="image/*" multiple />
+            <div class="text-center">
+              <button type="submit" class="btn btn-primary">Upload Property Images</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Include Bootstrap JS (you can adjust the URL to your project's setup) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -76,29 +76,35 @@ public class PropertyService {
 	public Property addProperty(Property property) throws Exception
 	{
 		try
-		{	
-			System.out.println(property.getAddress().getAdrid());
+		{
+			int adrid = 2;
 			Address address = new Address();
-			if( null != property.getAddress().getAdrid() ) {
+			address = addressDao.getById((long) adrid);
+			/*if( null != property.getAddress().getAdrid() ) {
 				address = addressDao.getById(property.getAddress().getAdrid());
 			} else {
-				/*
+				*//*
 				 * address.setCity(property.getAddress()); address.setCountry(null);
 				 * address.setPin(0); address.setState(null); address.setStreet(null);
 				 * address.setOther(null);
-				 */
-				/*
+				 *//*
+				*//*
 				 * Long maxAdrid = addressDao.getMaxAdrid(); System.out.println("ADRID MPS" +
 				 * maxAdrid); property.getAddress().setAdrid(maxAdrid+1);
-				 */
-				address = addressDao.saveAddress(property.getAddress());
-			}
+				 *//*
+				address = addressDao.getById((long) adrid);
+			}*/
 		    
 			property.setAddress(address);
 			/*
 			 * for (Amenity amenity : property.getPropertyFacility().getAmenities()) {
 			 * propertyRepository.saveAmenity(amenity); }
-			 */	
+			 */
+			if( property.getAvlRoom() == 0) {
+				property.setAvailabilty(false);
+			} else {
+				property.setAvailabilty(true);
+			}
 			Property l_property = propertyDao.saveProperty(property);
 			return l_property;
 		}
