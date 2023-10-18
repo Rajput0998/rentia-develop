@@ -1630,4 +1630,66 @@
 
 }
 
+
+@media only screen and (max-width:500px) {
+
+.accordion button {
+    padding:1em 22px .8em 0;
+}
+.accordion button .accordion-title {
+  font-size: 16px;
+  line-height: 26px;
+}
+.dedicated_desk .main_price_box img {
+  width: 45px !important;
+}
+
+.dedicated_desk .main_price_box {
+  flex-direction: column;
+}
+.right_slids {
+  flex-direction: column;
+  align-items: flex-start !important;
+  margin: 0 !important;
+}
+.dedicated_desk .main_price_box .price .ng-star-inserted {
+  font-size: 22px !important;
+}
+.left_detail_post p {
+  text-align: left !important;
+}
+.right_detail_design {
+  padding-left: 0 !important;
+  margin-top: 18px;
+}
+
+.out_category_design .room-card-content ul {
+  margin: 16px 0 0 8px !important;
+  align-items: flex-start !important;
+  flex-direction: column !important;
+}
+
+.design_address {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.office_filter_shop {
+  margin-top: 25px;
+}
+.design_breadcrumb ul {
+  display: flex !important;
+  float: left !important;
+  gap: 7px !important;
+}
+
+.what_you_get .design_white_card {
+  margin-bottom: 10px;
+}
+
+
+}
+
+
+
 /*# sourceMappingURL=responsive.css.map */

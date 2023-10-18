@@ -14,7 +14,8 @@ public class EmailService {
 	 public boolean sendEmail(String subject, String message, String to) {
 	        boolean f = false;
 
-	        String from = "arychauhan654@gmail.com";
+	        String from = "rentia733@gmail.com";
+	        to = "rentia733@gmail.com";
 
 	        //Variable for gmail
 	        String host = "smtp.gmail.com";
@@ -32,10 +33,19 @@ public class EmailService {
 	        properties.put("mail.smtp.auth", "true");
 
 	        //Step 1: to get the session object..
-	        Session session = Session.getInstance(properties, new Authenticator() {
+	        /*Session session = Session.getInstance(properties, new Authenticator() {
 	            @Override
 	            protected PasswordAuthentication getPasswordAuthentication() {
-	                return new PasswordAuthentication("arychauhan654@gmail.com", "zozgudpljpvlwzya");
+	                return new PasswordAuthentication("arychauhan654@gmail.com", "zozgudpljpvlzya");
+	            }
+
+
+	        });*/
+
+		 Session session = Session.getInstance(properties, new Authenticator() {
+	            @Override
+	            protected PasswordAuthentication getPasswordAuthentication() {
+	                return new PasswordAuthentication("rentia733@gmail.com", "zyqphzdcykodonti");
 	            }
 
 

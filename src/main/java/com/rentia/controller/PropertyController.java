@@ -37,7 +37,7 @@ import com.rentia.services.RatingService;
 import com.rentia.services.UserService;
 
 @Controller
-@CrossOrigin(origins = "http://www.rentia.in")
+@CrossOrigin(origins = "https://rentia.in")
 public class PropertyController {
 	
 	@Autowired
@@ -81,19 +81,19 @@ public class PropertyController {
 				this.fileService.deleteImage(path, property.getDisplayImage());
 			}
 
-			String profileImageName = this.fileService.uploadImage(path, profileImageFile);
+			String profileImageName = this.fileService.uploadImage(path, profileImageFile, savedProperty.getPrpName());
 
 			List<String> docImageName = new ArrayList<>();
 			if( propertyImagesFile != null && propertyImagesFile.size() > 0) {
 				for (MultipartFile file : propertyImagesFile) {
-					String fileName = this.fileService.uploadImage(path, file);
+					String fileName = this.fileService.uploadImage(path, file, savedProperty.getPrpName());
 					docImageName.add(fileName);
 				}
 			}
-			property.setDisplayImage(profileImageName);
-			property.setPropertyImages(docImageName);
+			savedProperty.setDisplayImage(profileImageName);
+			savedProperty.setPropertyImages(docImageName);
 			System.out.println(property);
-			Property updateProperty = propertyService.updateProperty(property, savedProperty.getId());
+			Property updateProperty = propertyService.updateProperty(savedProperty, savedProperty.getId());
 		}
 
 		// Redirect to a success page or display a success message
@@ -171,12 +171,12 @@ public class PropertyController {
 			this.fileService.deleteImage(path, property.getDisplayImage());
 		}
 
-		String profileImageName = this.fileService.uploadImage(path, profileImageFile);
+		String profileImageName = this.fileService.uploadImage(path, profileImageFile,null);
 
 		List<String> docImageName = new ArrayList<>();
 		if( propertyImagesFile != null && propertyImagesFile.size() > 0) {
 			for (MultipartFile file : propertyImagesFile) {
-				String fileName = this.fileService.uploadImage(path, file);
+				String fileName = this.fileService.uploadImage(path, file,null);
 				property.getPropertyImages().add(fileName);
 			}
 		}

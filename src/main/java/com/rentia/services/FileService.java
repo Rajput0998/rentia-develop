@@ -19,7 +19,7 @@ import org.springframework.core.io.ClassPathResource;
 public class FileService {
 
 
-	public String uploadImage(String path, MultipartFile file) throws IOException {
+	public String uploadImage(String path, MultipartFile file, String preName) throws IOException {
 
 		String fullPath = System.getProperty("user.dir") + "/" + path;
 		System.out.println("fullPath :- "+fullPath);
@@ -28,13 +28,17 @@ public class FileService {
 			directory.mkdirs(); // Create the directory if it doesn't exist
 		}
 
+		if( null == preName)
+		{
+			preName = "test";
+		}
 		// File name
 		String name = file.getOriginalFilename();
 		// abc.png
 		System.out.println("FileName :- "+name.substring(name.lastIndexOf(".")));
 
 		// random name generate file
-		String randomID = UUID.randomUUID().toString();
+		String randomID = preName + "-" + UUID.randomUUID();
 		String fileName1 = randomID.concat(name.substring(name.lastIndexOf(".")));
 		System.out.println("fileName1 :- "+fileName1);
 		// Full path

@@ -218,11 +218,11 @@ public class UserController {
 			this.fileService.deleteImage(path, user.getSelfImage());
 		}
 
-		String profileImageName = this.fileService.uploadImage(path, profileImageFile);
+		String profileImageName = this.fileService.uploadImage(path, profileImageFile,null);
 
 		List<String> docImageName = new ArrayList<>();
 		for (MultipartFile file : docImageFile) {
-			String fileName = this.fileService.uploadImage(path, file);
+			String fileName = this.fileService.uploadImage(path, file,null);
 			docImageName.add(fileName);
 		}
 

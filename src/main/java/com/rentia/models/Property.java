@@ -54,7 +54,7 @@ public class Property {
 	@Column(name = "propImage")
 	private List<String> propertyImages = new ArrayList<>();
 	private String displayImage;
-	
+	@Column(columnDefinition = "TEXT")
 	private String detail;
 	
 	@OneToOne(mappedBy = "property", fetch = FetchType.LAZY, orphanRemoval = true)
