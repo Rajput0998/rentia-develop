@@ -42,6 +42,21 @@ public class HomeController {
         return "index";
 	}
 
+	@RequestMapping("/about")
+	public String about(Model model) {
+		return "about";
+	}
+
+	@RequestMapping("/policy")
+	public String policy(Model model) {
+		return "policy";
+	}
+
+	@RequestMapping("/terms")
+	public String termsAndConditions(Model model) {
+		return "terms";
+	}
+
 	/*
 	 * @RequestMapping("/signup") public String signup(Model model) {
 	 * model.addAttribute("title", "Register - Smart Contact Manager");

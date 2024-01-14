@@ -6,7 +6,6 @@ import org.springframework.stereotype.Controller;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.security.Principal;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -20,7 +19,6 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -28,10 +26,8 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.rentia.models.UserAddress;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.JsonNode;
@@ -114,6 +110,23 @@ public class UserController {
 		} catch (Exception ex) {
 			return new ResponseEntity<IntUser>(new IntUser(), HttpStatus.NOT_ACCEPTABLE);
 		}
+	}
+
+	@PostMapping("/subscribe")
+	public ResponseEntity<String> subscribeUser(@RequestBody String email, HttpSession session) {
+		String recipientEmail = "arychauhan654@gmail.com";
+
+		// Email content and formatting
+		String subject = "New User Subscription";
+
+		String message = "Dear Admin,\n\n" +
+				"A new user has subscribed with the rentia.\n\n" +
+				"Please take appropriate action.\n\n" +
+				"Best regards,\n" +
+				"Rentia";
+		;
+		this.emailService.sendEmail(subject, message, recipientEmail);
+		return new ResponseEntity<String>(email, HttpStatus.OK);
 	}
 	
 	public ResponseEntity<String> sendOTP(@RequestParam("email") String email,HttpSession session)

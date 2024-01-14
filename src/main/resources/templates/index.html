@@ -1,291 +1,291 @@
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      th:fragment="layout(content)">
 <head>
     <title>Rentia</title>
-
-	<!-- Required Meta Tags -->
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-        <!-- Animate Min CSS -->
-        <link rel="stylesheet" href="assets/css/animate.min.css">
-        <!-- Flaticon CSS -->
-        <link rel="stylesheet" href="assets/fonts/flaticon.css">
-        <!-- Boxicons CSS -->
-        <link rel="stylesheet" href="assets/css/boxicons.min.css">
-        <!-- Magnific Popup CSS -->
-        <link rel="stylesheet" href="assets/css/magnific-popup.css">
-        <!-- Owl Carousel Min CSS -->
-        <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-        <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
-        <!-- Nice Select Min CSS -->
-        <link rel="stylesheet" href="assets/css/nice-select.min.css">
-        <!-- Meanmenu CSS -->
-        <link rel="stylesheet" href="assets/css/meanmenu.css">
-        <!-- Jquery Ui CSS -->
-        <link rel="stylesheet" href="assets/css/jquery-ui.css">
-        <!-- Style CSS -->
-        <link rel="stylesheet" href="assets/css/style.css">
-        <!-- Responsive CSS -->
-        <link rel="stylesheet" href="assets/css/responsive.css">
-        <!-- Theme Dark CSS -->
-        <link rel="stylesheet" href="assets/css/theme-dark.css">
-
-        <!-- Favicon -->
-        <link rel="icon" type="image/png" href="assets/img/favicon.webp">
-
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-        <!-- Process Form -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <!-- Required Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- Animate Min CSS -->
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <!-- Flaticon CSS -->
+    <link rel="stylesheet" href="assets/fonts/flaticon.css">
+    <!-- Boxicons CSS -->
+    <link rel="stylesheet" href="assets/css/boxicons.min.css">
+    <!-- Magnific Popup CSS -->
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <!-- Owl Carousel Min CSS -->
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+    <!-- Nice Select Min CSS -->
+    <link rel="stylesheet" href="assets/css/nice-select.min.css">
+    <!-- Meanmenu CSS -->
+    <link rel="stylesheet" href="assets/css/meanmenu.css">
+    <!-- Jquery Ui CSS -->
+    <link rel="stylesheet" href="assets/css/jquery-ui.css">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <!-- Theme Dark CSS -->
+    <link rel="stylesheet" href="assets/css/theme-dark.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/img/favicon.webp">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Process Form -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 </head>
 <body id="page">
-
-            <!-- Top Header Start -->
-            <header class="top-header top-header-bg">
-                <div class="container-fluid">
-                    <div class="row align-items-center">
-                        <div class="col-lg-2 col-md-2 pr-0 col-6">
-                            <div class="header-right add_header_number">
-                            <ul>
-                            </ul>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-10 col-md-10 col-6">
-                            <div class="header-right">
-                                <ul>
-                                    <li>
-                                        <i class='bx bx-envelope'></i>
-                                        <a href="mailto:info@rentia.in">info@rentia.in</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </header>
-            <!-- Top Header End -->
-
-            <!-- Start Navbar Area -->
-            <div class="navbar-area">
-                <!-- Menu For Mobile Device -->
-                <div class="mobile-nav">
-                    <a href="\" class="logo">
-                        <img src="assets/images/rentia-logo.webp" alt="Images">
-                    </a>
-                </div>
-
-                <!-- Menu For Desktop Device -->
-                <div class="main-nav">
-                    <div class="container-fluid">
-                        <nav class="navbar navbar-expand-md navbar-light ">
-                            <a class="navbar-brand rentia_logo" href="\">
-                                <img src="assets/images/rentia-logo.webp" alt="Images">
-                            </a>
-
-                            <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
-                                <ul class="navbar-nav m-auto">
-                                    <li class="nav-item">
-                                        <a href="#" class="nav-link active">
-                                            Home
-                                        </a>
-
-                                    </li>
-
-
-                                    <li class="nav-item">
-                                        <a href="#" class="nav-link">
-                                            About
-                                        </a>
-                                    </li>
-
-
-                                    <!-- <li class="nav-item">
-                                        <a href="#" class="nav-link">
-                                            Services
-                                            <i class='bx bx-chevron-down'></i>
-                                        </a>
-                                        <ul class="dropdown-menu">
-                                            <li class="nav-item">
-                                                <a href="category.php" class="nav-link">
-                                                    Services Style One
-                                                </a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a href="#" class="nav-link">
-                                                    Services Style Two
-                                                </a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a href="#" class="nav-link">
-                                                    Service Details
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li> -->
-
-                                    <li class="nav-item">
-                                        <a href="blogs.html" class="nav-link">
-                                            Blogs
-                                        </a>
-                                    </li>
-
-                                    <li class="nav-item">
-                                        <a href="#" class="nav-link">
-                                            List Property
-                                            <i class='bx bx-chevron-down'></i>
-                                        </a>
-                                        <ul class="dropdown-menu">
-                                            <li class="nav-item">
-                                                <a href="#" class="nav-link">
-                                                    Delhi
-                                                </a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a href="#" class="nav-link">
-                                                    Mumbai
-                                                </a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a href="#" class="nav-link">
-                                                    Hyderabad
-                                                </a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a href="#" class="nav-link">
-                                                    Bangalore
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-
-
-                                    <!--<li class="nav-item-btn">
-                                        <a href="#" class="default-btn btn-bg-one border-radius-5">Book Now</a>
-                                    </li>-->
-                                </ul>
-
-                                <!--<div class="nav-btn">
-                                    <a href="#" class="default-btn btn-bg-one border-radius-5">Book Now</a>
-                                </div>-->
-                            </div>
-                        </nav>
-                    </div>
+<!-- Top Header Start -->
+<header class="top-header top-header-bg">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <div class="col-lg-2 col-md-2 pr-0 col-6">
+                <div class="header-right add_header_number">
+                    <ul>
+                    </ul>
                 </div>
             </div>
-            <!-- End Navbar Area -->
-
-
-    <div class="cl"></div>
-
-
-<div class="main-wrapper">
-
-
-        <!-- Banner Area -->
-        <div class="banner-area">
-   <div class="video_design_part">
-      <video autoplay="" muted="muted" loop="">
-         <source src="assets/images/banner-video.mp4" type="video/mp4">
-      </video>
-   </div>
-   <div class="container">
-        <div class="banner-content">
-            <h1>Looking for Coliving Space?</h1>
-            <p>Premium living spaces at central locations with all-inclusive services.</p>
-            <div class="selectcity" style="background-color: #f8f8f8; padding: 10px; border-radius: 5px; box-shadow: 0px 0px 20px 20px rgb(218 138 35 / 15%); position: relative;">
-                <form>
-                    <label class="LeadForm__label" style="display: block; margin-bottom: 5px;"><span>Where</span></label>
-               <select id="citySelect" onchange="filterRoomsByCity()" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 40px; font-size: 14px;">
-                        <option value="" selected disabled>Select City</option>
-                    </select>
-                    <span style="content: '\f078'; font-family: FontAwesome; position: absolute; right: 15px; top: 50%; transform: translateY(-50%); z-index: 1;"></span>
-                </form>
+            <div class="col-lg-10 col-md-10 col-6">
+                <div class="header-right">
+                    <ul>
+                        <li>
+                            <i class='bx bx-envelope'></i>
+                            <a href="mailto:info@rentia.in">info@rentia.in</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
-    <script>
+</header>
+<!-- Top Header End -->
+<!-- Start Navbar Area -->
+<div class="navbar-area">
+    <!-- Menu For Mobile Device -->
+    <div class="mobile-nav">
+        <a href="\" class="logo">
+            <img src="assets/images/rentia-logo.webp" alt="Images">
+        </a>
+    </div>
+    <!-- Menu For Desktop Device -->
+    <div class="main-nav">
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-md navbar-light ">
+                <a class="navbar-brand rentia_logo" href="\">
+                    <img src="assets/images/rentia-logo.webp" alt="Images">
+                </a>
+                <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
+                    <ul class="navbar-nav m-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link active">
+                                Home
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/about" class="nav-link">
+                                About
+                            </a>
+                        </li>
+                        <!-- <li class="nav-item">
+                           <a href="#" class="nav-link">
+                               Services
+                               <i class='bx bx-chevron-down'></i>
+                           </a>
+                           <ul class="dropdown-menu">
+                               <li class="nav-item">
+                                   <a href="category.php" class="nav-link">
+                                       Services Style One
+                                   </a>
+                               </li>
+                               <li class="nav-item">
+                                   <a href="#" class="nav-link">
+                                       Services Style Two
+                                   </a>
+                               </li>
+                               <li class="nav-item">
+                                   <a href="#" class="nav-link">
+                                       Service Details
+                                   </a>
+                               </li>
+                           </ul>
+                           </li> -->
+                        <li class="nav-item">
+                            <a href="blogs.html" class="nav-link">
+                                Blogs
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                List Property
+                                <i class='bx bx-chevron-down'></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        Delhi
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        Mumbai
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        Hyderabad
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        Bangalore
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!--<li class="nav-item-btn">
+                           <a href="#" class="default-btn btn-bg-one border-radius-5">Book Now</a>
+                           </li>-->
+                    </ul>
+                    <!--<div class="nav-btn">
+                       <a href="#" class="default-btn btn-bg-one border-radius-5">Book Now</a>
+                       </div>-->
+                </div>
+            </nav>
+        </div>
+    </div>
+</div>
+<!-- End Navbar Area -->
+<div class="cl"></div>
+<div class="main-wrapper">
+    <!-- Banner Area -->
+    <div class="banner-area">
+        <div class="video_design_part">
+            <video autoplay="" muted="muted" loop="">
+                <source src="assets/images/banner-video.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="container">
+
+            <div class="banner-content">
+
+                <h1>Looking for Coliving Space?</h1>
+
+                <p>Premium living spaces at central locations with all-inclusive services.</p>
+
+                <div class="selectcity" style="background-color: #f8f8f8; padding: 10px; border-radius: 5px; box-shadow: 0px 0px 20px 20px rgb(218 138 35 / 15%); position: relative;">
+
+                    <form>
+
+                        <label class="LeadForm__label" style="display: block; margin-bottom: 5px;"><span>Where</span></label>
+
+                        <select id="citySelect" th:onchange="|filterRoomsByCity(this)|" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 40px; font-size: 14px;">
+
+                            <option value="" selected disabled>Select City</option>
+
+                            <!-- Thymeleaf iteration for populating cities -->
+
+                            <option th:each="city : ${uniqueCities}" th:value="${city}" th:text="${city}"></option>
+
+                        </select>
+
+                        <span style="content: '\f078'; font-family: FontAwesome; position: absolute; right: 15px; top: 50%; transform: translateY(-50%); z-index: 1;"></span>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <!-- Banner Area End -->
+    <!-- Workspace solutions -->
+    <div class="room-area pt-100 pb-70 workspace_solutions">
+
+        <div class="container">
+
+            <div class="section-title text-center">
+
+                <h2>Co-living solution for everyone</h2>
+
+                <span class="sp-color">Whatever may be your need, we have a solution that's right for you. Find yourself the most suitable coliving solution.</span>
+
+            </div>
+
+            <div id="property123" class="row pt-45">
+
+                <!-- Thymeleaf will populate this section dynamically -->
+
+            </div>
+
+        </div>
+
+    </div>
+    <!-- JavaScript -->
+
+    <script th:inline="javascript">
+
+        /*<![CDATA[*/
+
         document.addEventListener("DOMContentLoaded", async function() {
+
             const comboBox = document.getElementById("citySelect");
 
             try {
-                // Make the API call and await the response
+
                 const response = await fetch("https://rentia.in/api/common/address/getAddress/India");
+
                 const data = await response.json();
 
-                // Extract unique cities from the data
                 const uniqueCities = [...new Set(data.map(address => address.city))];
 
-                // Populate the combo box with unique cities
+                // Set the values in the combobox
                 uniqueCities.forEach(city => {
                     const option = document.createElement("option");
                     option.text = city;
-                    option.value = city;
-                    comboBox.appendChild(option);
-                    document.getElementById("citySelect").value="";
+                    comboBox.add(option);
                 });
+
             } catch (error) {
+
                 console.error("Error fetching data:", error);
+
             }
+
         });
+
+        /*]]>*/
+
     </script>
 
+    <script th:inline="javascript">
 
-</div>
-        <!-- Banner Area End -->
+        /*<![CDATA[*/
 
+        function filterRoomsByCity(select) {
 
+            const selectedCity = select.value;
 
+            fetch('/api/a1/property/city/' + selectedCity)
 
-        <!-- Workspace solutions -->
-        <div class="room-area pt-100 pb-70 workspace_solutions">
-            <div class="container">
-                <div class="section-title text-center">
-                  <h2>Co-living solution for everyone</h2>
-                    <span class="sp-color">Whatever may be your need, we save a solution that’s right for you. Find yourself the most suitable coliving solution.</span>
+                .then(response => response.json())
 
-                </div>
-				<html>
-<head>
-  <!-- Head content goes here -->
-</head>
-<body>
-  <!-- HTML content goes here -->
+                .then(data => {
 
- <!--Start  Work Space Body -->
- <div id="property123" class="row pt-45">
-  </div>
+                    const propertyElement = document.getElementById("property123");
 
-  <script>
-    // Function to filter rooms based on the selected city
-    function filterRoomsByCity() {
-      const citySelect = document.getElementById("citySelect");
-      const selectedCity = citySelect.value;
+                    propertyElement.innerHTML = '';
 
-      // Fetch room data from the API based on the selected city
-      fetch(`https://rentia.in/api/a1/property/city/${selectedCity}`)
-        .then(response => response.json())
-        .then(data => {
-          // Get the property element to append the dynamic content
-          const propertyElement = document.getElementById("property123");
+                    data.forEach(property => {
 
-          // Check if the property element exists
-          if (propertyElement) {
-            // Clear the existing content of the property element
-            propertyElement.innerHTML = "";
+                        // Generate HTML for each property using Thymeleaf variables
 
-            // Loop through the filtered rooms data and generate the HTML dynamically
-            ////<img src="${room.imageUrl}" alt="Images">
-            // <!--<p>${room.description}</p>-->
-            data.forEach(property => {
-              const html = `
-                <div class="col-lg-6">
-                  <div class="room-card-two">
+                        const html = `<div class="col-lg-6">
+
+                            <div class="room-card-two">
                     <div class="row align-items-center">
                       <div class="col-lg-5 col-md-4 p-0">
                         <div class="room-card-img">
@@ -312,729 +312,780 @@
                       </div>
                     </div>
                   </div>
-                </div>
-              `;
 
-              // Append the generated HTML to the property element
-              propertyElement.innerHTML += html;
-              propertyElement.scrollIntoView({ behavior: "smooth" })
-            });
-          } else {
-            console.error("Property element not found.");
-          }
-        })
-        .catch(error => {
-          console.error("Error fetching room data:", error);
-        });
-    }
-  </script>
- <!-- End Work Space Body -->
-</body>
-</html>
-            </div>
-        </div>
-        <!-- Workspace solutions End -->
+                        </div>`;
 
+                        propertyElement.innerHTML += html;
 
+                        propertyElement.scrollIntoView({ behavior: "smooth" });
 
+                    });
 
+                })
 
-        <!-- About Area -->
-        <div class="about-area pt-100 pb-70">
-            <div class="container-fluid">
-                <div class="row align-items-center">
-                    <div class="col-lg-6">
-                        <div class="about-img">
-                            <img src="assets/images/about-us.webp" alt="Images">
-                        </div>
+                .catch(error => {
+
+                    console.error("Error fetching room data:", error);
+
+                });
+
+        }
+
+        /*]]>*/
+
+    </script>
+
+    <!-- Workspace solutions End -->
+    <!-- About Area -->
+    <div class="about-area pt-100 pb-70">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="about-img">
+                        <img src="assets/images/about-us.webp" alt="Images">
                     </div>
-
-                    <div class="col-lg-6">
-                        <div class="about-content">
-                            <div class="section-title">
-                                <h2>About us</h2>
-                                <p>Rentia is a platform that aims to make co-living accessible and convenient for everyone. The platform connects tenants with the best co-living brands in Gurugram, providing them with detailed information about different brands and their properties. This makes it easier for tenants to find a room that fits their budget and needs.
-                                </p>
-                            </div>
-
-                            <ul>
-                                <li>
+                </div>
+                <div class="col-lg-6">
+                    <div class="about-content">
+                        <div class="section-title">
+                            <h2>About us</h2>
+                            <p>Rentia is a platform that aims to make co-living accessible and convenient for everyone. The platform connects tenants with the best co-living brands in Gurugram, providing them with detailed information about different brands and their properties. This makes it easier for tenants to find a room that fits their budget and needs.
+                            </p>
+                        </div>
+                        <ul>
+                            <li>
                                 <img src="assets/images/icons/mission.svg" alt="Images">
-                                    <div class="content">
-                                        <h3>Mission</h3>
-                                        <p>Rentia's mission is to make co-living accessible and convenient for everyone by being the go-to platform for booking, promoting top brands, and driving the growth of the co-living industry.
-                                        </p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <img src="assets/images/icons/vision.svg" alt="Images">
-                                    <div class="content">
-                                        <h3>Vision</h3>
-                                        <p>Rentia Aims to Establish Itself as the Foremost Platform for Co-living Solutions in India, Offering Affordable, Top-notch Accommodation Options with Uncompromising Quality and Exemplary Customer Satisfaction.
-                                        </p>
-                                    </div>
-                                </li>
-                            </ul>
-                            <a href="#" class="default-btn btn-bg-one border-radius-5">Read More</a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-        <!-- About Area End -->
-
-        <!-- Services Area -->
-        <div class="services-area pb-70">
-            <div class="container">
-                <div class="section-title text-center">
-                    <h2>Our Services</h2>
-                </div>
-                <div class="services-slider owl-carousel owl-theme pt-45">
-                    <div class="services-item">
-                        <img src="assets/images/icons/property-management.svg" alt="Images">
-                        <h3><a href="service-details.html">Property management</a></h3>
-                        <p>Rentia ensures seem less property management for owners</p>
-                        <a href="service-details.html" class="get-btn">Get Service</a>
-                    </div>
-
-                    <div class="services-item">
-                    <img src="assets/images/icons/property-lease.svg" alt="Images">
-                        <h3><a href="service-details.html">Property on lease</a></h3>
-                        <p>Letrentia handle your property needs with expertise and efficiency</p>
-                        <a href="service-details.html" class="get-btn">Get Service</a>
-                    </div>
-
-                    <div class="services-item">
-                    <img src="assets/images/icons/renting-solution.svg" alt="Images">
-                        <h3><a href="service-details.html">Renting solution</a></h3>
-                        <p>Find and move into your perfect room effortlessly, from searching to shifting.</p>
-                        <a href="service-details.html" class="get-btn">Get Service</a>
-                    </div>
-
-                    <div class="services-item">
-                    <img src="assets/images/icons/promoting-spaces.svg" alt="Images">
-                        <h3><a href="service-details.html">Promoting co-living spaces</a></h3>
-                        <p>promotes co-living brands helping individuals find their ideal living space.</p>
-                        <a href="service-details.html" class="get-btn">Get Service</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Services Area End -->
-
-        <!-- What you get from us Area -->
-        <div class="specialty-area what_you_get section-bg what you get pt-100 pb-70">
-            <div class="container">
-                <div class="section-title text-center">
-                    <h2>What you get from us</h2>
-                </div>
-
-                <div class="row pt-45 align-items-center">
-                <div class="col-lg-12 col-xxl-12">
-                        <div class="specialty-list">
-                            <div class="row">
-                                <div class="col-lg-3">
-                                    <div class="design_white_card">
-                                    <img src="assets/images/icons/exclusive-pricing.svg" alt="Images">
-                                        <h3>Exclusive <br>Pricing</h3>
-                                    </div>
+                                <div class="content">
+                                    <h3>Mission</h3>
+                                    <p>Rentia's mission is to make co-living accessible and convenient for everyone by being the go-to platform for booking, promoting top brands, and driving the growth of the co-living industry.
+                                    </p>
                                 </div>
-
-                                <div class="col-lg-3">
-                                    <div class="design_white_card">
-                                    <img src="assets/images/icons/verified-partner.svg" alt="Images">
-                                        <h3>Verified spaces and trusted partner</h3>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-3">
-                                    <div class="design_white_card">
-                                    <img src="assets/images/icons/safety-security.svg" alt="Images">
-                                        <h3>Safety &<br> Security</h3>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-3">
-                                    <div class="design_white_card">
-                                    <img src="assets/images/icons/offline-support.svg" alt="Images">
-                                        <h3>100% Offline <br>Support</h3>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-
-
-                </div>
-            </div>
-        </div>
-        <!-- What you get from us End -->
-
-        <!-- Specialty Area End -->
-        <div class="specialty-area pt-100 pb-70">
-            <div class="container">
-                <div class="section-title text-center">
-                    <h2>How we work?</h2>
-                </div>
-
-                <div class="row pt-45 align-items-center">
-                    <div class="col-lg-6 col-xxl-7">
-                        <div class="specialty-img">
-                            <img src="assets/images/how-we-work.webp" alt="Images">
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6 col-xxl-5">
-                        <div class="specialty-list">
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <div class="specialty-list-card">
-                                    <h3>Browse 1200+ properties across different localities in gurugram</h3>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-12">
-                                    <div class="specialty-list-card">
-                                        <h3>Reserve a bed of your choice by paying a small token amount</h3>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-12">
-                                    <div class="specialty-list-card">
-                                        <h3>Receive confirmation 3 days prior to your check-in date</h3>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-12">
-                                    <div class="specialty-list-card">
-                                        <h3>Easy and hassle free shifting.</h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Specialty Area End -->
-
-
-
-        <!-- Testimonials Area -->
-        <div class="testimonials-area pt-100 pb-70">
-            <div class="container">
-                <div class="section-title text-center">
-                    <span>TESTIMONIALS</span>
-                    <h2>Our Latest Testimonials and What Our Client Says</h2>
-                </div>
-                <div class="testimonials-slider owl-carousel owl-theme pt-45">
-                    <div class="testimonials-item">
-                        <i class="flaticon-left-quote"></i>
-                        <p>
-                            You can easily make a good and easily the best service from this agency. This is one
-                            of the best and crucial service for us.
-                        </p>
-                        <ul>
+                            </li>
                             <li>
-                                <img src="assets/img/testimonials/testimonials-img1.jpg" alt="Images">
-                                <h3>Mary Marden</h3>
-                                <span>New York City</span>
+                                <img src="assets/images/icons/vision.svg" alt="Images">
+                                <div class="content">
+                                    <h3>Vision</h3>
+                                    <p>Rentia Aims to Establish Itself as the Foremost Platform for Co-living Solutions in India, Offering Affordable, Top-notch Accommodation Options with Uncompromising Quality and Exemplary Customer Satisfaction.
+                                    </p>
+                                </div>
                             </li>
                         </ul>
-                    </div>
-
-                    <div class="testimonials-item">
-                        <i class="flaticon-left-quote"></i>
-                        <p>
-                            You can easily make a good and easily the best service from this agency. This is one
-                            of the best and crucial service for us.
-                        </p>
-                        <ul>
-                            <li>
-                                <img src="assets/img/testimonials/testimonials-img2.jpg" alt="Images">
-                                <h3>Harriet Johnson</h3>
-                                <span>London City</span>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="testimonials-item">
-                        <i class="flaticon-left-quote"></i>
-                        <p>
-                            You can easily make a good and easily the best service from this agency. This is one
-                            of the best and crucial service for us.
-                        </p>
-                        <ul>
-                            <li>
-                                <img src="assets/img/testimonials/testimonials-img3.jpg" alt="Images">
-                                <h3>Tyrone Morgan</h3>
-                                <span>New Jersey</span>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="testimonials-item">
-                        <i class="flaticon-left-quote"></i>
-                        <p>
-                            You can easily make a good and easily the best service from this agency. This is one
-                            of the best and crucial service for us.
-                        </p>
-                        <ul>
-                            <li>
-                                <img src="assets/img/testimonials/testimonials-img4.jpg" alt="Images">
-                                <h3>Julia Rose</h3>
-                                <span>Budapest</span>
-                            </li>
-                        </ul>
+                        <a href="/about" class="default-btn btn-bg-one border-radius-5">Read More</a>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Testimonials Area End -->
+    </div>
+    <!-- About Area End -->
+    <!-- Services Area
+       <div class="services-area pb-70">
+           <div class="container">
+               <div class="section-title text-center">
+                   <h2>Our Services</h2>
+               </div>
+               <div class="services-slider owl-carousel owl-theme pt-45">
+                   <div class="services-item">
+                       <img src="assets/images/icons/property-management.svg" alt="Images">
+                       <h3><a href="service-details.html">Property management</a></h3>
+                       <p>Rentia ensures seem less property management for owners</p>
+                       <a href="service-details.html" class="get-btn">Get Service</a>
+                   </div>
 
-       <!-- FAQ Area -->
-       <div class="faq-area pt-100 pb-70 section-bg">
+                   <div class="services-item">
+                   <img src="assets/images/icons/property-lease.svg" alt="Images">
+                       <h3><a href="service-details.html">Property on lease</a></h3>
+                       <p>Letrentia handle your property needs with expertise and efficiency</p>
+                       <a href="service-details.html" class="get-btn">Get Service</a>
+                   </div>
+
+                   <div class="services-item">
+                   <img src="assets/images/icons/renting-solution.svg" alt="Images">
+                       <h3><a href="service-details.html">Renting solution</a></h3>
+                       <p>Find and move into your perfect room effortlessly, from searching to shifting.</p>
+                       <a href="service-details.html" class="get-btn">Get Service</a>
+                   </div>
+
+                   <div class="services-item">
+                   <img src="assets/images/icons/promoting-spaces.svg" alt="Images">
+                       <h3><a href="service-details.html">Promoting co-living spaces</a></h3>
+                       <p>promotes co-living brands helping individuals find their ideal living space.</p>
+                       <a href="service-details.html" class="get-btn">Get Service</a>
+                   </div>
+               </div>
+           </div>
+       </div> -->
+    <!-- Services Area End -->
+    <!-- What you get from us Area -->
+    <div id="what-you-get" class="specialty-area what_you_get section-bg what you get pt-100 pb-70">
         <div class="container">
+            <div class="section-title text-center">
+                <h2>What you get from us</h2>
+            </div>
+            <div class="row pt-45 align-items-center">
+                <div class="col-lg-12 col-xxl-12">
+                    <div class="specialty-list">
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <div class="design_white_card">
+                                    <img src="assets/images/icons/exclusive-pricing.svg" alt="Images">
+                                    <h3>Exclusive <br>Pricing</h3>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="design_white_card">
+                                    <img src="assets/images/icons/verified-partner.svg" alt="Images">
+                                    <h3>Verified spaces and trusted partner</h3>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="design_white_card">
+                                    <img src="assets/images/icons/safety-security.svg" alt="Images">
+                                    <h3>Safety &<br> Security</h3>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="design_white_card">
+                                    <img src="assets/images/icons/offline-support.svg" alt="Images">
+                                    <h3>100% Offline <br>Support</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- What you get from us End -->
+    <!-- Specialty Area End -->
+    <div class="specialty-area pt-100 pb-70">
+        <div class="container">
+            <div class="section-title text-center">
+                <h2>How we work?</h2>
+            </div>
+            <div class="row pt-45 align-items-center">
+                <div class="col-lg-6 col-xxl-7">
+                    <div class="specialty-img">
+                        <img src="assets/images/how-we-work.webp" alt="Images">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-xxl-5">
+                    <div class="specialty-list">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="specialty-list-card">
+                                    <h3>Browse 1200+ properties across different localities in gurugram</h3>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="specialty-list-card">
+                                    <h3>Reserve a bed of your choice by paying a small token amount</h3>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="specialty-list-card">
+                                    <h3>Receive confirmation 3 days prior to your check-in date</h3>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="specialty-list-card">
+                                    <h3>Easy and hassle free shifting.</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Specialty Area End -->
+    <!-- Testimonials Area -->
+    <div class="testimonials-area pt-100 pb-70">
+        <div class="container">
+            <div class="section-title text-center">
+                <span>TESTIMONIALS</span>
+                <h2>Our Latest Testimonials and What Our Client Says</h2>
+            </div>
+            <div class="testimonials-slider owl-carousel owl-theme pt-45">
+                <div class="testimonials-item">
+                    <i class="flaticon-left-quote"></i>
+                    <p>
+                        "Rentia.in made finding my dream rental property a breeze! The user-friendly interface and detailed listings made the entire process seamless. I highly recommend Rentia.in for anyone looking for a hassle-free rental experience."
 
-        <div class="section-title text-center">
+                    </p>
+                    <ul>
+                        <li>
+                            <img src="assets/img/testimonials/testimonials-img1.jpg" alt="Images">
+                            <h3>Ayush Verma</h3>
+                            <span>Delhi</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="testimonials-item">
+                    <i class="flaticon-left-quote"></i>
+                    <p>
+                        "I had a query regarding a property listing, and the customer service at was incredibly responsive and helpful. They went above and beyond to address my concerns. A top-notch team with excellent customer support!"
+
+                    </p>
+                    <ul>
+                        <li>
+                            <img src="assets/img/testimonials/testimonials-img2.jpg" alt="Images">
+                            <h3>Mayank Rajput</h3>
+                            <span>Gurugram</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="testimonials-item">
+                    <i class="flaticon-left-quote"></i>
+                    <p>
+                        "As a property owner, Rentia has been a game-changer for me. The platform's property management tools are efficient and easy to use. From listing my property to managing applications, they have simplified entire process."
+
+                    </p>
+                    <ul>
+                        <li>
+                            <img src="assets/img/testimonials/testimonials-img3.jpg" alt="Images">
+                            <h3>Rohini Singh</h3>
+                            <span>Gurugram</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="testimonials-item">
+                    <i class="flaticon-left-quote"></i>
+                    <p>
+                        "Rentia's tenant verification process provided me with peace of mind. The thorough background checks and documentation ensured that I found reliable tenants for my property. A trustworthy platform for both landlords and tenants."
+
+                    </p>
+                    <ul>
+                        <li>
+                            <img src="assets/img/testimonials/testimonials-img4.jpg" alt="Images">
+                            <h3>Tanu Sharma</h3>
+                            <span>Noida</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonials Area End -->
+    <!-- FAQ Area -->
+    <div class="faq-area pt-100 pb-70 section-bg">
+        <div class="container">
+            <div class="section-title text-center">
                 <span>Frequently asked questions?</span>
                 <h2>Let's Start a Free of Questions And Get a Quick Support That Will Help You to Know Us</h2>
                 <br>
             </div>
-
-
             <div class="row align-items-center">
                 <div class="col-lg-6 col-xxl-7">
                     <div class="faq-img">
                         <img src="assets/images/frequently-asked-questions.webp" alt="Images">
                     </div>
                 </div>
-
                 <div class="col-lg-6 col-xxl-5">
                     <div class="faq-content">
-
                         <div class="accordion">
                             <div class="accordion-item">
-                              <button id="accordion-button-1" aria-expanded="false"><span class="accordion-title">How can I find co-living spaces in Gurugram on your platform?</span><span class="icon" aria-hidden="true"></span></button>
-                              <div class="accordion-content">
-                                <p>On our platform, you can easily search for coliving spaces in Gurugram by specifying location, budget, and preferred amenities. Our search feature will display matching results.</p>
-                              </div>
+                                <button id="accordion-button-1" aria-expanded="false"><span class="accordion-title">How can I find co-living spaces in Gurugram on your platform?</span><span class="icon" aria-hidden="true"></span></button>
+                                <div class="accordion-content">
+                                    <p>On our platform, you can easily search for coliving spaces in Gurugram by specifying location, budget, and preferred amenities. Our search feature will display matching results.</p>
+                                </div>
                             </div>
                             <div class="accordion-item">
-                              <button id="accordion-button-2" aria-expanded="false"><span class="accordion-title">What amenities are typically offered in coliving spaces?</span><span class="icon" aria-hidden="true"></span></button>
-                              <div class="accordion-content">
-                                <p>Common amenities in coliving spaces include furnished rooms, high-speed internet, communal kitchens, laundry facilities, cleaning services, social spaces, and sometimes gyms or co-working areas.</p>
-                              </div>
+                                <button id="accordion-button-2" aria-expanded="false"><span class="accordion-title">What amenities are typically offered in coliving spaces?</span><span class="icon" aria-hidden="true"></span></button>
+                                <div class="accordion-content">
+                                    <p>Common amenities in coliving spaces include furnished rooms, high-speed internet, communal kitchens, laundry facilities, cleaning services, social spaces, and sometimes gyms or co-working areas.</p>
+                                </div>
                             </div>
                             <div class="accordion-item">
-                              <button id="accordion-button-3" aria-expanded="false"><span class="accordion-title">How can I book a coliving space through your platform?</span><span class="icon" aria-hidden="true"></span></button>
-                              <div class="accordion-content">
-                                <p>Booking a coliving space is simple on our platform. After finding a suitable listing, you can directly book it by following the provided instructions, which typically involve filling out a booking form and making a secure payment.</p>
-                              </div>
+                                <button id="accordion-button-3" aria-expanded="false"><span class="accordion-title">How can I book a coliving space through your platform?</span><span class="icon" aria-hidden="true"></span></button>
+                                <div class="accordion-content">
+                                    <p>Booking a coliving space is simple on our platform. After finding a suitable listing, you can directly book it by following the provided instructions, which typically involve filling out a booking form and making a secure payment.</p>
+                                </div>
                             </div>
                             <div class="accordion-item">
-                              <button id="accordion-button-4" aria-expanded="false"><span class="accordion-title">Are utilities and other charges included in the rent?</span><span class="icon" aria-hidden="true"></span></button>
-                              <div class="accordion-content">
-                                <p>Yes, most coliving spaces include utilities such as electricity, water, and internet in the monthly rent. However, it's essential to check the specific details provided in the listing.</p>
-                              </div>
+                                <button id="accordion-button-4" aria-expanded="false"><span class="accordion-title">Are utilities and other charges included in the rent?</span><span class="icon" aria-hidden="true"></span></button>
+                                <div class="accordion-content">
+                                    <p>Yes, most coliving spaces include utilities such as electricity, water, and internet in the monthly rent. However, it's essential to check the specific details provided in the listing.</p>
+                                </div>
                             </div>
                             <div class="accordion-item">
-                              <button id="accordion-button-5" aria-expanded="false"><span class="accordion-title">What types of rooms are available in coliving spaces?</span><span class="icon" aria-hidden="true"></span></button>
-                              <div class="accordion-content">
-                                <p>Coliving spaces offer a variety of room types, including private rooms, shared rooms, and sometimes studio apartments. Listings on our platform will indicate the available room types for each property.</p>
-                              </div>
+                                <button id="accordion-button-5" aria-expanded="false"><span class="accordion-title">What types of rooms are available in coliving spaces?</span><span class="icon" aria-hidden="true"></span></button>
+                                <div class="accordion-content">
+                                    <p>Coliving spaces offer a variety of room types, including private rooms, shared rooms, and sometimes studio apartments. Listings on our platform will indicate the available room types for each property.</p>
+                                </div>
                             </div>
-                          </div>
-
+                        </div>
                     </div>
                 </div>
-
-
-
                 <div class="col-lg-12 col-xxl-12">
                     <div class="specialty-list">
                         <div class="row">
-
                             <div class="col-lg-6">
                                 <div class="accordion">
                                     <div class="accordion-item">
-                                      <button id="accordion-button-6" aria-expanded="false"><span class="accordion-title">Can I bring my own furniture or personalize my room?</span><span class="icon" aria-hidden="true"></span></button>
-                                      <div class="accordion-content">
-                                        <p>In most cases, coliving spaces come fully furnished, and personalizing the room may have limitations. However, it's advisable to check the specific policies mentioned in the listing or contact the coliving brand for more information.</p>
-                                      </div>
+                                        <button id="accordion-button-6" aria-expanded="false"><span class="accordion-title">Can I bring my own furniture or personalize my room?</span><span class="icon" aria-hidden="true"></span></button>
+                                        <div class="accordion-content">
+                                            <p>In most cases, coliving spaces come fully furnished, and personalizing the room may have limitations. However, it's advisable to check the specific policies mentioned in the listing or contact the coliving brand for more information.</p>
+                                        </div>
                                     </div>
                                     <div class="accordion-item">
                                         <button id="accordion-button-7" aria-expanded="false"><span class="accordion-title">How can I contact the coliving brand or property manager for additional information?</span><span class="icon" aria-hidden="true"></span></button>
                                         <div class="accordion-content">
-                                          <p>Each listing on our platform includes contact details for the coliving brand or property manager. You can reach out to them directly via phone or email to ask any additional questions or clarify doubts.</p>
+                                            <p>Each listing on our platform includes contact details for the coliving brand or property manager. You can reach out to them directly via phone or email to ask any additional questions or clarify doubts.</p>
                                         </div>
-                                      </div>
-                                  </div>
+                                    </div>
+                                </div>
                             </div>
-
                             <div class="col-lg-6">
                                 <div class="accordion">
                                     <div class="accordion-item">
-                                      <button id="accordion-button-8" aria-expanded="false"><span class="accordion-title">What is your cancellation and refund policy?</span><span class="icon" aria-hidden="true"></span></button>
-                                      <div class="accordion-content">
-                                        <p>Our cancellation and refund policies may vary depending on the coliving brand and property. It's recommended to review the cancellation policy mentioned on the listing or contact the coliving brand directly for detailed information.</p>
-                                      </div>
+                                        <button id="accordion-button-8" aria-expanded="false"><span class="accordion-title">What is your cancellation and refund policy?</span><span class="icon" aria-hidden="true"></span></button>
+                                        <div class="accordion-content">
+                                            <p>Our cancellation and refund policies may vary depending on the coliving brand and property. It's recommended to review the cancellation policy mentioned on the listing or contact the coliving brand directly for detailed information.</p>
+                                        </div>
                                     </div>
                                     <div class="accordion-item">
                                         <button id="accordion-button-9" aria-expanded="false"><span class="accordion-title">How can I leave a review or provide feedback about a coliving space?</span><span class="icon" aria-hidden="true"></span></button>
                                         <div class="accordion-content">
-                                          <p>We value your feedback! After your stay in a coliving space booked through our platform, you will have the opportunity to leave a review and provide feedback. Look for the review section on the property's page to share your experience.</p>
+                                            <p>We value your feedback! After your stay in a coliving space booked through our platform, you will have the opportunity to leave a review and provide feedback. Look for the review section on the property's page to share your experience.</p>
                                         </div>
-                                      </div>
-                                  </div>
+                                    </div>
+                                </div>
                             </div>
-
-
                         </div>
                     </div>
                 </div>
-
-
-
-
             </div>
         </div>
     </div>
     <!-- FAQ Area End -->
-
-
     <br> <br>
-
-        <!-- Blog Area -->
-        <div class="blog-area pb-70">
-            <div class="container">
-                <div class="section-title text-center">
-                    <h2>BLOGS</h2>
-                </div>
-                <div class="row pt-45">
-                    <div class="col-lg-6">
-                        <div class="blog-card">
-                            <div class="row align-items-center">
-                                <div class="col-lg-5 col-md-4 p-0">
-                                    <div class="blog-img">
-                                        <a href="blog-details.html">
-                                            <img src="assets/images/blogs-2.jpg" alt="Images">
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-7 col-md-8 p-0">
-                                     <div class="blog-content">
-                                         <span>October 08, 2020</span>
-                                         <h3>
-                                             <a href="blog-details.html">CO-LIVING ROOM VS TRADITIONAL ROOM?</a>
-                                         </h3>
-                                         <p>Co-Living Spaces vs Traditional Rooms: Finding the Right Living Environment</p>
-                                         <a href="#" class="read-btn">
-                                             Read More
-                                         </a>
-                                     </div>
-                                 </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6">
-                        <div class="blog-card">
-                            <div class="row align-items-center">
-                                <div class="col-lg-5 col-md-4 p-0">
-                                    <div class="blog-img">
-                                        <a href="blog-details.html">
-                                            <img src="assets/images/blogs-1.jpg" alt="Images">
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-7 col-md-8 p-0">
-                                     <div class="blog-content">
-                                         <span>October 11, 2020</span>
-                                         <h3>
-                                             <a href="blog-details.html">The Future of Co-living Spaces: Building Connected Communities</a>
-                                         </h3>
-                                         <p>Co-living spaces have become popular as a modern solution to urban...</p>
-                                         <a href="#" class="read-btn">
-                                             Read More
-                                         </a>
-                                     </div>
-                                 </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-12 text-center">
-                       <div class="nav-btn text-center">
-                                <a href="#" class="default-btn btn-bg-one border-radius-5">View All Blogs</a>
-                        </div>
-                    </div>
-
-
-
-                </div>
-            </div>
-        </div>
-        <!-- Blog Area End -->
-
-
-
-</div>
-
-
-
-       <!-- Footer Area -->
-       <footer class="footer-area footer-bg">
+    <!-- Team Area -->
+   <!-- <div class="team-area pt-100 pb-70">
         <div class="container">
-            <div class="footer-top pt-100 pb-70">
-                <div class="row align-items-center">
-                    <div class="col-lg-3 col-md-6">
-                        <div class="footer-widget">
-                            <div class="footer-logo">
-                                <a href="\">
-                                    <img src="assets/images/rentia-logo.webp" style="border-radius:5px;" alt="Images">
-                                </a>
+            <div class="section-title text-center">
+                <span>TEAM</span>
+                <h2>Let's Meet Up With Our Special Team Members</h2>
+            </div>
+            <div class="team-slider owl-carousel owl-theme pt-45">
+                <div class="team-item">
+                    <a href="team.html">
+                        <img src="assets/images/member-1.jpg" alt="Images">
+                    </a>
+                    <div class="content">
+                        <h3><a href="team.html">Tom Shumate</a></h3>
+                        <span>Manager</span>
+                        <ul class="social-link">
+                            <li>
+                                <a href="#" target="_blank"><i class='bx bxl-facebook'></i></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><i class='bx bxl-twitter'></i></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><i class='bx bxl-instagram'></i></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><i class='bx bxl-pinterest-alt'></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="team-item">
+                    <a href="team.html">
+                        <img src="assets/images/member-2.jpg" alt="Images">
+                    </a>
+                    <div class="content">
+                        <h3><a href="team.html">Carrie Horton</a></h3>
+                        <span>Chief Reception Officer</span>
+                        <ul class="social-link">
+                            <li>
+                                <a href="#" target="_blank"><i class='bx bxl-facebook'></i></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><i class='bx bxl-twitter'></i></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><i class='bx bxl-instagram'></i></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><i class='bx bxl-pinterest-alt'></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="team-item">
+                    <a href="team.html">
+                        <img src="assets/images/member-1.jpg" alt="Images">
+                    </a>
+                    <div class="content">
+                        <h3><a href="team.html">Brian Orlando</a></h3>
+                        <span>Housekeeping</span>
+                        <ul class="social-link">
+                            <li>
+                                <a href="#" target="_blank"><i class='bx bxl-facebook'></i></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><i class='bx bxl-twitter'></i></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><i class='bx bxl-instagram'></i></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><i class='bx bxl-pinterest-alt'></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="team-item">
+                    <a href="team.html">
+                        <img src="assets/images/member-2.jpg" alt="Images">
+                    </a>
+                    <div class="content">
+                        <h3><a href="team.html">Michael Evens</a></h3>
+                        <span>Housekeeping</span>
+                        <ul class="social-link">
+                            <li>
+                                <a href="#" target="_blank"><i class='bx bxl-facebook'></i></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><i class='bx bxl-twitter'></i></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><i class='bx bxl-instagram'></i></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><i class='bx bxl-pinterest-alt'></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>-->
+    <!-- Team Area End -->
+    <!-- Blog Area -->
+    <div class="blog-area pb-70">
+        <div class="container">
+            <div class="section-title text-center">
+                <h2>BLOGS</h2>
+            </div>
+            <div class="row pt-45">
+                <div class="col-lg-6">
+                    <div class="blog-card">
+                        <div class="row align-items-center">
+                            <div class="col-lg-5 col-md-4 p-0">
+                                <div class="blog-img">
+                                    <a href="blog-details.html">
+                                        <img src="assets/images/blogs-2.jpg" alt="Images">
+                                    </a>
+                                </div>
                             </div>
-                            <p>
-                                Rentia is a platform that aims to make co-living accessible and convenient for everyone. The platform connects tenants with the best co-living brands in Gurugram, providing them with detailed information about different brands and their properties. This makes it easier for tenants to find a room that fits their budget and needs.
-                            </p>
-                            <ul class="footer-list-contact">
-                                <li>
-                                    <i class='bx bx-home-alt'></i>
-                                    <a href="#">House no.Q20, Q1 Block, South City 2, Gurugram, Haryana</a>
-                                </li>
-                                <li>
-                                    <i class='bx bx-phone-call'></i>
-                                    <a href="tel:9319144228">+91-9319144228</a>
-                                </li>
-                                <li>
-                                    <i class='bx bx-envelope'></i>
-                                    <a href="mailto:info@rentia.in">info@rentia.in</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6">
-                        <div class="footer-widget pl-5">
-                            <h3>Links</h3>
-                            <ul class="footer-list">
-                                <li>
-                                    <a href="#" target="_blank">
-                                        <i class='bx bx-caret-right'></i>
-                                        About Us
+                            <div class="col-lg-7 col-md-8 p-0">
+                                <div class="blog-content">
+                                    <span>October 08, 2023</span>
+                                    <h3>
+                                        <a href="blog-details.html">CO-LIVING ROOM VS TRADITIONAL ROOM?</a>
+                                    </h3>
+                                    <p>Co-Living Spaces vs Traditional Rooms: Finding the Right Living Environment</p>
+                                    <a href="#" class="read-btn">
+                                        Read More
                                     </a>
-                                </li>
-                                <li>
-                                    <a href="#" target="_blank">
-                                        <i class='bx bx-caret-right'></i>
-                                        Services
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" target="_blank">
-                                        <i class='bx bx-caret-right'></i>
-                                        Team
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" target="_blank">
-                                        <i class='bx bx-caret-right'></i>
-                                        Gallery
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" target="_blank">
-                                        <i class='bx bx-caret-right'></i>
-                                        Terms
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" target="_blank">
-                                        <i class='bx bx-caret-right'></i>
-                                        Privacy Policy
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6">
-                        <div class="footer-widget">
-                            <h3>Useful Links</h3>
-                            <ul class="footer-list">
-                                <li>
-                                    <a href="\" target="_blank">
-                                        <i class='bx bx-caret-right'></i>
-                                        Home
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="blogs.html" target="_blank">
-                                        <i class='bx bx-caret-right'></i>
-                                        Blog
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" target="_blank">
-                                        <i class='bx bx-caret-right'></i>
-                                        FAQ
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" target="_blank">
-                                        <i class='bx bx-caret-right'></i>
-                                        Testimonials
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" target="_blank">
-                                        <i class='bx bx-caret-right'></i>
-                                        Gallery
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" target="_blank">
-                                        <i class='bx bx-caret-right'></i>
-                                        Contact Us
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6">
-                        <div class="footer-widget">
-                            <h3>Newsletter</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                Nullam tempor eget ante fringilla rutrum aenean sed venenatis .
-                            </p>
-                            <div class="footer-form">
-                                <form class="newsletter-form" data-toggle="validator" method="POST">
-                                    <div class="row">
-                                        <div class="col-lg-12">
-                                            <div class="form-group">
-                                                <input type="email" class="form-control" placeholder="Your Email*" name="EMAIL" required autocomplete="off">
-                                            </div>
-                                        </div>
-
-                                        <div class="col-lg-12 col-md-12">
-                                            <button style="border: 1px solid;" type="submit" class="default-btn btn-bg-one">
-                                                Subscribe Now
-                                            </button>
-                                            <div id="validator-newsletter" class="form-result"></div>
-                                        </div>
-                                    </div>
-                                </form>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="copy-right-area">
-                <div class="row">
-                    <div class="col-lg-8 col-md-8">
-                        <div class="copy-right-text text-align1">
-                            <p>
-                                Copyright @<script>document.write(new Date().getFullYear())</script> Rentia All Rights Reserved
-                            </p>
+                <div class="col-lg-6">
+                    <div class="blog-card">
+                        <div class="row align-items-center">
+                            <div class="col-lg-5 col-md-4 p-0">
+                                <div class="blog-img">
+                                    <a href="blog-details.html">
+                                        <img src="assets/images/blogs-1.jpg" alt="Images">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-lg-7 col-md-8 p-0">
+                                <div class="blog-content">
+                                    <span>October 11, 2023</span>
+                                    <h3>
+                                        <a href="blog-details.html">The Future of Co-living Spaces: Building Connected Communities</a>
+                                    </h3>
+                                    <p>Co-living spaces have become popular as a modern solution to urban...</p>
+                                    <a href="#" class="read-btn">
+                                        Read More
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-
-                    <div class="col-lg-4 col-md-4">
-                        <div class="social-icon text-align2">
-                            <ul class="social-link">
-                                <li>
-                                    <a href="#" target="_blank"><i class='bx bxl-facebook'></i></a>
-                                </li>
-                                <li>
-                                    <a href="#" target="_blank"><i class='bx bxl-twitter'></i></a>
-                                </li>
-                                <li>
-                                    <a href="#" target="_blank"><i class='bx bxl-instagram'></i></a>
-                                </li>
-                                <li>
-                                    <a href="#" target="_blank"><i class='bx bxl-pinterest-alt'></i></a>
-                                </li>
-                                <li>
-                                    <a href="#" target="_blank"><i class='bx bxl-youtube'></i></a>
-                                </li>
-                            </ul>
+                </div>
+                <!--<div class="col-lg-12 text-center">
+                   <div class="nav-btn text-center">
+                            <a href="#" class="default-btn btn-bg-one border-radius-5">View All Blogs</a>
+                    </div>
+                   </div>-->
+            </div>
+        </div>
+    </div>
+    <!-- Blog Area End -->
+</div>
+<!-- Footer Area -->
+<footer class="footer-area footer-bg">
+    <div class="container">
+        <div class="footer-top pt-100 pb-70">
+            <div class="row align-items-center">
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-widget">
+                        <div class="footer-logo">
+                            <a href="\">
+                                <img src="assets/images/rentia-logo.webp" style="border-radius:5px;" alt="Images">
+                            </a>
+                        </div>
+                        <p>
+                            Rentia is a platform that aims to make co-living accessible and convenient for everyone. The platform connects tenants with the best co-living brands in Gurugram, providing them with detailed information about different brands and their properties. This makes it easier for tenants to find a room that fits their budget and needs.
+                        </p>
+                        <ul class="footer-list-contact">
+                            <li>
+                                <i class='bx bx-home-alt'></i>
+                                <a href="#">House no.Q20, Q1 Block, South City 2, Gurugram, Haryana</a>
+                            </li>
+                            <li>
+                                <i class='bx bx-phone-call'></i>
+                                <a href="tel:9319144228">+91-9319144228</a>
+                            </li>
+                            <li>
+                                <i class='bx bx-envelope'></i>
+                                <a href="mailto:info@rentia.in">info@rentia.in</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-widget pl-5">
+                        <h3>Links</h3>
+                        <ul class="footer-list">
+                            <li>
+                                <a href="#" target="_blank">
+                                    <i class='bx bx-caret-right'></i>
+                                    About Us
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#what-you-get" target="_blank">
+                                    <i class='bx bx-caret-right'></i>
+                                    Services
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">
+                                    <i class='bx bx-caret-right'></i>
+                                    Team
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">
+                                    <i class='bx bx-caret-right'></i>
+                                    Gallery
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/terms" target="_blank">
+                                    <i class='bx bx-caret-right'></i>
+                                    Terms
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/policy" target="_blank">
+                                    <i class='bx bx-caret-right'></i>
+                                    Privacy Policy
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-widget">
+                        <h3>Useful Links</h3>
+                        <ul class="footer-list">
+                            <li>
+                                <a href="\" target="_blank">
+                                    <i class='bx bx-caret-right'></i>
+                                    Home
+                                </a>
+                            </li>
+                            <li>
+                                <a href="blogs.html" target="_blank">
+                                    <i class='bx bx-caret-right'></i>
+                                    Blog
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">
+                                    <i class='bx bx-caret-right'></i>
+                                    FAQ
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">
+                                    <i class='bx bx-caret-right'></i>
+                                    Testimonials
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">
+                                    <i class='bx bx-caret-right'></i>
+                                    Gallery
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">
+                                    <i class='bx bx-caret-right'></i>
+                                    Contact Us
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-widget">
+                        <h3>Newsletter</h3>
+                        <p>
+                            Subscribe to our newsletter to stay updated!
+                        </p>
+                        <div class="footer-form">
+                            <form class="newsletter-form" data-toggle="validator">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="form-group">
+                                            <input type="email" class="form-control" placeholder="Your Email*" name="EMAIL" required autocomplete="off">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12">
+                                        <button style="border: 1px solid;" type="submit" class="default-btn btn-bg-one" onclick="subscribe()">
+                                            Subscribe Now
+                                        </button>
+                                        <div id="validator-newsletter" class="form-result"></div>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </footer>
-    <!-- Footer Area End -->
+        <div class="copy-right-area">
+            <div class="row">
+                <div class="col-lg-8 col-md-8">
+                    <div class="copy-right-text text-align1">
+                        <p>
+                            Copyright @<script>document.write(new Date().getFullYear())</script> Rentia All Rights Reserved
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <div class="social-icon text-align2">
+                        <ul class="social-link">
+                            <li>
+                                <a href="#" target="_blank"><i class='bx bxl-facebook'></i></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><i class='bx bxl-twitter'></i></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><i class='bx bxl-instagram'></i></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><i class='bx bxl-pinterest-alt'></i></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><i class='bx bxl-youtube'></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Footer Area End -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Get all links with the class 'scroll-to-section'
+        var scrollLinks = document.querySelectorAll('.scroll-to-section');
 
+        // Add a click event listener to each link
+        scrollLinks.forEach(function (scrollLink) {
+            scrollLink.addEventListener('click', function (event) {
+                event.preventDefault();
 
+                // Get the target element's id from the href attribute
+                var targetId = this.getAttribute('href').substring(1);
 
+                // Get the target element
+                var targetElement = document.getElementById(targetId);
+
+                // Scroll smoothly to the target element
+                targetElement.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    });
+</script>
 <script src="assets/js/process-form.js"></script>
-
 <!-- Home Page Product Tabs Start
---------------------------------------------------------------------------------------------------->
-
-
-
-        <script src="assets/js/jquery.min.js"></script>
-        <!-- Bootstrap Bundle Min JS -->
-        <script src="assets/js/bootstrap.bundle.min.js"></script>
-        <!-- Magnific Popup Min JS -->
-        <script src="assets/js/jquery.magnific-popup.min.js"></script>
-        <!-- Owl Carousel Min JS -->
-        <script src="assets/js/owl.carousel.min.js"></script>
-        <!-- Nice Select Min JS -->
-        <script src="assets/js/jquery.nice-select.min.js"></script>
-        <!-- Wow Min JS -->
-        <script src="assets/js/wow.min.js"></script>
-        <!-- Jquery Ui JS -->
-        <script src="assets/js/jquery-ui.js"></script>
-        <!-- Meanmenu JS -->
-        <script src="assets/js/meanmenu.js"></script>
-        <!-- Ajaxchimp Min JS -->
-        <script src="assets/js/jquery.ajaxchimp.min.js"></script>
-        <!-- Form Validator Min JS -->
-        <script src="assets/js/form-validator.min.js"></script>
-        <!-- Contact Form JS -->
-        <script src="assets/js/contact-form-script.js"></script>
-        <!-- Custom JS -->
-        <!-- <script src="assets/js/custom.js"></script> -->
-
+   --------------------------------------------------------------------------------------------------->
+<script src="assets/js/jquery.min.js"></script>
+<!-- Bootstrap Bundle Min JS -->
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<!-- Magnific Popup Min JS -->
+<script src="assets/js/jquery.magnific-popup.min.js"></script>
+<!-- Owl Carousel Min JS -->
+<script src="assets/js/owl.carousel.min.js"></script>
+<!-- Nice Select Min JS -->
+<script src="assets/js/jquery.nice-select.min.js"></script>
+<!-- Wow Min JS -->
+<script src="assets/js/wow.min.js"></script>
+<!-- Jquery Ui JS -->
+<script src="assets/js/jquery-ui.js"></script>
+<!-- Meanmenu JS -->
+<script src="assets/js/meanmenu.js"></script>
+<!-- Ajaxchimp Min JS -->
+<script src="assets/js/jquery.ajaxchimp.min.js"></script>
+<!-- Form Validator Min JS -->
+<script src="assets/js/form-validator.min.js"></script>
+<!-- Contact Form JS -->
+<script src="assets/js/contact-form-script.js"></script>
+<script src="assets/js/subscribe.js"></script>
+<!-- Custom JS -->
+<script src="assets/js/custom.js"></script>
 <script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
+<script>
+    const items = document.querySelectorAll(".accordion button");
 
-        <script>
+    function toggleAccordion() {
+    const itemToggle = this.getAttribute('aria-expanded');
 
-        const items = document.querySelectorAll(".accordion button");
-
-function toggleAccordion() {
-  const itemToggle = this.getAttribute('aria-expanded');
-  
-  for (i = 0; i < items.length; i++) {
+    for (i = 0; i < items.length; i++) {
     items[i].setAttribute('aria-expanded', 'false');
-  }
-  
-  if (itemToggle == 'false') {
-    this.setAttribute('aria-expanded', 'true');
-  }
-}
+    }
 
-items.forEach(item => item.addEventListener('click', toggleAccordion));
+    if (itemToggle == 'false') {
+    this.setAttribute('aria-expanded', 'true');
+    }
+    }
+
+    items.forEach(item => item.addEventListener('click', toggleAccordion));
 
 </script>
-
-
-
 <!-- Home Page Product Tabs End
---------------------------------------------------------------------------------------------------->
-
-
+   --------------------------------------------------------------------------------------------------->
 </body>
-
 </html>

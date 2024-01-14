@@ -26,21 +26,21 @@
     
     // Set minAmount and maxAmount based on selected value
     var minAmount, maxAmount;
-    if (budget === "1000-5000") {
-        minAmount = 1000.0;
-        maxAmount = 5000.0;
-    } else if (budget === "5000-10000") {
-        minAmount = 5000.0;
-        maxAmount = 10000.0;
-    } else if (budget === "10000-15000") {
-        minAmount = 10000.0;
-        maxAmount = 15000.0;
-    } else if (budget === "15000-20000") {
+    if (budget === "15000-20000") {
         minAmount = 15000.0;
         maxAmount = 20000.0;
+    } else if (budget === "20000-25000") {
+        minAmount = 20000.0;
+        maxAmount = 25000.0;
+    } else if (budget === "25000-30000") {
+        minAmount = 25000.0;
+        maxAmount = 30000.0;
+    } else if (budget === "30000-40000") {
+        minAmount = 30000.0;
+        maxAmount = 40000.0;
     } else {
-        minAmount = null;
-        maxAmount = null;
+        minAmount = 40000.0;
+        maxAmount = 45000.0;
     }
     
     
