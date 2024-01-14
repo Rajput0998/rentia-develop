@@ -194,12 +194,12 @@
             <div class="container-fluid">
                 <div class="row pt-45">
                     <div class="col-lg-6">
-                        <h3>Coliving Spaces in Delhi</h3>
+                        <h3>Coliving Spaces in Gurgaon</h3>
                    </div>
 
-                   <div class="col-lg-6 design_breadcrumb">
+                   <!--<div class="col-lg-6 design_breadcrumb">
                     <ul><li><a href="/">Home</a></li><li><a href="/">Coliving</a></li><li class="breadcrumb_active" aria-current="page">Roseate House</li></ul>
-                   </div>
+                   </div>-->
 
                 </div>
             </div>
@@ -235,16 +235,18 @@
                                 <div class="col-lg-8 col-md-8 left_detail_post">
                                     <div class="room-card-content design_address">
                                         <ul>
-                              <li>Starting Price<br> <b><span th:text="${property.price}"></span></b> / month</li>
+
+                                            <li>Starting Price<br> <b><span th:text="${#strings.substringBefore(#strings.toString(property.price), '.')}"></span></b> / month</li>
+
                                         </ul>
 
                                         <div>
                                             <a><svg width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 12q.825 0 1.413-.588T14 10q0-.825-.588-1.413T12 8q-.825 0-1.413.588T10 10q0 .825.588 1.413T12 12Zm0 7.35q3.05-2.8 4.525-5.088T18 10.2q0-2.725-1.738-4.462T12 4Q9.475 4 7.737 5.738T6 10.2q0 1.775 1.475 4.063T12 19.35ZM12 22q-4.025-3.425-6.012-6.362T4 10.2q0-3.75 2.413-5.975T12 2q3.175 0 5.588 2.225T20 10.2q0 2.5-1.988 5.438T12 22Zm0-11.8Z"/></svg> <span th:text="${property.address.city}"></span></a>
                                             
-                                            <a><svg width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M9.025 15.175q.625-.45 1.388-.7t1.587-.25q.825 0 1.588.25t1.387.7L21.1 9.05q-1.95-1.475-4.263-2.263T12 6q-2.525 0-4.838.788T2.9 9.05l6.125 6.125Zm2.975 5.4q-.2 0-.375-.062T11.3 20.3L.7 9.7q-.3-.3-.288-.712T.725 8.3q2.35-2.125 5.238-3.213T12 4q3.175 0 6.063 1.088T23.274 8.3q.3.275.313.688T23.3 9.7L12.7 20.3q-.15.15-.325.213t-.375.062Z"/></svg> High speed WiFi</a>
+                                            <!--<a><svg width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M9.025 15.175q.625-.45 1.388-.7t1.587-.25q.825 0 1.588.25t1.387.7L21.1 9.05q-1.95-1.475-4.263-2.263T12 6q-2.525 0-4.838.788T2.9 9.05l6.125 6.125Zm2.975 5.4q-.2 0-.375-.062T11.3 20.3L.7 9.7q-.3-.3-.288-.712T.725 8.3q2.35-2.125 5.238-3.213T12 4q3.175 0 6.063 1.088T23.274 8.3q.3.275.313.688T23.3 9.7L12.7 20.3q-.15.15-.325.213t-.375.062Z"/></svg> High speed WiFi</a>
                                             
                                             <a><svg width="24" height="24" viewBox="0 0 1024 1024"><path fill="currentColor" d="M275 281c19.9 0 36-16.1 36-36V36c0-19.9-16.1-36-36-36s-36 16.1-36 36v209c0 19.9 16.1 36 36 36zm613 144H768c0-39.8-32.2-72-72-72H200c-39.8 0-72 32.2-72 72v248c0 3.4.2 6.7.7 9.9c-.5 7-.7 14-.7 21.1c0 176.7 143.3 320 320 320c160.1 0 292.7-117.5 316.3-271H888c39.8 0 72-32.2 72-72V497c0-39.8-32.2-72-72-72zM696 681h-1.1c.7 7.6 1.1 15.2 1.1 23c0 137-111 248-248 248S200 841 200 704c0-7.8.4-15.4 1.1-23H200V425h496v256zm192-8H776V497h112v176zM613 281c19.9 0 36-16.1 36-36V36c0-19.9-16.1-36-36-36s-36 16.1-36 36v209c0 19.9 16.1 36 36 36zm-170 0c19.9 0 36-16.1 36-36V36c0-19.9-16.1-36-36-36s-36 16.1-36 36v209c0 19.9 16.1 36 36 36z"/></svg> Cofee & Bar</a>
-
+-->
                                         </div>
                                     </div>
 
@@ -270,7 +272,10 @@
                                             </div>
 
                                             <div class="right_slids">
-                                                <div class="price"><span class="hideOnMobile tabhide">starting from</span><div class="ng-star-inserted"> <span th:text="${property.propertyFacility.doubleSharingPrice}"></span><small><span>/month</span></small></div></div>
+                                                <div class="price"><span class="hideOnMobile tabhide">starting from</span><div class="ng-star-inserted">
+                                                    <span th:text="${#strings.substringBefore(#strings.toString(property.propertyFacility.doubleSharingPrice), '.')}"></span><small><span>/month</span></small></div></div>
+
+
 
                                                 <!--<button class="btn-link hideOnMobile tabhide" type="button">Enquire<small class="icon-next fas fa-angle-right" aria-hidden="true"></small></button>--></div>
                                             </div>
@@ -284,7 +289,9 @@
                                             </div>
 
                                             <div class="right_slids">
-                                                <div class="price"><span class="hideOnMobile tabhide">starting from</span><div class="ng-star-inserted"><span th:text="${property.propertyFacility.singleSharingPrice}"></span><small><span>/month</span></small></div></div>
+                                                <div class="price"><span class="hideOnMobile tabhide">starting from</span><div class="ng-star-inserted">
+                                                    <span th:text="${#strings.substringBefore(#strings.toString(property.propertyFacility.singleSharingPrice), '.')}"></span><small><span>/month</span></small></div></div>
+
 
                                                 <!--<button class="btn-link hideOnMobile tabhide" type="button">Enquire<small class="icon-next fas fa-angle-right" aria-hidden="true"></small></button>-->
                                             </div>
@@ -358,6 +365,11 @@
                                              <option value="Type">Type</option>
                                              <option value="Private Room">Private Room</option>
                                              <option value="Double Sharing">Double Sharing</option>
+                                             <option value="Double Sharing">Triple Sharing</option>
+                                             <option value="Double Sharing">1 RK</option>
+                                             <option value="Double Sharing">1 BHK</option>
+                                             <option value="Double Sharing">2 BHK</option>
+                                             <option value="Double Sharing">3 BHK</option>
                                              <option  value="Any Other">Any Other</option>
                                           </select>
                                                             </div>
@@ -366,10 +378,12 @@
                                                             <div class="form-group">
                                                                 <select id="budget" name="budget" style="display: none;">
                                                                     <option value="Budget">Budget</option>
+                                                                    <option value="10000-15000">10000-15000</option>
                                                                     <option value="15000-20000">15000-20000</option>
                                                                     <option value="20000-25000">20000-25000</option>
                                                                     <option  value="25000-30000">25000-30000</option>
                                                                     <option  value="30000-40000">30000-40000</option>
+                                                                    <option  value="40000-50000">40000-50000</option>
                                                                 </select>
                                                             </div>
                                                         </div>
@@ -427,7 +441,7 @@
                                         
                                         <a><svg width="24" height="24" viewBox="0 0 1024 1024"><path fill="currentColor" d="M275 281c19.9 0 36-16.1 36-36V36c0-19.9-16.1-36-36-36s-36 16.1-36 36v209c0 19.9 16.1 36 36 36zm613 144H768c0-39.8-32.2-72-72-72H200c-39.8 0-72 32.2-72 72v248c0 3.4.2 6.7.7 9.9c-.5 7-.7 14-.7 21.1c0 176.7 143.3 320 320 320c160.1 0 292.7-117.5 316.3-271H888c39.8 0 72-32.2 72-72V497c0-39.8-32.2-72-72-72zM696 681h-1.1c.7 7.6 1.1 15.2 1.1 23c0 137-111 248-248 248S200 841 200 704c0-7.8.4-15.4 1.1-23H200V425h496v256zm192-8H776V497h112v176zM613 281c19.9 0 36-16.1 36-36V36c0-19.9-16.1-36-36-36s-36 16.1-36 36v209c0 19.9 16.1 36 36 36zm-170 0c19.9 0 36-16.1 36-36V36c0-19.9-16.1-36-36-36s-36 16.1-36 36v209c0 19.9 16.1 36 36 36z"/></svg> Cofee & Bar</a>
                                         <ul>
-                                            <li>Starting Price<br> <b><span>₹</span><span th:text="${property.price}"></span></b> / month</li>
+                                            <li>Starting Price<br> <b><span th:text="${#strings.substringBefore(#strings.toString(property.price), '.')}"></span></b> / month</li>
                                             <li><a th:href="@{/api/a1/property/getProperty/{prpName}(prpName=${property.prpName})}" class="book-more-btn">Explore More</a></li>
                                         </ul>
                                     </div>
